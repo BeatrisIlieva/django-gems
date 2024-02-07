@@ -2,6 +2,12 @@ from django.core.exceptions import ValidationError
 from django.utils.deconstruct import deconstructible
 
 
+class ChoicesMaxLengthMixin:
+    @classmethod
+    def max_length(cls):
+        return max(len(choice.value) for choice in cls)
+
+
 def get_objects_by_choices(model_name):
     objects = model_name.objects.all()
 

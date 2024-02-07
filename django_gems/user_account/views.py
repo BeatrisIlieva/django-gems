@@ -12,7 +12,7 @@ from e_commerce_website.common.mixins import NavigationBarMixin
 
 
 class RegisterUserView(NavigationBarMixin, CreateView):
-    template_name = 'accounts/register.html'
+    template_name = 'user_account/register.html'
     form_class = RegisterUserForm
     success_url = reverse_lazy('index_page')
 
@@ -39,7 +39,7 @@ class RegisterUserView(NavigationBarMixin, CreateView):
 
 
 class LoginOrRegisterUserView(NavigationBarMixin, LoginView):
-    template_name = 'accounts/login-or-register.html'
+    template_name = 'user_account/login-or-register.html'
     form_class = LoginUserForm
 
     def get_context_data(self, **kwargs):
@@ -59,7 +59,7 @@ class LogoutUserView(View):
 
 
 class CustomUpdateEmailView(UpdateView):
-    template_name = 'accounts/update-email.html'
+    template_name = 'user_account/update-email.html'
     form_class = CustomUpdateEmailForm
 
     def get_object(self, queryset=None):
@@ -72,7 +72,7 @@ class CustomUpdateEmailView(UpdateView):
 
 
 class CustomUpdatePasswordView(SuccessMessageMixin,PasswordChangeView):
-    template_name = 'accounts/update-password.html'
+    template_name = 'user_account/update-password.html'
     form_class = CustomUpdatePasswordForm
 
     def get_success_url(self):

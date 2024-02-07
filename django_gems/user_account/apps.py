@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ShoppingCartConfig(AppConfig):
+class UserAccountConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'shopping_cart'
+    name = 'django_gems.user_account'

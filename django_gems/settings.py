@@ -21,15 +21,14 @@ INSTALLED_APPS = [
     'django_celery_beat',
     'django_countries',
 
-    'e_commerce_website.account',
-    'e_commerce_website.common',
-    'e_commerce_website.core',
-    'e_commerce_website.inventory',
-    'e_commerce_website.jewelry',
-    'e_commerce_website.order',
-    'e_commerce_website.profile',
-    'e_commerce_website.shopping_cart',
-    'e_commerce_website.wishlist',
+    # 'django_gems.user_account',
+    # 'django_gems.common',
+    # 'django_gems.inventory',
+    # 'django_gems.jewelry',
+    # 'django_gems.order',
+    # 'django_gems.user_profile',
+    # 'django_gems.shopping_cart',
+    # 'django_gems.wishlist',
 ]
 
 MIDDLEWARE = [
@@ -117,11 +116,11 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = reverse_lazy('index_page')
-LOGOUT_REDIRECT_URL = reverse_lazy('login_or_register_user')
-LOGIN_URL = reverse_lazy('login_or_register_user')
-
-AUTH_USER_MODEL = 'accounts.AccountUser'
+# LOGIN_REDIRECT_URL = reverse_lazy('index_page')
+# LOGOUT_REDIRECT_URL = reverse_lazy('login_or_register_user')
+# LOGIN_URL = reverse_lazy('login_or_register_user')
+#
+# AUTH_USER_MODEL = 'accounts.AccountUser'
 
 CELERY_BROKER_URL = 'redis://localhost:6379'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379'

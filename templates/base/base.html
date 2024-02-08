@@ -1,36 +1,84 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/deztgvefu/image/upload/v1706426486/template_images/cute-little-pink-cat-watercolor-png_2_kxmwtq.webp">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://res.cloudinary.com/deztgvefu/image/upload/v1706426486/template_images/cute-little-pink-cat-watercolor-png_2_kxmwtq.webp"
+    />
     <title>Fine Jewelries</title>
-    <link rel="stylesheet" href="{% static 'reset/reset.css' %}">
-{#    <link rel="stylesheet" href="{% static 'styles/colors.styles' %}">#}
-    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'icons/icons.css' %}">
-</head>
-<body>
-<header class="header">
-    <img class="logo-image"
-         src="https://res.cloudinary.com/deztgvefu/image/upload/v1706426486/template_images/cute-little-pink-cat-watercolor-png_2_kxmwtq.webp"
-         alt="Logo">
-    <span class="logo-title">FINE JEWELRIES</span>
-    {% include 'base/partials/nav.html' %}
-    {% include 'base/partials/icons.html' %}
-</header>
-<main>
-    {% block page_content %}
-    {% endblock %}
-</main>
-<footer class="footer-content">
-    <div>
+    <link rel="stylesheet" href="{% static 'reset/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'colors/colors.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'icons/icons.css' %}" />
+  </head>
+  <body>
+    <header id="header">
+<div class="logo-img-container">
+    <img
+    class="logo-img"
+    src="https://res.cloudinary.com/deztgvefu/image/upload/v1706426486/template_images/cute-little-pink-cat-watercolor-png_2_kxmwtq.webp"
+    alt="Logo Image"
+  />
+</div>
+        <div class="logo-title-container">
+            <h1 class="logo-title">FINE JEWELRIES</h1>
+        </div>
+    </header>
+    <main>
+      <div id="main">B</div>
+    </main>
+    <footer>
+      <div id="footer">
         © 2024 Fine Jewelries | Beatris Ilieve | beatrisilieve@icloud.com
-    </div>
-</footer>
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
 
+{% comment %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://res.cloudinary.com/deztgvefu/image/upload/v1706426486/template_images/cute-little-pink-cat-watercolor-png_2_kxmwtq.webp"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fine Jewelries</title>
+    <link rel="stylesheet" href="{% static 'reset/reset.css' %}" />
+    {#
+    <link rel="stylesheet" href="{% static 'styles/colors.styles' %}" />
+    #}
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'icons/icons.css' %}" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="logo-image"
+        src="https://res.cloudinary.com/deztgvefu/image/upload/v1706426486/template_images/cute-little-pink-cat-watercolor-png_2_kxmwtq.webp"
+        alt="Logo"
+      />
+      <span class="logo-title">FINE JEWELRIES</span>
+      {% include 'base/partials/nav.html' %} {% include
+      'base/partials/icons.html' %}
+    </header>
+    <main>{% block page_content %} {% endblock %}</main>
+    <footer class="footer-content">
+      <div>
+        © 2024 Fine Jewelries | Beatris Ilieve | beatrisilieve@icloud.com
+      </div>
+    </footer>
+  </body>
+</html>
+{% endcomment %}

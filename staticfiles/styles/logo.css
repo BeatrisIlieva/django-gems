@@ -1,0 +1,26 @@
+#header .logo-img-container {
+    height: 24vh;
+    display: flex;
+    overflow: hidden;
+}
+
+#header .logo-img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#header .logo-title-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -86px;
+    margin-left: -20px;
+}
+
+#header .logo-title {
+    font-size: 20px;
+    border-bottom-color: var(--dark-pink);
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-style: ridge;
+}

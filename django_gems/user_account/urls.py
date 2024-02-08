@@ -1,6 +1,6 @@
 from django.urls import path
 
-from e_commerce_website.accounts.views import (
+from django_gems.user_account.views import (
     RegisterUserView,
     LoginOrRegisterUserView,
     LogoutUserView, CustomUpdateEmailView, CustomUpdatePasswordView

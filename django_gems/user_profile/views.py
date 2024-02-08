@@ -1,15 +1,15 @@
 from django.contrib.auth import get_user_model
 from django.urls import reverse_lazy
 from django.views.generic import UpdateView, DeleteView, DetailView
-from e_commerce_website.profiles.forms import AccountProfileForm
-from e_commerce_website.common.mixins import NavigationBarMixin
-from e_commerce_website.profiles.models import AccountProfile
+from django_gems.user_profile.forms import AccountProfileForm
+from django_gems.common.mixins import NavigationBarMixin
+from django_gems.user_profile.models import AccountProfile
 
 UserModel = get_user_model()
 
 
 # class UserDetailsView(NavigationBarMixin, DetailView):
-#     template_name = 'profiles/update-profile.html'
+#     template_name = 'user-profile/update-profile.html'
 #     model = UserModel
 #
 #     def get_context_data(self, **kwargs):
@@ -22,7 +22,7 @@ UserModel = get_user_model()
 
 
 class UserUpdateView(NavigationBarMixin, UpdateView):
-    template_name = 'profiles/update-profile.html'
+    template_name = 'user-profile/update-profile.html'
     model = AccountProfile
     form_class = AccountProfileForm
 
@@ -40,7 +40,7 @@ class UserUpdateView(NavigationBarMixin, UpdateView):
 
 
 class UserDeleteView(DeleteView):
-    template_name = 'profiles/delete-profile.html'
+    template_name = 'user-profile/delete-profile.html'
     model = UserModel
     success_url = reverse_lazy('profile-deleted')
 

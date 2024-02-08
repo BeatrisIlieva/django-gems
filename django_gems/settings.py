@@ -32,7 +32,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'e_commerce_website.middlewares.middlewares.measure_execution_time_middleware',
+    'django_gems.middlewares.middlewares.measure_execution_time_middleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -120,7 +120,7 @@ LOGIN_REDIRECT_URL = reverse_lazy('index_page')
 LOGOUT_REDIRECT_URL = reverse_lazy('login_or_register_user')
 LOGIN_URL = reverse_lazy('login_or_register_user')
 
-AUTH_USER_MODEL = 'accounts.AccountUser'
+AUTH_USER_MODEL = 'user_account.AccountUser'
 
 CELERY_BROKER_URL = 'redis://localhost:6379'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379'

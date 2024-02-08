@@ -1,5 +1,5 @@
 from django import forms
-from e_commerce_website.jewelry.models import Category
+from django_gems.jewelry.models import Category
 
 
 class IndexForm(forms.Form):

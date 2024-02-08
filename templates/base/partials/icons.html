@@ -1,0 +1,94 @@
+<div class="icon-container">
+    <div class="icon-item">
+        <form action="{% url 'search_bar' %}?page={{ page_obj.number }}">
+            <input type="checkbox" id="search-toggle" class="search-toggle">
+            <input class="search" name="search" value="{{ search }}">
+            <label for="search-toggle" class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+        </form>
+    </div>
+    {% if likes_count > 0 %}
+        <div class="icon-item">
+            <a href="{% url 'display_liked_jewelries' %}">
+                <i class="fa-regular fa-heart"><span class="likes-count-nav">({{ likes_count }})</span></i>
+            </a>
+        </div>
+    {% else %}
+        <div class="icon-item">
+            <a href="{% url 'display_liked_jewelries' %}">
+                <i class="fa-regular fa-heart"></i>
+            </a>
+        </div>
+    {% endif %}
+    {% if cart_count > 0 %}
+        <div class="icon-item">
+            <a href="{% url 'view_shopping_cart' %}">
+                <i class="fa-solid fa-basket-shopping"><span class="cart-count-nav">({{ cart_count }})</span></i>
+            </a>
+        </div>
+    {% else %}
+        <div class="icon-item">
+            <a href="{% url 'view_shopping_cart' %}">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </a>
+        </div>
+    {% endif %}
+    {% if not request.user.is_authenticated %}
+        <div class="icon-item">
+            <a href="{% url 'login_or_register_user' %}">
+                <i class="fa-regular fa-user"></i>
+            </a>
+        </div>
+    {% else %}
+        <div class="icon-item">
+            <a href="{% url 'my_orders' pk=request.user.pk %}">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+            </a>
+        </div>
+        {#        <div class="icon-item">#}
+        {#            <a href="{% url 'profile_options' pk=request.user.pk %}">#}
+        {#                <i class="fa-regular fa-user"></i>#}
+        {#            </a>#}
+        {#        </div>#}
+        <ul class="dropdown" role="list" tabindex="0">
+            <li class="nav-item">
+                <i class="fa-regular fa-user"></i>
+            </li>
+            <li class="icon-dropdown dropdown-content">
+                {#                <p style="color: black">{{ user.profile.full_name }}</p>#}
+                {#                <p style="color: black">{{ request.user.profile.full_name }}</p>#}
+
+                <div id="profile-item-drop-down-name">
+                    {{ user.accountprofile.full_name }}
+                </div>
+                <div id="profile-item-drop-down-email">
+                    {{ user.email }}
+                </div>
+                {#                <p style="color: black">{{ request.user.accountprofile.full_name }}</p>#}
+                <a href="{% url 'update_user' pk=request.user.pk %}">
+                    Update Profile
+                </a>
+                <a href="{% url 'update_email' pk=request.user.pk %}">
+                    Change Email
+                </a>
+                <a href="{% url 'update_password' pk=request.user.pk %}">
+                    Change Password
+                </a>
+                <a href="{% url 'delete_user' pk=request.user.pk %}">
+                    <i class="fa-solid fa-user-slash"></i> Delete Profile
+                </a>
+            </li>
+            {#            <li class="icon-dropdown dropdown-content">#}
+            {#                <a href="{% url 'update_password' pk=request.user.pk %}">#}
+            {#                    Change Password#}
+            {#                </a>#}
+            {#            </li>#}
+        </ul>
+        <div class="icon-item">
+            <a href="{% url 'logout_user' %}">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+        </div>
+    {% endif %}
+</div>

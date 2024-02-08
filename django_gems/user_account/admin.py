@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth import get_user_model
 
-from e_commerce_website.profiles.forms import AccountProfileForm
+from django_gems.user_profile.forms import AccountProfileForm
 
 UserModel = get_user_model()
 

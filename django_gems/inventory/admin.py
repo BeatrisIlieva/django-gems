@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
-from e_commerce_website.inventory.models import Inventory
+from django_gems.inventory.models import Inventory
 
 
 @admin.register(Inventory)

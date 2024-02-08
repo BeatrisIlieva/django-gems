@@ -4,8 +4,8 @@ from collections import OrderedDict
 
 from django.db.models import Q
 
-from e_commerce_website.inventory.models import Inventory
-from e_commerce_website.jewelry.models import \
+from django_gems.inventory.models import Inventory
+from django_gems.jewelry.models import \
     Jewelry, \
     Category, \
     Metal, \

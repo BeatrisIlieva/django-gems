@@ -1,6 +1,6 @@
 from django import forms
 from django.core.validators import RegexValidator
-from e_commerce_website.order.validators import ExpirationDateValidator
+from django_gems.order.validators import ExpirationDateValidator
 
 
 class CardDetailsForm(forms.Form):

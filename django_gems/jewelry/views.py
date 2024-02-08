@@ -2,19 +2,19 @@ from django.db.models import Q
 from django.shortcuts import redirect
 from django.views.generic import TemplateView
 from django.views.generic.edit import FormMixin
-from e_commerce_website.jewelry.mixins import (
+from django_gems.jewelry.mixins import (
     DisplayJewelryMixin, LastViewedJewelriesMixin,
     JewelryStonesMixin, JewelryMetalsMixin, JewelriesStonesMixin, JewelriesMetalsMixin
 )
-from e_commerce_website.jewelry.models import (
+from django_gems.jewelry.models import (
     Jewelry, StoneType, StoneColor
 )
-from e_commerce_website.common.mixins import NavigationBarMixin
-from e_commerce_website.jewelry.forms import (
+from django_gems.common.mixins import NavigationBarMixin
+from django_gems.jewelry.forms import (
     JewelryCategoryForm, JewelryMetalForm,
     JewelryStoneTypeForm, JewelryStoneColorForm, SizeForm
 )
-from e_commerce_website.jewelry.funcs import (
+from django_gems.jewelry.funcs import (
     get_related_size_objects, get_related_choices,
     get_stone_type_pks, get_stone_color_pks
 )

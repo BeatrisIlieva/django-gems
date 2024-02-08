@@ -1,8 +1,8 @@
 from django.db import models
 from django.core import validators
 from django_countries.fields import CountryField
-from e_commerce_website.accounts.models import AccountUser
-from e_commerce_website.profiles.validators import (
+from django_gems.user_account.models import AccountUser
+from django_gems.user_profile.validators import (
     OnlyLettersValidator, OnlyDigitsValidator
 )
 

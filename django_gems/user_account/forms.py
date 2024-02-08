@@ -5,7 +5,7 @@ from django.contrib.auth.forms import (
     AuthenticationForm, UserChangeForm, PasswordChangeForm
 )
 
-from e_commerce_website.profiles.models import AccountProfile
+from django_gems.user_profile.models import AccountProfile
 
 UserModel = get_user_model()
 

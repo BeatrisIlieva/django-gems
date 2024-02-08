@@ -3,12 +3,12 @@ from _decimal import Decimal
 from django.db.models import Q
 from django.views.generic import ListView
 
-from e_commerce_website.inventory.models import Inventory
-from e_commerce_website.jewelry.models import Jewelry, Category, Metal, JewelryStone, StoneType, StoneColor
-from e_commerce_website.common.mixins import NavigationBarMixin
+from django_gems.inventory.models import Inventory
+from django_gems.jewelry.models import Jewelry, Category, Metal, JewelryStone, StoneType, StoneColor
+from django_gems.common.mixins import NavigationBarMixin
 from collections import OrderedDict
 
-from e_commerce_website.jewelry.funcs import \
+from django_gems.jewelry.funcs import \
     get_related_choices, \
     get_query_price, \
     get_category_pks, \

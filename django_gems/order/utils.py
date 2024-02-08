@@ -1,4 +1,4 @@
-from e_commerce_website.order.models import Order, OrderProducts
+from django_gems.order.models import Order, OrderProducts
 
 
 def add_order(user_pk):

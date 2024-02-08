@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from e_commerce_website.core.mixins import ChoicesMaxLengthMixin
+from django_gems.common.utils import ChoicesMaxLengthMixin
 
 
 class Category(models.Model):

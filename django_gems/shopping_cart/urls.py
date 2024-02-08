@@ -1,6 +1,6 @@
 from django.urls import path
 
-from e_commerce_website.shopping_cart.views import (
+from django_gems.shopping_cart.views import (
     DisplayShoppingCartView,
     UpdateShoppingCartView,
     AddToShoppingCartView

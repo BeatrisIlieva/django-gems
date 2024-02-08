@@ -1,8 +1,8 @@
 from celery import shared_task
 from django.db.models import F
 
-from e_commerce_website.inventory.models import Inventory
-from e_commerce_website.shopping_cart.models import ShoppingCart
+from django_gems.inventory.models import Inventory
+from django_gems.shopping_cart.models import ShoppingCart
 
 
 @shared_task

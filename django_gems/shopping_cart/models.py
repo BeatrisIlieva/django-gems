@@ -1,6 +1,6 @@
 from django.db import models
-from e_commerce_website.accounts.models import AccountUser
-from e_commerce_website.jewelry.models import Jewelry
+from django_gems.user_account.models import AccountUser
+from django_gems.jewelry.models import Jewelry
 
 
 class ShoppingCart(models.Model):

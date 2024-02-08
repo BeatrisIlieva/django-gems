@@ -1,6 +1,6 @@
 from django import forms
-from e_commerce_website.inventory.models import Inventory
-from e_commerce_website.jewelry.models import (
+from django_gems.inventory.models import Inventory
+from django_gems.jewelry.models import (
     Metal, StoneType, StoneColor, Size, Category
 )
 

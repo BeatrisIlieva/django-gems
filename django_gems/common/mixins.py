@@ -3,12 +3,12 @@ from django.views import View
 from django.views.decorators.cache import cache_page
 
 
-from e_commerce_website.common.utils import get_objects_by_choices
-from e_commerce_website.jewelry.models import Category, \
+from django_gems.common.utils import get_objects_by_choices
+from django_gems.jewelry.models import Category, \
     Metal, \
     StoneType, \
     StoneColor
-from e_commerce_website.wishlist.models import JewelryLike
+from django_gems.wishlist.models import JewelryLike
 
 
 # class CachedViewMixin:

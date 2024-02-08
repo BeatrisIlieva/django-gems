@@ -1,6 +1,6 @@
 from django.urls import path
 
-from e_commerce_website.common.views import (
+from django_gems.common.views import (
     IndexView,
     SearchBarView, ProfileOptionsView, PasswordChangedSuccessfully, EmailChangedSuccessfully,
     DetailsChangedSuccessfully, ProfileDeletedSuccessfully

@@ -6,15 +6,15 @@ from django.urls import reverse
 
 from django.views.generic import FormView, TemplateView, RedirectView
 
-from e_commerce_website.common.mixins import NavigationBarMixin
-from e_commerce_website.inventory.models import Inventory
-from e_commerce_website.inventory.utils import remove_quantity_from_inventory, add_quantity_to_inventory
-from e_commerce_website.jewelry.mixins import LastViewedJewelriesMixin, JewelryStonesMixin, JewelryMetalsMixin
-from e_commerce_website.jewelry.models import Jewelry
-from e_commerce_website.shopping_cart.forms import QuantityUpdateForm
-from e_commerce_website.shopping_cart.mixins import MaxQuantityMixin
+from django_gems.common.mixins import NavigationBarMixin
+from django_gems.inventory.models import Inventory
+from django_gems.inventory.utils import remove_quantity_from_inventory, add_quantity_to_inventory
+from django_gems.jewelry.mixins import LastViewedJewelriesMixin, JewelryStonesMixin, JewelryMetalsMixin
+from django_gems.jewelry.models import Jewelry
+from django_gems.shopping_cart.forms import QuantityUpdateForm
+from django_gems.shopping_cart.mixins import MaxQuantityMixin
 
-from e_commerce_website.shopping_cart.models import ShoppingCart
+from django_gems.shopping_cart.models import ShoppingCart
 
 
 class AddToShoppingCartView(RedirectView):

@@ -1,10 +1,10 @@
 from django.db.models import Q
 from django.contrib.auth import get_user_model
 from django.views.generic import TemplateView, ListView, DetailView
-from e_commerce_website.common.mixins import NavigationBarMixin
-from e_commerce_website.common.utils import get_object_pks
-from e_commerce_website.jewelry.mixins import JewelryIsLikedByUserMixin, LastViewedJewelriesMixin
-from e_commerce_website.jewelry.models import (
+from django_gems.common.mixins import NavigationBarMixin
+from django_gems.common.utils import get_object_pks
+from django_gems.jewelry.mixins import JewelryIsLikedByUserMixin, LastViewedJewelriesMixin
+from django_gems.jewelry.models import (
     Category, Metal, StoneType, StoneColor, Jewelry
 )
 

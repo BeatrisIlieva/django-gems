@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from e_commerce_website.profiles.models import AccountProfile
+from django_gems.user_profile.models import AccountProfile
 
 
 @admin.register(AccountProfile)

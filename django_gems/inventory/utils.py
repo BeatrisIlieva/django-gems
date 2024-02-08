@@ -1,4 +1,4 @@
-from e_commerce_website.inventory.models import Inventory
+from django_gems.inventory.models import Inventory
 
 
 def remove_quantity_from_inventory(jewelry, quantity):

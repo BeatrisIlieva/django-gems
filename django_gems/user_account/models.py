@@ -1,8 +1,8 @@
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from django.db import models
-from e_commerce_website.accounts.manager import AccountUserManager
-from e_commerce_website.jewelry.models import Jewelry
+from django_gems.user_account.manager import AccountUserManager
+from django_gems.jewelry.models import Jewelry
 
 
 class AccountUser(AbstractBaseUser, PermissionsMixin):

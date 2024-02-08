@@ -6,13 +6,13 @@ from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import CreateView, UpdateView
-from e_commerce_website.accounts.forms import RegisterUserForm, LoginUserForm, CustomUpdateEmailForm, \
+from django_gems.user_account.forms import RegisterUserForm, LoginUserForm, CustomUpdateEmailForm, \
     CustomUpdatePasswordForm
-from e_commerce_website.common.mixins import NavigationBarMixin
+from django_gems.common.mixins import NavigationBarMixin
 
 
 class RegisterUserView(NavigationBarMixin, CreateView):
-    template_name = 'user_account/register.html'
+    template_name = 'user-account/register.html'
     form_class = RegisterUserForm
     success_url = reverse_lazy('index_page')
 
@@ -39,7 +39,7 @@ class RegisterUserView(NavigationBarMixin, CreateView):
 
 
 class LoginOrRegisterUserView(NavigationBarMixin, LoginView):
-    template_name = 'user_account/login-or-register.html'
+    template_name = 'user-account/login-or-register.html'
     form_class = LoginUserForm
 
     def get_context_data(self, **kwargs):
@@ -59,7 +59,7 @@ class LogoutUserView(View):
 
 
 class CustomUpdateEmailView(UpdateView):
-    template_name = 'user_account/update-email.html'
+    template_name = 'user-account/update-email.html'
     form_class = CustomUpdateEmailForm
 
     def get_object(self, queryset=None):
@@ -72,7 +72,7 @@ class CustomUpdateEmailView(UpdateView):
 
 
 class CustomUpdatePasswordView(SuccessMessageMixin,PasswordChangeView):
-    template_name = 'user_account/update-password.html'
+    template_name = 'user-account/update-password.html'
     form_class = CustomUpdatePasswordForm
 
     def get_success_url(self):

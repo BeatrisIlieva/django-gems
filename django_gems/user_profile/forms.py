@@ -1,6 +1,6 @@
 from django import forms
 from django_countries import countries
-from e_commerce_website.profiles.models import AccountProfile
+from django_gems.user_profile.models import AccountProfile
 
 
 class AccountProfileForm(forms.ModelForm):

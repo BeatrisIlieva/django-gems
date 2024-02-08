@@ -1,6 +1,6 @@
 from django.urls import path
 
-from e_commerce_website.order.views import (
+from django_gems.order.views import (
     CompleteOrderView,
     CompleteTransactionView,
     OrderDetailsView,

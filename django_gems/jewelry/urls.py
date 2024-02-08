@@ -1,7 +1,7 @@
 from django.urls import path
 
-from e_commerce_website.jewelry.utils import view_jewelry, select_size
-from e_commerce_website.jewelry.views import (
+from django_gems.jewelry.utils import view_jewelry, select_size
+from django_gems.jewelry.views import (
     JewelryDetailsView,
     DisplayJewelriesByCategoryView,
     DisplayJewelriesByMetalView,

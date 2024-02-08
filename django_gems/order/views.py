@@ -7,17 +7,17 @@ from django.urls import reverse_lazy
 from django.views.generic import UpdateView, TemplateView
 from django.views.generic.edit import FormMixin
 
-from e_commerce_website.profiles.forms import AccountProfileForm
+from django_gems.user_profile.forms import AccountProfileForm
 
-from e_commerce_website.common.mixins import NavigationBarMixin
-from e_commerce_website.inventory.models import Inventory
-from e_commerce_website.jewelry.models import Jewelry
-from e_commerce_website.order.forms import CardDetailsForm
-from e_commerce_website.order.models import Order, OrderProducts
-from e_commerce_website.order.utils import add_order, add_order_details
-from e_commerce_website.profiles.models import AccountProfile
+from django_gems.common.mixins import NavigationBarMixin
+from django_gems.inventory.models import Inventory
+from django_gems.jewelry.models import Jewelry
+from django_gems.order.forms import CardDetailsForm
+from django_gems.order.models import Order, OrderProducts
+from django_gems.order.utils import add_order, add_order_details
+from django_gems.user_profile.models import AccountProfile
 
-from e_commerce_website.shopping_cart.models import ShoppingCart
+from django_gems.shopping_cart.models import ShoppingCart
 
 
 class CompleteOrderView(LoginRequiredMixin, NavigationBarMixin, UpdateView):

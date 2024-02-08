@@ -1,7 +1,7 @@
 from django.db import models
-from e_commerce_website.core.mixins import ChoicesMaxLengthMixin
+from django_gems.common.utils import ChoicesMaxLengthMixin
 from django.utils.translation import gettext_lazy as _
-from e_commerce_website.jewelry.models import Jewelry
+from django_gems.jewelry.models import Jewelry
 
 
 class Inventory(models.Model):

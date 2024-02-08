@@ -1,6 +1,6 @@
 from django.shortcuts import redirect
 
-from e_commerce_website.jewelry.models import Jewelry
+from django_gems.jewelry.models import Jewelry
 
 
 def view_jewelry(request, pk):

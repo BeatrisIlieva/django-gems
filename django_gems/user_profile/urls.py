@@ -1,6 +1,6 @@
 from django.urls import path, include
 
-from e_commerce_website.profiles.views import (
+from django_gems.user_profile.views import (
     UserUpdateView,
     UserDeleteView
 )

@@ -15,85 +15,28 @@
     <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
     <link rel="stylesheet" href="{% static 'icons/icons.css' %}" />
   </head>
-  <body>
-    <header id="header">
+  <body class="body">
+    <header class="header">
       <div class="logo-img-container">
         <img
-          class="logo-img"
+          class="logo"
           src="https://res.cloudinary.com/deztgvefu/image/upload/v1706426486/template_images/cute-little-pink-cat-watercolor-png_2_kxmwtq.webp"
           alt="Logo Image"
         />
       </div>
       <div class="logo-title-container">
-        <h1 class="logo-title">FINE JEWELRIES</h1>
+        <h1 class="logo-title">FINE <br />JEWELRIES</h1>
       </div>
-      <nav class="navigation">
-        <ul class="dropdown" role="list" tabindex="0">
-          <li class="nav-item">BY CATEGORY <i class="fa-solid fa-sort-down"></i> </li>
-          <ul class="dropdown-content" role="list">
-            {% for category, title in categories_by_choices.items %}
-            <li>
-              <a
-                href="{% url 'display_jewelries_by_category' selected_pk=category.pk %}"
-                >{{ title }}</a
-              >
-            </li>
-            {% endfor %}
-          </ul>
-        </ul>
-      </nav>
+      {% include 'base/partials/nav.html' %}
+      {% include 'base/partials/icons.html' %}
     </header>
-    <main>
-      <div id="main"></div>
+    <main class="main">
+      <div>Main</div>
     </main>
-    <footer>
-      <div id="footer">
-        © 2024 Fine Jewelries | Beatris Ilieve | beatrisilieve@icloud.com
-      </div>
-    </footer>
-  </body>
-</html>
-
-{% comment %} {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://res.cloudinary.com/deztgvefu/image/upload/v1706426486/template_images/cute-little-pink-cat-watercolor-png_2_kxmwtq.webp"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Fine Jewelries</title>
-    <link rel="stylesheet" href="{% static 'reset/reset.css' %}" />
-    {#
-    <link rel="stylesheet" href="{% static 'styles/colors.styles' %}" />
-    #}
-    <link rel="stylesheet" href="{% static 'styles/styles.css' %}" />
-    <link rel="stylesheet" href="{% static 'icons/icons.css' %}" />
-  </head>
-  <body>
-    <header class="header">
-      <img
-        class="logo-image"
-        src="https://res.cloudinary.com/deztgvefu/image/upload/v1706426486/template_images/cute-little-pink-cat-watercolor-png_2_kxmwtq.webp"
-        alt="Logo"
-      />
-      <span class="logo-title">FINE JEWELRIES</span>
-      {% include 'base/partials/nav.html' %} {% include
-      'base/partials/icons.html' %}
-    </header>
-    <main>{% block page_content %} {% endblock %}</main>
-    <footer class="footer-content">
+    <footer class="footer">
       <div>
         © 2024 Fine Jewelries | Beatris Ilieve | beatrisilieve@icloud.com
       </div>
     </footer>
   </body>
 </html>
-{% endcomment %}

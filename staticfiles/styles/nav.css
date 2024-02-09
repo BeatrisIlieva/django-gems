@@ -1,9 +1,23 @@
-#header .dropdown {
-    position: relative;
-    cursor: pointer; 
+.btn {
+    all: unset;
+    padding: 4px;
+    cursor: pointer;
+    color: var(--white);
 }
 
-#header .dropdown-content {
+
+.navigation{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    left: 30px;
     background-color: var(--white-pink);
     color: var(--dark-blue);
     text-align: center;
@@ -18,7 +32,7 @@
 }
 
 
-#header .dropdown-content a {
+.dropdown-content a {
     color: var(--dark-blue);
     padding: 12px 16px;
     text-decoration: none;
@@ -27,11 +41,58 @@
     z-index: 100;
 }
 
-#header .dropdown-content a:hover {
+.dropdown-content a:hover {
     text-decoration: underline;
     text-decoration-color: var(--dark-blue);
 }
 
-#header .dropdown:focus-within .dropdown-content {
+.dropdown:focus-within .dropdown-content {
     display: block;
+}
+
+.search-toggle {
+    display: none;
+}
+
+.search {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 100px;
+    z-index: 1;
+}
+
+.search-toggle:checked + .search {
+    display: inline-block;
+}
+
+.icon-item {
+    display: inline-block;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.header i {
+    color: white;
+    margin-left: 18px;
+}
+
+.header i:hover, .header li:hover {
+    color: var(--dark-pink);
+}
+
+.likes-count-nav {
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: 200;
+}
+
+.cart-count-nav {
+    font-size: 16px;
+    font-family: Arial;
+    font-weight: 200;
 }

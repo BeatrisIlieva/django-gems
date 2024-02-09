@@ -15,12 +15,25 @@
     text-align: center;
     margin-top: -98px;
     margin-left: -26px;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-title {
-    font-size: 20px;
+    font-size: 22px;
     border-bottom-color: var(--dark-pink);
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
     border-bottom-style: ridge;
 }
+
+
+.logo-span-img img {
+    display: inline-block;
+    padding-top: 2px;
+    width: 3.5vh;
+    height: 3.5vh;
+}
+
+
+

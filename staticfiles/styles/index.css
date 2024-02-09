@@ -1,7 +1,7 @@
 .hero {
     display: flex;
     justify-content: space-evenly;
-    /* align-items: center; */
+    /* align-items: center;  */
     /* justify-content: center; */
 }
 
@@ -13,15 +13,22 @@
 
 .hero-wrapper {
     /* margin-right: 62px; */
+    padding-top: 22px;
     text-align: center;
     width: 38%;
 }
 
 .hero-wrapper .hero-title {
-    padding-bottom: 18px;
+    padding-bottom: 2px;
     font-size: 22px;
+}
+
+.hero-wrapper .hero-sub-title {
+    padding-bottom:8px;
+    font-size: 20px;
 }
 
 .hero-wrapper .hero-desc {
     font-size: 18px;
+    padding-bottom: 12px;
 }

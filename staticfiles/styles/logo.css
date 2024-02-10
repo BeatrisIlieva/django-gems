@@ -1,7 +1,7 @@
 .logo-img-container {
     height: 24vh;
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .logo-img {
@@ -30,7 +30,7 @@
 
 .logo-span-img img {
     display: inline-block;
-    padding-top: 2px;
+    padding-top: 6px;
     width: 3.5vh;
     height: 3.5vh;
 }

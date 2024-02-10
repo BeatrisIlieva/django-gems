@@ -8,7 +8,7 @@
     font-family: FranklinGothic;
     color: var(--white);
     grid-template-columns: 100vw;
-    grid-template-rows: 34vh auto 6vh;
+    grid-template-rows: 24vh auto 6vh;
     grid-template-areas:
       "header"
       "main"
@@ -18,16 +18,13 @@
 .header {
     grid-area: header;
     display: flex;
-    flex-wrap: wrap;
     background-color: var(--dark-blue);
-    font-size: 16px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    font-size: 18px;
     border-bottom-color: var(--dark-pink);
     border-bottom-width: 2px;
     border-bottom-style: ridge;
     align-items: center;
-    padding: 0px 32px;
+    padding: 0px 62px;
     top: 0;
     position: sticky;
     z-index: 1;
@@ -38,7 +35,6 @@
     color: var(--dark-blue);
     background-color: var(--white);
     font-size: 16px;
-    padding: 16px 32px;
 }
 
 .footer {
@@ -49,8 +45,6 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     border-top-color: var(--dark-pink);
     border-top-width: 2px;
     border-top-style: ridge;

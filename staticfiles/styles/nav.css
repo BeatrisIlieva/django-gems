@@ -6,7 +6,7 @@
 }
 
 
-.navigation{
+.header .navigation{
     margin-left: auto;
     margin-right: auto;
 }
@@ -15,6 +15,24 @@
 .dropdown {
     position: relative;
 }
+
+.dropdown:hover {
+    color: var(--dark-pink);
+
+}
+
+.zoom-text {
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown:hover .zoom-text {
+    transform: scale(1.2);
+}
+
+/* .icon-container:hover .zoom-text {
+    transform: scale(1.2);
+} */
+
 
 .dropdown-content {
     left: 30px;

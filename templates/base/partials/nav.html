@@ -1,8 +1,7 @@
 <nav class="navigation">
-    <button class="btn dropdown" role="list" tabindex="0">
-      <ul class="nav-item">
-        BY CATEGORY<i class="fa-solid fa-sort-down"></i>
-      </ul>
+  <button class="btn dropdown" role="list" tabindex="0">
+    <ul class="nav-item zoom-text">
+      BY CATEGORY<i class="fa-solid fa-sort-down"></i>
       <li class="dropdown-content">
         {% for category, title in categories_by_choices.items %}
         <a
@@ -11,24 +10,23 @@
         >
         {% endfor %}
       </li>
-    </button>
-    <button class="btn dropdown" role="list" tabindex="0">
-      <ul class="nav-item">
-        BY METAL<i class="fa-solid fa-sort-down"></i>
-      </ul>
+    </ul>
+  </button>
+  <button class="btn dropdown" role="list" tabindex="0">
+    <ul class="nav-item zoom-text">
+      BY METAL<i class="fa-solid fa-sort-down"></i>
       <li class="dropdown-content">
         {% for metal, title in metals_by_choices.items %}
-        <a
-          href="{% url 'display_jewelries_by_metal' selected_pk=metal.pk %}"
+        <a href="{% url 'display_jewelries_by_metal' selected_pk=metal.pk %}"
           >{{ title }}</a
         >
         {% endfor %}
       </li>
-    </button>
-    <button class="btn dropdown" role="list" tabindex="0">
-      <ul class="nav-item">
-        BY GEMSTONE<i class="fa-solid fa-sort-down"></i>
-      </ul>
+    </ul>
+  </button>
+  <button class="btn dropdown" role="list" tabindex="0">
+    <ul class="nav-item zoom-text">
+      BY GEMSTONE<i class="fa-solid fa-sort-down"></i>
       <li class="dropdown-content">
         {% for stone_type, title in stone_types_by_choices.items %}
         <a
@@ -37,11 +35,11 @@
         >
         {% endfor %}
       </li>
-    </button>
-    <button class="btn dropdown" role="list" tabindex="0">
-      <ul class="nav-item">
-        BY COLOR<i class="fa-solid fa-sort-down"></i>
-      </ul>
+    </ul>
+  </button>
+  <button class="btn dropdown" role="list" tabindex="0">
+    <ul class="nav-item zoom-text">
+      BY COLOR<i class="fa-solid fa-sort-down"></i>
       <li class="dropdown-content">
         {% for stone_color, title in stone_colors_by_choices.items %}
         <a
@@ -50,5 +48,6 @@
         >
         {% endfor %}
       </li>
-    </button>
-  </nav>
+    </ul>
+  </button>
+</nav>

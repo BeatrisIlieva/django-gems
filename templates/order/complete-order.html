@@ -3,68 +3,64 @@
 {% load countries %}
 {% get_countries as countries %}
 {% block page_content %}
-    <article class="details-card">
-        <img class="img-bg-details"
-             src="https://res.cloudinary.com/deztgvefu/image/upload/v1706522736/template_images/pink-delivery-car-deliver-express-with-cardboard-boxes-cartoon-shipping-transportation-concept-pink-background-3d-rendering_56104-1526_ttrakq.jpg"
-             alt="image">
-        <form method="post">
-            <div class="complete-order-container">
-                <fieldset class="fieldset-content">
-                    <legend class="fieldset-title">Personal Information</legend>
-                    <ul role="list">
-                        <li class="fieldset-element">
-                            {{ form.first_name.label }}
-                        </li>
-                        <li class="fieldset-element">
-                            {{ form.first_name }}
-                        </li>
-                        <li class="fieldset-element">
-                            {{ form.last_name.label }}
-                        </li>
-                        <li class="fieldset-element">
-                            {{ form.last_name }}
-                        </li>
-                        <li class="fieldset-element">
-                            {{ form.phone_number.label }}
-                        </li>
-                        <li class="fieldset-element">
-                            {{ form.phone_number }}
-                        </li>
-                    </ul>
-                </fieldset>
-                <fieldset class="fieldset-content">
-                    <legend class="fieldset-title">Delivery Information</legend>
-                    <ul role="list">
-                        <li class="fieldset-element">
-                            {{ form.country.label }}
-                        </li>
-                        <li class="fieldset-element">
-                            {{ form.country }}
-                        </li>
-                        <li class="fieldset-element">
-                            {{ form.city.label }}
-                        </li>
-                        <li class="fieldset-element">
-                            {{ form.city }}
-                        </li>
-                        <li class="fieldset-element">
-                            {{ form.delivery_address.label }}
-                        </li>
-                        <li class="fieldset-element">
-                            {{ form.delivery_address }}
-                        </li>
-                    </ul>
-                </fieldset>
-                <div class="continue-button">
-                    <a href="{% url 'complete_transaction' pk=object.pk %}"></a>
-                    <button class="button hover filled_pink" type="submit">
-                        CONTINUE <i class="fa-solid fa-angles-right"></i>
-                    </button>
-                </div>
-            </div>
-            {% csrf_token %}
-        </form>
-    </article>
+    <section class="complete-order">
+        <div class="form-container">
+            <form method="post">
+                <h4 class="personal-details-title">Personal Information</h4>
+                <ul class="personal-details-items" role="list">
+                    <li class="personal-details-item">
+                        {{ form.first_name.label }}
+                    </li>
+                    <li class="personal-details-item">
+                        {{ form.first_name }}
+                    </li>
+                    <li class="personal-details-item">
+                        {{ form.last_name.label }}
+                    </li>
+                    <li class="personal-details-item">
+                        {{ form.last_name }}
+                    </li>
+                    <li class="personal-details-item">
+                        {{ form.phone_number.label }}
+                    </li>
+                    <li class="personal-details-item">
+                        {{ form.phone_number }}
+                    </li>
+                </ul>
+                <h4 class="personal-details-title">Delivery Information</h4>
+                <ul class="personal-details-items" role="list">
+                    <li class="personal-details-item">
+                        {{ form.country.label }}
+                    </li>
+                    <li class="personal-details-item">
+                        {{ form.country }}
+                    </li>
+                    <li class="personal-details-item">
+                        {{ form.city.label }}
+                    </li>
+                    <li class="personal-details-item">
+                        {{ form.city }}
+                    </li>
+                    <li class="personal-details-item">
+                        {{ form.delivery_address.label }}
+                    </li>
+                    <li class="personal-details-item">
+                        {{ form.delivery_address }}
+                    </li>
+                </ul>
+                <a href="{% url 'complete_transaction' pk=object.pk %}"></a>
+                <button class="button hover filled_pink" type="submit">
+                    CONTINUE <i class="fa-solid fa-angles-right"></i>
+                </button>
+                {% csrf_token %}
+            </form>
+        </div>
+        <div class="delivery-img-container">
+            <img class="delivery-img"
+                 src="https://res.cloudinary.com/deztgvefu/image/upload/v1706522736/template_images/pink-delivery-car-deliver-express-with-cardboard-boxes-cartoon-shipping-transportation-concept-pink-background-3d-rendering_56104-1526_ttrakq.jpg"
+                 alt="image">
+        </div>
+    </section>
     {% if form.errors.items %}
         {% include 'error-messages/error-messages.html' %}
     {% endif %}

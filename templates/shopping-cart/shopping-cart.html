@@ -2,7 +2,12 @@
 {% load dict %}
 {% load static %}
 {% block page_content %}
-    <h4 class="shopping-cart-title">Your Bag</h4>
+    <div class="shopping-cart-title-container">
+        <h4 class="shopping-cart-title">Your Bag</h4>
+        <div class="cart-img-container">
+            <img class="cart-img" src="https://res.cloudinary.com/deztgvefu/image/upload/v1706465957/template_images/229937_m9taue.png" alt="image">
+        </div>
+    </div>
 <section class="shopping-cart-wrapper">
     <div class="left-container">
         {% for jewelry, details in jewelries_by_quantity_and_size.items %}
@@ -71,10 +76,26 @@
                         </span>
                     {% endif %}
                 </li>  
-                <li class="composition-item">
+                <li class="composition-item-size">
                     <span>Size: {{ details.size }} cm.</span>
                 </li>
             </ul>
+        </div>
+        <div class="price-and-quantity">
+            <p class="item-price">
+                {{ details.jewelry_total_price }}
+            </p>
+<div class="item-quantity">
+    <form action="{% url 'update_shopping_cart' jewelry.pk %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="jewelry_id" value="{{ jewelry.pk }}">
+        <input type="number" name="quantity" value="{{ details.quantity }}"
+               min={{ details.min_quantity }} max={{ details.max_quantity }}>
+        <button type="submit" name="update_quantity" class="button hover filled_pink">
+            <i class="fa-solid fa-pencil"></i> UPDATE
+        </button>
+    </form>
+</div>
         </div>
     </section>
     {%endfor%}

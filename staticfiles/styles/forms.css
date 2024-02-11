@@ -6,7 +6,6 @@
     font-size: 16px;
 }
 
-
 .form-title {
     font-size: 20px;
     margin-bottom: 14px;
@@ -22,7 +21,6 @@
     color: pink;
     margin-top: 0px;
 } */
-
 
 .form-item {
     font-size: 18px;
@@ -86,7 +84,6 @@ li.form-item:last-of-type {
     align-items: center;
 
 }
-
 
 .form-container-login-or-register {
     display: flex;

@@ -15,7 +15,8 @@
                         {{ form.email }}
                     </li>
                 </ul>
-                <button class="edit-btn button hover filled_green" type="submit"><i class="fa-regular fa-floppy-disk"></i>
+                <button class="edit-btn button hover filled_green" type="submit"><i
+                        class="fa-regular fa-floppy-disk"></i>
                     Confirm and Save
                 </button>
                 {% csrf_token %}
@@ -26,29 +27,3 @@
         {% include 'error-messages/error-messages.html' %}
     {% endif %}
 {% endblock %}
-
-
-
-{% comment %} {% extends 'base/base.html' %}
-{% load static %}
-{% block page_content %}
-    <form method="post">
-        <div class="fieldset-container-update">
-            <fieldset class="fieldset-content">
-                <legend class="fieldset-title">Change Email</legend>
-                <ul role="list">
-                    <li class="fieldset-element">
-                        {{ form.email.label }}
-                    </li>
-                    <li class="fieldset-element">
-                        {{ form.email }}
-                    </li>
-                </ul>
-                <button type="submit" class="button hover filled_green">
-                    <i class="fa-solid fa-user-plus"></i> Change Email
-                </button>
-                {% csrf_token %}
-            </fieldset>
-        </div>
-    </form>
-{% endblock %} {% endcomment %}

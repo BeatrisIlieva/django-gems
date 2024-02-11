@@ -117,16 +117,20 @@
 
 .right-container{
     width: calc(36% - 62px);
-
 }
 
 .order-summary-container {
-    background-color: pink;
     position: sticky;
     top: calc(24% + 12px);
 }
 
-.some {
+.order-summary-title {
     margin-top: 0px;
-    font-size: 50px;
+    font-size: 18px;
 } 
+
+.order-summary-items {
+    display: flex;
+    justify-content: space-between;
+}
+

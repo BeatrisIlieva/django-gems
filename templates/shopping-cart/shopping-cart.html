@@ -27,8 +27,8 @@
                     </div>
                     <div class="jewelry-composition">
                         <h5 class="composition-title">{{ jewelry.title }}</h5>
-                        <ul class="composition-list" role="list">
-                            <li class="composition-list" role="list">
+                        <ul role="list">
+                            <li>
                                 {% if jewelry.jewelry_metals.count > 1 %}
                                     {% for metal_info in jewelry.jewelry_metals.all %}
                                         <span class="composition-item">
@@ -53,7 +53,7 @@
                         </span>
                                 {% endif %}
                             </li>
-                            <li class="composition-list" role="list">
+                            <li>
                                 {% if jewelry.jewelry_stones.count > 1 %}
                                     {% for stone_info in jewelry.jewelry_stones.all %}
                                         <span class="composition-item">
@@ -104,7 +104,11 @@
         </div>
         <div class="right-container">
             <section class="order-summary-container">
-                <h4 class="some">Order Summary</h4>
+                <h4 class="order-summary-title">Order Summary</h4>
+                <div class="order-summary-items">
+                    <p>Subtotal</p>
+                    <p>{{ total_price }}</p>
+                </div>
             </section>
         </div>
     </section>

@@ -3,48 +3,48 @@
 {% load countries %}
 {% get_countries as countries %}
 {% block page_content %}
-    <section class="complete-order">
-        <div class="form-container">
+    <section class="form-container">
+        <div>
             <form method="post">
-                <h4 class="personal-details-title">Personal Information</h4>
-                <ul class="personal-details-items" role="list">
-                    <li class="personal-details-item">
+                <h4 class="form-title">Personal Information</h4>
+                <ul role="list">
+                    <li class="form-item">
                         {{ form.first_name.label }}
                     </li>
-                    <li class="personal-details-item">
+                    <li class="form-item">
                         {{ form.first_name }}
                     </li>
-                    <li class="personal-details-item">
+                    <li class="form-item">
                         {{ form.last_name.label }}
                     </li>
-                    <li class="personal-details-item">
+                    <li class="form-item">
                         {{ form.last_name }}
                     </li>
-                    <li class="personal-details-item">
+                    <li class="form-item">
                         {{ form.phone_number.label }}
                     </li>
-                    <li class="personal-details-item">
+                    <li class="form-item">
                         {{ form.phone_number }}
                     </li>
                 </ul>
-                <h4 class="personal-details-title">Delivery Information</h4>
-                <ul class="personal-details-items" role="list">
-                    <li class="personal-details-item">
+                <h4 class="form-title">Delivery Information</h4>
+                <ul role="list">
+                    <li class="form-item">
                         {{ form.country.label }}
                     </li>
-                    <li class="personal-details-item">
+                    <li class="form-item">
                         {{ form.country }}
                     </li>
-                    <li class="personal-details-item">
+                    <li class="form-item">
                         {{ form.city.label }}
                     </li>
-                    <li class="personal-details-item">
+                    <li class="form-item">
                         {{ form.city }}
                     </li>
-                    <li class="personal-details-item">
+                    <li class="form-item">
                         {{ form.delivery_address.label }}
                     </li>
-                    <li class="personal-details-item">
+                    <li class="form-item">
                         {{ form.delivery_address }}
                     </li>
                 </ul>
@@ -55,8 +55,8 @@
                 {% csrf_token %}
             </form>
         </div>
-        <div class="delivery-img-container">
-            <img class="delivery-img"
+        <div class="form-img-container">
+            <img class="form-img"
                  src="https://res.cloudinary.com/deztgvefu/image/upload/v1706522736/template_images/pink-delivery-car-deliver-express-with-cardboard-boxes-cartoon-shipping-transportation-concept-pink-background-3d-rendering_56104-1526_ttrakq.jpg"
                  alt="image">
         </div>

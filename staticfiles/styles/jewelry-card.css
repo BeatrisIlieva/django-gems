@@ -1,4 +1,4 @@
-.jewelry-cards{
+.jewelry-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px 32px;
@@ -29,8 +29,6 @@
 
 .jewelry-card .jewelry-card-content {
     position: absolute;
-    /*bottom: -100%;*/
-    /*bottom: -441px;*/
     left: 0;
     width: 100%;
     font-size: 18px;
@@ -38,11 +36,11 @@
     padding: 12px;
     transition: bottom 300ms linear;
 
-background: rgb(4,7,32);
-background: linear-gradient(0deg, rgba(4,7,32,0.9262298669467787) 0%, rgba(255,183,206,0.7413559173669468) 30%, rgba(255,248,250,0) 63%);
+    background: rgb(4, 7, 32);
+    background: linear-gradient(0deg, rgba(4, 7, 32, 0.9262298669467787) 0%, rgba(255, 183, 206, 0.7413559173669468) 30%, rgba(255, 248, 250, 0) 63%);
 }
 
-.jewelry-card .jewelry-card-meta{
+.jewelry-card .jewelry-card-meta {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     color: #040720;
@@ -54,8 +52,7 @@ background: linear-gradient(0deg, rgba(4,7,32,0.9262298669467787) 0%, rgba(255,1
     overflow: hidden;
 }
 
-.jewelry-card:hover .jewelry-card-content{
-        /*top: 0px;*/
+.jewelry-card:hover .jewelry-card-content {
     bottom: 0px;
 }
 

@@ -100,6 +100,7 @@
 .jewelry-composition {
     width: 44%;
     margin:18px 18px 18px 0px;
+    position: relative;
 }
 
 .composition-title {
@@ -114,7 +115,8 @@
 }
 
 .composition-item-size {
-    margin-top: 12px;
+    position: absolute;
+    bottom: 0;
 }
 
 .price-and-quantity {

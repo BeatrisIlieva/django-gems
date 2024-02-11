@@ -11,10 +11,12 @@
         </h2>
     </div>
     {% else %}
-    <section class="orders-history-title">
-        <h2>My orders</h2>
-    </section>
-    {% for order_pk, details in order_details.items %}
+
+    <div class="orders-history-container">
+        <section class="orders-history-title">
+            <h2>My orders</h2>
+        </section>
+        {% for order_pk, details in order_details.items %}
         <section class="orders-section">
             <div class="order-title-content">
                 <h3 class="order-title">Order ID: {{ order_pk }}</h3>
@@ -35,6 +37,7 @@
             </div>
         </section>
     {% endfor %}
+    </div>
     {% endif %}
 {% endblock %}
 

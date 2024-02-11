@@ -1,7 +1,6 @@
 .logo-img-container {
     height: 24vh;
     display: flex;
-    /* overflow: hidden; */
 }
 
 .logo-img {
@@ -10,7 +9,7 @@
     object-fit: contain;
 }
 
-.logo-title-container{
+.logo-title-container {
     display: flex;
     text-align: center;
     margin-top: -98px;
@@ -26,7 +25,6 @@
     border-bottom-left-radius: 6px;
     border-bottom-style: ridge;
 }
-
 
 .logo-span-img img {
     display: inline-block;

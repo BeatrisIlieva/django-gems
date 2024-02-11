@@ -1,4 +1,42 @@
 {% extends 'base/base.html' %}
+{% load static %}
+{% load countries %}
+{% get_countries as countries %}
+{% block page_content %}
+    <section class="delete-profile-container">
+<div class="left-delete-container">
+    <h4 class="delete-profile-title">Are you sure you want to delete your profile?</h4>
+    <div class="delete-profile-items">
+        
+            <div>
+                <form method="post" action="{% url 'delete_user' pk=request.user.pk %}">
+                    <button class="button hover filled_red">Yes</button>
+                    {% csrf_token %}
+                </form>
+            </div>
+            <div>
+                <button class="button filled_green">
+                    <a id="go-back" href="{% url 'update_user' pk=request.user.pk %}">Go Back</a>
+                </button>
+            </div>
+    </div>
+</div>
+{% comment %} <div class="right-delete-container"> {% endcomment %}
+    <div class="form-img-container">
+        <img class="form-img"
+             src="https://res.cloudinary.com/deztgvefu/image/upload/v1706630328/template_images/8138196_1_f9hgnv.jpg"
+             alt="image">
+    {% comment %} </div> {% endcomment %}
+</div>
+    </section>
+    {% if form.errors.items %}
+        {% include 'error-messages/error-messages.html' %}
+    {% endif %}
+{% endblock %}
+
+
+
+{% comment %} {% extends 'base/base.html' %}
 {% block page_content %}
     <article class="wish-list-card">
         <img class="img-bg"
@@ -25,4 +63,4 @@
         {% include 'wishlist/jewelry-card.html' %}
     {% endif %}
     {% include 'common/pagination.html' %}
-{% endblock %}
+{% endblock %} {% endcomment %}

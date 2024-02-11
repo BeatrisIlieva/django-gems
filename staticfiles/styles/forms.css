@@ -51,3 +51,74 @@ li.form-item:last-of-type {
     flex-direction: column;
     gap: 40px;
 }
+
+.changed-container {
+    color: var(--dark-blue);
+    font-size: 22px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.changed-container i {
+    font-size: 80px;
+}
+
+.delete-profile-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 96px;
+}
+
+.delete-profile-title {
+    font-size: 22px;
+}
+
+.delete-profile-items{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+.form-container-login-or-register {
+    display: flex;
+    justify-content:center;
+    margin-top: 22px;
+    padding: 12px 96px;
+    font-size: 16px;
+}
+
+.right-login-or-register-container ul {
+    list-style-type: circle;
+}
+
+.form-login-or-register-title {
+    font-size: 22px;
+    margin-bottom: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    border-bottom-style: dotted;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--dark-pink);
+}
+
+.form-login-or-register-subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.left-login-or-register-container {
+    border-right-style: dotted;
+    border-right-width: 2px;
+    border-right-color: var(--dark-pink);
+    padding-right: 80px;
+}
+
+.right-login-or-register-container{
+    margin-left: 80px;
+}

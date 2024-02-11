@@ -1,4 +1,28 @@
-{% extends 'base/base.html' %}
+{% extends 'base/base.html' %} {% block page_content %}
+<section class="hero">
+    <div class="hero-wrapper">
+        <h3 class="hero-title">
+            <i class="fa-solid fa-check" style="color: #ffb7ce;"></i> Your profile has been successfully deleted.
+        </h3>
+        <p class="hero-desc">
+            We appreciate your time with us and hope to serve you again in the future. If you have any feedback, feel free to share. Thank you and farewell! 
+        </p>
+      </div>
+    <div class="hero-img-container">
+      <img
+  class="hero-img"
+  src="https://res.cloudinary.com/deztgvefu/image/upload/v1706337258/template_images/fifty_incredibles_pink_b_i0m1in.webp"
+  alt=""
+/>
+    </div>
+</section>
+{% endblock %}
+
+
+
+
+
+{% comment %} {% extends 'base/base.html' %}
 {% block page_content %}
     <section class="hero">
         <img class="hero__img"
@@ -14,4 +38,4 @@
         </div>
     </section>
 {% endblock %}
-
+ {% endcomment %}

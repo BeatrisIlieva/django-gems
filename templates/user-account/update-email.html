@@ -1,6 +1,36 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load countries %}
+{% get_countries as countries %}
+{% block page_content %}
+    <section class="form-container">
+        <div>
+            <form method="post">
+                <h4 class="form-title">Change Email</h4>
+                <ul role="list">
+                    <li class="form-item">
+                        {{ form.email.label }}
+                    </li>
+                    <li class="form-item">
+                        {{ form.email }}
+                    </li>
+                </ul>
+                <button class="edit-btn button hover filled_green" type="submit"><i class="fa-regular fa-floppy-disk"></i>
+                    Confirm and Save
+                </button>
+                {% csrf_token %}
+            </form>
+        </div>
+    </section>
+    {% if form.errors.items %}
+        {% include 'error-messages/error-messages.html' %}
+    {% endif %}
+{% endblock %}
 
+
+
+{% comment %} {% extends 'base/base.html' %}
+{% load static %}
 {% block page_content %}
     <form method="post">
         <div class="fieldset-container-update">
@@ -21,4 +51,4 @@
             </fieldset>
         </div>
     </form>
-{% endblock %}
+{% endblock %} {% endcomment %}

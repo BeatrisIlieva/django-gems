@@ -3,6 +3,119 @@
 {% load static %}
 {% block page_content %}
     <div class="shopping-cart-title-container">
+        <h4 class="shopping-cart-title">Your Bag Is Empty</h4>
+        <div class="cart-img-container">
+            <img class="cart-img"
+                 src="https://res.cloudinary.com/deztgvefu/image/upload/v1707645424/template_images/pink-shopping-bag-png_1_ppqpwi.webp"
+                 alt="image">
+        </div>
+    </div>
+    <section class="shopping-cart-wrapper">
+        <div class="left-container">
+            {% for jewelry, details in jewelries_by_quantity_and_size.items %}
+                <section class="jewelry-container">
+                    <div class="shopping-cart-image-container">
+                        <a
+                                href="{% url 'view_jewelry' jewelry.pk %}?page={{ page_obj.number }}"
+                                title="{{ jewelry.title }}">
+                            <img
+                                    class="shopping-cart-jewelry-img"
+                                    src="{{ jewelry.first_image_url }}"
+                                    alt="{{ jewelry.title }} image"
+                            />
+                        </a>
+                    </div>
+                    <div class="jewelry-composition">
+                        <h5 class="composition-title">{{ jewelry.title }}</h5>
+                        <ul class="composition-list" role="list">
+                            <li class="composition-list" role="list">
+                                {% if jewelry.jewelry_metals.count > 1 %}
+                                    {% for metal_info in jewelry.jewelry_metals.all %}
+                                        <span class="composition-item">
+                                {% if metal_info.gold_carat %}
+                                    <span>{{ metal_info.gold_carat.get_weight_display }} {{ metal_info.metal.get_title_display }}{% if not forloop.last %}, {% endif %}</span>
+                                {% else %}
+                                    <span>{{ metal_info.metal.get_title_display }}{% if not forloop.last %}, {% endif %}</span>
+                                {% endif %}
+                            </span>
+                                    {% endfor %}
+                                {% else %}
+                                    <span class="composition-item">
+                            <span>
+                                {% for metal_info in jewelry.jewelry_metals.all %}
+                                    {% if metal_info.gold_carat %}
+                                        <span>{{ metal_info.gold_carat.get_weight_display }} {{ metal_info.metal.get_title_display }}</span>
+                                    {% else %}
+                                        <span>{{ metal_info.metal.get_title_display }}</span>
+                                    {% endif %}
+                                {% endfor %}
+                            </span>
+                        </span>
+                                {% endif %}
+                            </li>
+                            <li class="composition-list" role="list">
+                                {% if jewelry.jewelry_stones.count > 1 %}
+                                    {% for stone_info in jewelry.jewelry_stones.all %}
+                                        <span class="composition-item">
+                                {% if stone_info.stone_carat %}
+                                    <span>{{ stone_info.stone_color.get_title_display }} {{ stone_info.stone_type.get_title_display }} {{ stone_info.stone_carat }}ct.{% if not forloop.last %}, {% endif %}</span>
+                                {% else %}
+                                    <span>{{ stone_info.stone_color.get_title_display }} {{ stone_info.stone_type.get_title_display }}{% if not forloop.last %}, {% endif %}</span>
+                                {% endif %}
+                            </span>
+                                    {% endfor %}
+                                {% else %}
+                                    <span class="composition-item">
+                            <span>
+                                {% for stone_info in jewelry.jewelry_stones.all %}
+                                    {% if metal_info.gold_carat %}
+                                        <span>{{ stone_info.stone_color.get_title_display }} {{ stone_info.stone_type.get_title_display }} {{ stone_info.stone_carat }}ct.</span>
+                                    {% else %}
+                                        <span>{{ stone_info.stone_color.get_title_display }} {{ stone_info.stone_type.get_title_display }}</span>
+                                    {% endif %}
+                                {% endfor %}
+                            </span>
+                        </span>
+                                {% endif %}
+                            </li>
+                            <li class="composition-item-size">
+                                <span>Size: {{ details.size }} cm.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="price-and-quantity">
+                        <p class="item-price">
+                            {{ details.jewelry_total_price }}
+                        </p>
+                        <div class="item-quantity">
+                            <form action="{% url 'update_shopping_cart' jewelry.pk %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="jewelry_id" value="{{ jewelry.pk }}">
+                                <input type="number" name="quantity" value="{{ details.quantity }}"
+                                       min={{ details.min_quantity }} max={{ details.max_quantity }}>
+                                <button type="submit" name="update_quantity" class="button hover filled_pink">
+                                    <i class="fa-solid fa-pencil"></i> UPDATE
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                {% endfor %}
+        </div>
+        <div class="right-container">
+            <section class="order-summary-container">
+                <h4 class="some">Order Summary</h4>
+            </section>
+        </div>
+    </section>
+{% endblock %}
+
+
+{% comment %} {% extends 'base/base.html' %}
+{% load dict %}
+{% load static %}
+{% block page_content %}
+    <div class="shopping-cart-title-container">
         <h4 class="shopping-cart-title">Your Bag</h4>
         <div class="cart-img-container">
             <img class="cart-img" src="https://res.cloudinary.com/deztgvefu/image/upload/v1706465957/template_images/229937_m9taue.png" alt="image">
@@ -102,11 +215,11 @@
     </div>
 <div class="right-container">
     <section class="order-summary-container">
-        o
+        <h4>Order Summary</h4>
     </section>
 </div>
 </section>
-{% endblock %}
+{% endblock %} {% endcomment %}
 
 
 {% if not jewelries_by_quantity_and_size %}

@@ -65,6 +65,10 @@ li.form-item:last-of-type {
     font-size: 80px;
 }
 
+.hero-title i {
+    font-size: 80px;
+}
+
 .delete-profile-container {
     display: flex;
     justify-content: space-around;
@@ -76,7 +80,7 @@ li.form-item:last-of-type {
     font-size: 22px;
 }
 
-.delete-profile-items{
+.delete-profile-items {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -86,7 +90,7 @@ li.form-item:last-of-type {
 
 .form-container-login-or-register {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     margin-top: 22px;
     padding: 12px 96px;
     font-size: 16px;
@@ -119,6 +123,11 @@ li.form-item:last-of-type {
     padding-right: 80px;
 }
 
-.right-login-or-register-container{
+.right-login-or-register-container {
     margin-left: 80px;
+}
+
+li.form-item::marker {
+    display: none;
+    color: transparent;
 }

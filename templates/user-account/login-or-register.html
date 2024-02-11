@@ -15,6 +15,7 @@
                     <li class="form-item">
                         {{ form.password }}
                     </li>
+                </ul>
                 <input type="hidden" value="{{ next }}" name="next"/>
                 <button class="button hover filled_blue">
                     <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
@@ -23,28 +24,29 @@
             </form>
         </div>
         <div class="right-login-or-register-container">
-                <h4 class="form-login-or-register-title">New Customers</h4>
-                <h3 class="form-login-or-register-subtitle">Register with <i>Django Gems</i> for the following benefits:</h3>
-                <ul>
-                    <li class="form-item">
-                        Faster checkout
-                    </li>
-                    <li class="form-item">
-                        Access your order status
-                    </li>
-                    <li class="form-item">
-                        View order history
-                    </li>
-                    <li class="form-item">
-                        Enjoy the convenience of saving your wishlist permanently
-                    </li>
-                    <a href="{% url 'register_user' %}?next={{ next }}" >
-                        <button class="button hover filled_green">
-                            <i class="fa-solid fa-user-plus"></i> Register
-                        </button>
-                    </a>
+            <h4 class="form-login-or-register-title">New Customers</h4>
+            <h3 class="form-login-or-register-subtitle">Register with <i>Django Gems</i> for the following benefits:
+            </h3>
+            <ul>
+                <li class="form-item">
+                    Faster checkout
+                </li>
+                <li class="form-item">
+                    Access your order status
+                </li>
+                <li class="form-item">
+                    View order history
+                </li>
+                <li class="form-item">
+                    Enjoy the convenience of saving your wishlist permanently
+                </li>
+            </ul>
+            <a href="{% url 'register_user' %}?next={{ next }}">
+                <button class="button hover filled_green">
+                    <i class="fa-solid fa-user-plus"></i> Register
+                </button>
+            </a>
         </div>
-
     </section>
     {% if form.errors.items %}
         {% include 'error-messages/error-messages.html' %}

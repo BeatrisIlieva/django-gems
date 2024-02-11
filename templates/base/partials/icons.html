@@ -1,92 +1,80 @@
 <div class="icon-container">
-  <button class="btn">
-    <form action="{% url 'search_bar' %}?page={{ page_obj.number }}">
-      <input type="checkbox" id="search-toggle" class="search-toggle" />
-      <input
-        class="search"
-        name="search"
-        value="{{ search }}"
-        placeholder="Find a Jewelry"
-        style="text-align: center"
-      />
-      <label for="search-toggle" class="search-icon">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </label>
-    </form>
-  </button>
-  {% if likes_count > 0 %}
-  <button class="btn">
-    <a href="{% url 'display_liked_jewelries' %}">
-      <i class="fa-regular fa-heart"
-        ><span class="likes-count-nav">({{ likes_count }})</span></i
-      >
-    </a>
-  </button>
-  {% else %}
-  <button class="btn">
-    <a href="{% url 'display_liked_jewelries' %}">
-      <i class="fa-regular fa-heart"></i>
-    </a>
-  </button>
-  {% endif %} {% if cart_count > 0 %}
-  <button class="btn">
-    <a href="{% url 'view_shopping_cart' %}">
-      <i class="fa-solid fa-bag-shopping"
-        ><span class="cart-count-nav">({{ cart_count }})</span></i
-      >
-    </a>
-  </button>
-  {% else %}
-  <button class="btn">
-    <a href="{% url 'view_shopping_cart' %}">
-      <i class="fa-solid fa-bag-shopping"></i>
-    </a>
-  </button>
-  {% endif %} {% if not request.user.is_authenticated %}
-  <button class="btn">
-    <a href="{% url 'login_or_register_user' %}">
-      <i class="fa-regular fa-user"></i>
-    </a>
-  </button>
-  {% else %}
-  <button class="btn dropdown">
-    <ul class="nav-item" role="list" tabindex="0">
-      <i class="fa-regular fa-user"></i>
-    <li class="icon-dropdown dropdown-content">
-      <div id="profile-item-drop-down-name">
-        {{ user.accountprofile.full_name }}
-      </div>
-      <div id="profile-item-drop-down-email">{{ user.email }}</div>
-      <a href="{% url 'my_orders' pk=request.user.pk %}">
-        <i class="fa-solid fa-clock-rotate-left"></i> 
-        Order History
-      </a>
-      <a href="{% url 'update_user' pk=request.user.pk %}"> 
-        <i class="fa-regular fa-pen-to-square"></i>
-        Update Profile 
-    </a>
-    <a href="{% url 'logout_user' %}">
-      <i class="fa-solid fa-arrow-right-from-bracket"></i>
-      Log Out
-    </a>
-      {% comment %} <a href="{% url 'update_email' pk=request.user.pk %}"> 
-        <i class="fa-regular fa-envelope"></i>
-        Change Email 
-    </a>
-      <a href="{% url 'update_password' pk=request.user.pk %}">
-        <i class="fa-solid fa-lock"></i>
-        Change Password
-      </a>
-      <a href="{% url 'logout_user' %}">
-        <i class="fa-solid fa-arrow-right-from-bracket"></i>
-        Log Out
-      </a>
-      <a href="{% url 'delete_user' pk=request.user.pk %}">
-        <i class="fa-solid fa-user-slash"></i> 
-        Delete Profile
-      </a> {% endcomment %}
-    </li>
-</ul>
-  </button>
-  {% endif %}
+    <button class="btn">
+        <form action="{% url 'search_bar' %}?page={{ page_obj.number }}">
+            <input type="checkbox" id="search-toggle" class="search-toggle"/>
+            <input
+                    class="search"
+                    name="search"
+                    value="{{ search }}"
+                    placeholder="Find a Jewelry"
+                    style="text-align: center"
+            />
+            <label for="search-toggle" class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+        </form>
+    </button>
+    {% if likes_count > 0 %}
+        <button class="btn">
+            <a href="{% url 'display_liked_jewelries' %}">
+                <i class="fa-regular fa-heart"
+                ><span class="likes-count-nav">({{ likes_count }})</span></i
+                >
+            </a>
+        </button>
+    {% else %}
+        <button class="btn">
+            <a href="{% url 'display_liked_jewelries' %}">
+                <i class="fa-regular fa-heart"></i>
+            </a>
+        </button>
+    {% endif %} {% if cart_count > 0 %}
+    <button class="btn">
+        <a href="{% url 'view_shopping_cart' %}">
+            <i class="fa-solid fa-bag-shopping"
+            ><span class="cart-count-nav">({{ cart_count }})</span></i
+            >
+        </a>
+    </button>
+{% else %}
+    <button class="btn">
+        <a href="{% url 'view_shopping_cart' %}">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </a>
+    </button>
+{% endif %} {% if not request.user.is_authenticated %}
+    <button class="btn">
+        <a href="{% url 'login_or_register_user' %}">
+            <i class="fa-regular fa-user"></i>
+        </a>
+    </button>
+{% else %}
+    <button class="btn dropdown">
+        <ul class="nav-item" role="list" tabindex="0">
+            <li>
+                <i class="fa-regular fa-user"></i>
+            </li>
+            <li class="icon-dropdown dropdown-content">
+                <div id="profile-item-drop-down-name">
+                    {{ user.accountprofile.full_name }}
+                </div>
+                <div id="profile-item-drop-down-email">
+                    {{ user.email }}
+                </div>
+                <a href="{% url 'my_orders' pk=request.user.pk %}">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Order History
+                </a>
+                <a href="{% url 'update_user' pk=request.user.pk %}">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    Update Profile
+                </a>
+                <a href="{% url 'logout_user' %}">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Log Out
+                </a>
+            </li>
+        </ul>
+    </button>
+{% endif %}
 </div>

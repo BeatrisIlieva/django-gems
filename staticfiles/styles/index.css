@@ -27,11 +27,13 @@
 .hero-wrapper .hero-title {
     padding-bottom: 2px;
     font-size: 22px;
+    font-style: italic;
 }
 
 .hero-wrapper .hero-sub-title {
-    padding-bottom: 8px;
+    padding-bottom:8px;
     font-size: 20px;
+    font-style: italic;
 }
 
 .hero-wrapper .hero-desc {

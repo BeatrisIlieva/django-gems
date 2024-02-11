@@ -172,6 +172,12 @@ class DisplayShoppingCartView(LastViewedJewelriesMixin, JewelryStonesMixin, Jewe
         request_session = self.request.session
         last_viewed_jewelries = self.get_last_viewed_jewelries(request_session)
         context.update(last_viewed_jewelries)
+        
+        cart = self.request.session.get('cart', {})
+
+        cart_count = len(cart)
+
+        context['cart_count'] = cart_count
 
         nav_bar_context = self.get_nav_bar_context()
         context.update(nav_bar_context)

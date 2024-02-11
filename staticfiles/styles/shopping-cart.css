@@ -70,7 +70,6 @@
 }
 
 .composition-item {
-    /* font-size: 14px; */
     margin-bottom: 4px;
     display: inline-block;
 }
@@ -117,14 +116,12 @@
 }
 
 .right-container{
-    /* height: 10vh; */
     width: calc(36% - 62px);
 
 }
 
 .order-summary-container {
     background-color: pink;
-    /* display: flex; */
     position: sticky;
     top: calc(24% + 12px);
 }

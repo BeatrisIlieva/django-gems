@@ -1,6 +1,4 @@
-
-
-.order-details-wrapper{
+.order-details-wrapper {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
@@ -11,8 +9,6 @@
     color: var(--dark-blue);
     text-align: left;
     padding: 12px 96px;
-    /* font-size: 16px;
-    font-weight: 500; */
 }
 
 .order-title-content {

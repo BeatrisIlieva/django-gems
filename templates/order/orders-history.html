@@ -2,7 +2,6 @@
 {% load static %}
 {% block page_content %}
     {% if not order_details %}
-
         <section class="hero">
             <div class="hero-wrapper">
                 <h3 class="hero-title">
@@ -40,7 +39,9 @@
                                 <p>Total Price per Jewelry: {{ product.total_price }}</p>
                             </div>
                             <div class="order-content">
-                                <p><img class="order-image" src="{{ product.jewelry.first_image_url }}" alt="image"></p>
+                                <p>
+                                    <img class="order-image" src="{{ product.jewelry.first_image_url }}" alt="image">
+                                </p>
                             </div>
                         {% endfor %}
                     </div>

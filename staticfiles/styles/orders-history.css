@@ -30,7 +30,6 @@
 
 .order-wrapper {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
@@ -41,7 +40,7 @@
     text-align: center;
 }
 
-.orders-history-container{
+.orders-history-container {
     padding: 12px 96px;
 }
 

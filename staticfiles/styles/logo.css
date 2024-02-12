@@ -1,12 +1,13 @@
 .logo-img-container {
-    height: 24vh;
-    display: flex;
+    height: 22vh;
+    width: 22vh;
+    aspect-ratio: 1 / 1;
 }
 
 .logo-img {
     height: 100%;
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .logo-title-container {

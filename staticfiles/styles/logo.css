@@ -50,13 +50,20 @@
 
 .logo-span {
     display: inline-block;
-}
-
-.logo-span-img {
-    position: absolute;
     width: 4vh;
     height: 4vh;
-    top: 14px;
+    aspect-ratio: 1 / 1;
+        position: absolute;
+        top: 16px;
+}
+
+.logo-span-img img {
+
+    /*width: 4vh;*/
+    /*height: 4vh;*/
+        height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 

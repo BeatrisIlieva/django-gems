@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="{% static 'icons/icons.css' %}" />
   </head>
   <body class="body">
-    <header class="header">
+<div class="relative-container">
+        <header class="header">
       <div class="logo-img-container">
         <img
           class="logo"
@@ -30,6 +31,7 @@
       {% include 'base/partials/nav.html' %}
       {% include 'base/partials/icons.html' %}
     </header>
+</div>
     <main class="main">
       {% block page_content %}
       {% endblock %}

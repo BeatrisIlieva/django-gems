@@ -13,10 +13,13 @@
 .logo-title-container {
     display: flex;
     text-align: center;
-    margin-top: -98px;
-    margin-left: -26px;
+    top: -4px;
+    left: 154px;
+    /*margin-top: -98px;*/
+    /*margin-left: -26px;*/
     justify-content: center;
     align-items: center;
+    position: absolute;
 }
 
 .logo-title {
@@ -29,9 +32,10 @@
 
 .logo-span-img img {
     display: inline-block;
-    padding-top: 6px;
-    width: 3.5vh;
-    height: 3.5vh;
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    top: 14px;
 }
 
 

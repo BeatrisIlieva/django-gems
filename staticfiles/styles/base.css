@@ -15,6 +15,10 @@
       "footer";
 }
 
+.relative-container {
+    position: relative;
+}
+
 .header {
     grid-area: header;
     display: flex;

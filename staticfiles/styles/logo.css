@@ -50,7 +50,6 @@
 
 .logo-span {
     display: inline-block;
-    /*position: relative;*/
 }
 
 .logo-span-img {
@@ -58,7 +57,6 @@
     width: 4vh;
     height: 4vh;
     top: 14px;
-    /*left: 0px;*/
 }
 
 

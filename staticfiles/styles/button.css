@@ -50,7 +50,7 @@
 }
 
 .button.filled_red {
-    color: black;
+    color: var(--dark-blue);
     background-color: var(--red-pink);
 }
 

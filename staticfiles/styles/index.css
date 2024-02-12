@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 12px 32px;
+        padding: 12px 96px;
+    /*margin: 12px 32px;*/
 }
 
 .hero-wrapper {

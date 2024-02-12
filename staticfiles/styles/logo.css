@@ -1,59 +1,69 @@
+/*Do Not Delete From This File*/
+
 .logo-img-container {
-    height: 22vh;
-    width: 22vh;
+    height: 34vh;
+    width: 34vh;
     aspect-ratio: 1 / 1;
 }
 
 .logo-img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
-.logo-title-container {
-    display: flex;
-    text-align: center;
-    top: -4px;
-    left: 154px;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-}
 
-.logo-title {
-    font-size: 22px;
-    border-bottom-color: var(--dark-pink);
-    border-bottom-right-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border-bottom-style: ridge;
-}
 
-.logo-img-container {
-    height: 22vh;
-    width: 22vh;
-    aspect-ratio: 1 / 1;
-}
+/*.logo-title-container {*/
+/*    text-align: center;*/
+/*    top: -13vh;*/
+/*    left: 22vh;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    position: absolute;*/
+/*}*/
 
-.logo-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
+/*.logo-title {*/
+/*    font-size: 24px;*/
+/*    border-bottom-color: var(--dark-pink);*/
+/*    border-bottom-right-radius: 6px;*/
+/*    border-bottom-left-radius: 6px;*/
+/*    border-bottom-style: ridge;*/
+/*}*/
 
-.logo-span {
-    display: inline-block;
-    width: 4vh;
-    height: 4vh;
-    aspect-ratio: 1 / 1;
-    position: absolute;
-    top: 16px;
-}
+/*.logo-span {*/
+/*    display: inline-block;*/
+/*    width: 4.2vh;*/
+/*    height: 4.2vh;*/
+/*    aspect-ratio: 1 / 1;*/
+/*    position: absolute;*/
+/*    top: 3.2vh;*/
+/*}*/
 
-.logo-span-img img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
+/*.logo-span-img img {*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
 
+
+/*<header class="header">*/
+/*    <div class="relative-container">*/
+/*            <div class="logo-img-container">*/
+/*                <img*/
+/*                        class="logo-img"*/
+/*                        src="https://res.cloudinary.com/deztgvefu/image/upload/v1707735843/template_images/Screenshot_2024-02-12_at_13.01.58_nm3xvv.png"*/
+/*                        alt="Logo Image"*/
+/*                />*/
+/*            </div>*/
+/*            <div class="logo-title-container">*/
+/*                <h1 class="logo-title">Djang<span class="logo-span"><img class="logo-span-img"*/
+/*                                                                         src="https://res.cloudinary.com/deztgvefu/image/upload/v1707499296/template_images/giphy_s_b3cfly_1_b0dwbo.gif"*/
+/*                                                                         alt=""></span><br/>Gems</h1>*/
+/*            </div>*/
+/*    </div>*/
+/*    {% include 'base/partials/nav.html' %}*/
+/*    {% include 'base/partials/icons.html' %}*/
+/*</header>*/
 
 

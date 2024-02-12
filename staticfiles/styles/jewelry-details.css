@@ -1,40 +1,131 @@
-.jewelry-details {
-    font-size: 18px;
-    color: black;
-    padding: 32px 64px;
-}
-
-.jewelry-details .row {
+.jewelry-details-wrapper {
     display: flex;
     justify-content: space-evenly;
+    color: var(--dark-blue);
+    padding: 24px 96px 0px 96px;
+    /*gap: 20px;*/
 }
 
-.jewelry-details .row .row-image-first {
-    width: 33%;
-    overflow: hidden;
+.jewelry-details-image{
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    height: calc(35% - 48px);
+    width: calc(35% - 48px);
+    aspect-ratio: 1 / 1;
+    background-color: var(--white-pink);
+    border-radius: 16px;
+}
+
+/*.jewelry-details-image{*/
+/*    height: 50%;*/
+/*    width: 50%;*/
+/*    aspect-ratio: 1 / 1;*/
+/*}*/
+
+.jewelry-details-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.jewelry-details-composition {
+    /*height: calc(30% - 96px);*/
+    width: calc(30% - 96px);
     position: relative;
 }
 
-.jewelry-details .row .row-image-second {
-    width: 33%;
-    overflow: hidden;
-    position: relative;
-}
+
+
 
 .zoom-image {
     transition: transform 0.3s ease;
 }
 
-.thumbnail:hover .zoom-image {
-    transform: scale(2.8);
+.jewelry-details-image:hover .zoom-image {
+    transform: scale(1.3);
 }
 
-.jewelry-details .row .materials {
-    font-size: 24px;
-    margin-bottom: 8px;
-    margin-top: 8px;
-}
 
-.jewelry-details .row .materials-details {
-    font-size: 18px;
-}
+
+
+
+
+/*.jewelry-details {*/
+/*    color: var(--dark-blue);*/
+/*    padding: 24px 96px 0px 96px;*/
+/*}*/
+
+/*.jewelry-details-image-container {*/
+/*    display: flex;*/
+/*    justify-content: space-evenly;*/
+/*}*/
+
+/*.jewelry-details-img {*/
+/*    width: 43vh;*/
+/*    height: 43vh;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*}*/
+
+/*.zoom-image {*/
+/*    transition: transform 0.3s ease;*/
+/*}*/
+
+/*.thumbnail:hover .zoom-image {*/
+/*    transform: scale(2.8);*/
+/*}*/
+
+/*.jewelry-details .row .materials {*/
+/*    font-size: 22px;*/
+/*    margin-bottom: 8px;*/
+/*    margin-top: 8px;*/
+/*}*/
+
+/*.jewelry-details .row .materials-details {*/
+/*    font-size: 18px;*/
+/*}*/
+
+
+
+
+/*.jewelry-details {*/
+/*    color: var(--dark-blue);*/
+/*    padding: 24px 96px 0px 96px;*/
+/*}*/
+
+/*.jewelry-details .row {*/
+/*    display: flex;*/
+/*    justify-content: space-evenly;*/
+/*}*/
+
+/*.jewelry-details .row .row-image-first {*/
+/*    width: 43vh;*/
+/*    height: 43vh;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*}*/
+
+/*.jewelry-details .row .row-image-second {*/
+/*    width: 43vh;*/
+/*    height: 43vh;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+/*}*/
+
+/*.zoom-image {*/
+/*    transition: transform 0.3s ease;*/
+/*}*/
+
+/*.thumbnail:hover .zoom-image {*/
+/*    transform: scale(2.8);*/
+/*}*/
+
+/*.jewelry-details .row .materials {*/
+/*    font-size: 22px;*/
+/*    margin-bottom: 8px;*/
+/*    margin-top: 8px;*/
+/*}*/
+
+/*.jewelry-details .row .materials-details {*/
+/*    font-size: 18px;*/
+/*}*/

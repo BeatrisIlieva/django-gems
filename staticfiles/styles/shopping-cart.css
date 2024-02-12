@@ -29,7 +29,8 @@
 .shopping-cart-wrapper {
     display: flex;
     justify-content: space-evenly;
-    padding: 12px 96px;
+    /*padding: 12px 96px;*/
+        padding: 24px 96px;
     font-size: 16px;
 }
 
@@ -69,9 +70,16 @@
 }
 
 .jewelry-composition {
-    width: 44%;
+    width: 50%;
     margin: 18px 18px 18px 0px;
     position: relative;
+}
+
+.composition-category {
+    font-size: 14px;
+    background-color: var(--white-pink);
+    border-radius: 4px;
+    padding: 6px;
 }
 
 .composition-title {
@@ -90,7 +98,7 @@
 }
 
 .price-and-quantity {
-    width: 26%;
+    width: 20%;
     position: relative;
     margin: 18px 18px 18px 0px;
 }

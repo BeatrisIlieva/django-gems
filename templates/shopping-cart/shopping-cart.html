@@ -45,6 +45,7 @@
                                 </a>
                             </div>
                             <div class="jewelry-composition">
+                            <h6 class="composition-category">{{ jewelry.category.get_title_display }}</h6>
                                 <h5 class="composition-title">{{ jewelry.title }}</h5>
                                 <ul role="list">
                                     <li>
@@ -52,11 +53,9 @@
                                             {% for metal_info in jewelry.jewelry_metals.all %}
                                                 <span class="composition-item">
                                 {% if metal_info.gold_carat %}
-                                    <span>{{ metal_info.gold_carat.get_weight_display }} {{ metal_info.metal.get_title_display }}
-                                        {% if not forloop.last %}, {% endif %}</span>
+                                    <span>{{ metal_info.gold_carat.get_weight_display }} {{ metal_info.metal.get_title_display }}{% if not forloop.last %}, {% endif %}</span>
                                 {% else %}
-                                    <span>{{ metal_info.metal.get_title_display }}{% if not forloop.last %}
-                                        , {% endif %}</span>
+                                    <span>{{ metal_info.metal.get_title_display }}{% if not forloop.last %}, {% endif %}</span>
                                 {% endif %}
                             </span>
                                             {% endfor %}
@@ -79,11 +78,9 @@
                                             {% for stone_info in jewelry.jewelry_stones.all %}
                                                 <span class="composition-item">
                                 {% if stone_info.stone_carat %}
-                                    <span>{{ stone_info.stone_color.get_title_display }} {{ stone_info.stone_type.get_title_display }} {{ stone_info.stone_carat }}ct.
-                                        {% if not forloop.last %}, {% endif %}</span>
+                                    <span>{{ stone_info.stone_color.get_title_display }} {{ stone_info.stone_type.get_title_display }} {{ stone_info.stone_carat }}ct.{% if not forloop.last %}, {% endif %}</span>
                                 {% else %}
-                                    <span>{{ stone_info.stone_color.get_title_display }} {{ stone_info.stone_type.get_title_display }}
-                                        {% if not forloop.last %}, {% endif %}</span>
+                                    <span>{{ stone_info.stone_color.get_title_display }} {{ stone_info.stone_type.get_title_display }}{% if not forloop.last %}, {% endif %}</span>
                                 {% endif %}
                             </span>
                                             {% endfor %}

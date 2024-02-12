@@ -1,19 +1,18 @@
 .jewelry-details-wrapper {
     display: flex;
-    justify-content: space-evenly;
     color: var(--dark-blue);
-    padding: 24px 96px 0px 96px;
-    /*gap: 20px;*/
+    padding: 24px 96px 24px 96px;
+    justify-content: space-evenly;
 }
 
-.jewelry-details-image{
+.jewelry-details-image-first, .jewelry-details-image-second{
     /*display: flex;*/
     /*justify-content: space-between;*/
-    height: calc(35% - 48px);
-    width: calc(35% - 48px);
+    /*height: calc(66vh - 48px);*/
+    width: calc(28vw - 48px);
     aspect-ratio: 1 / 1;
-    background-color: var(--white-pink);
-    border-radius: 16px;
+          overflow: hidden;
+      position: relative;
 }
 
 /*.jewelry-details-image{*/
@@ -26,11 +25,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background-color: var(--white-pink);
+    border-radius: 16px;
 }
 
 .jewelry-details-composition {
     /*height: calc(30% - 96px);*/
-    width: calc(30% - 96px);
+    width: calc(28vw - 96px);
     position: relative;
 }
 
@@ -41,10 +42,13 @@
     transition: transform 0.3s ease;
 }
 
-.jewelry-details-image:hover .zoom-image {
-    transform: scale(1.3);
+.jewelry-details-image-first:hover .zoom-image {
+    transform: scale(2.2);
 }
 
+.jewelry-details-image-second:hover .zoom-image {
+    transform: scale(2.2);
+}
 
 
 

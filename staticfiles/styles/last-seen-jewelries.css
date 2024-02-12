@@ -10,13 +10,12 @@
     display: flex;
     justify-content: center;
     gap: 12px;
-    /*z-index: 2;*/
 }
 
 .last-seen-jewelries-container {
     width: 16vh;
     height: 16vh;
-    /*aspect-ratio: 1 / 1;*/
+    aspect-ratio: 1 / 1;
 }
 
 .last-seen-jewelries-img {
@@ -24,7 +23,6 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    /*z-index: 2;*/
 }
 
 

@@ -2,14 +2,14 @@
 {% load static %}
 {% block page_content %}
     <section class="jewelry-details-wrapper">
-            <div class="jewelry-details-image">
-                <img class="jewelry-details-img zoom-image" src="{{ jewelry.first_image_url }}" alt="image1">
-            </div>
-            <div class="jewelry-details-image">
-                <img class="jewelry-details-img zoom-image" src="{{ jewelry.second_image_url }}" alt="image1">
-            </div>
+        <div class="jewelry-details-image">
+            <img class="jewelry-details-img zoom-image" src="{{ jewelry.first_image_url }}" alt="image1">
+        </div>
+        <div class="jewelry-details-image">
+            <img class="jewelry-details-img zoom-image" src="{{ jewelry.second_image_url }}" alt="image1">
+        </div>
         <div class="jewelry-details-composition">
-            <h7 class="composition-category">{{ jewelry.category.get_title_display }}</h7>
+            <h6 class="composition-category">{{ jewelry.category.get_title_display }}</h6>
             <h5 class="composition-title">{{ jewelry.title }}</h5>
             <ul role="list">
                 <li>
@@ -17,11 +17,9 @@
                         {% for metal_info in jewelry.jewelry_metals.all %}
                             <span class="composition-item">
                                 {% if metal_info.gold_carat %}
-                                    <span>{{ metal_info.gold_carat.get_weight_display }} {{ metal_info.metal.get_title_display }}
-                                        {% if not forloop.last %}, {% endif %}</span>
+                                    <span>{{ metal_info.gold_carat.get_weight_display }} {{ metal_info.metal.get_title_display }}{% if not forloop.last %}, {% endif %}</span>
                                 {% else %}
-                                    <span>{{ metal_info.metal.get_title_display }}{% if not forloop.last %}
-                                        , {% endif %}</span>
+                                    <span>{{ metal_info.metal.get_title_display }}{% if not forloop.last %}, {% endif %}</span>
                                 {% endif %}
                             </span>
                         {% endfor %}
@@ -44,11 +42,9 @@
                         {% for stone_info in jewelry.jewelry_stones.all %}
                             <span class="composition-item">
                                 {% if stone_info.stone_carat %}
-                                    <span>{{ stone_info.stone_color.get_title_display }} {{ stone_info.stone_type.get_title_display }} {{ stone_info.stone_carat }}ct.
-                                        {% if not forloop.last %}, {% endif %}</span>
+                                    <span>{{ stone_info.stone_color.get_title_display }} {{ stone_info.stone_type.get_title_display }} {{ stone_info.stone_carat }}ct.{% if not forloop.last %}, {% endif %}</span>
                                 {% else %}
-                                    <span>{{ stone_info.stone_color.get_title_display }} {{ stone_info.stone_type.get_title_display }}
-                                        {% if not forloop.last %}, {% endif %}</span>
+                                    <span>{{ stone_info.stone_color.get_title_display }} {{ stone_info.stone_type.get_title_display }}{% if not forloop.last %}, {% endif %}</span>
                                 {% endif %}
                             </span>
                         {% endfor %}
@@ -66,20 +62,20 @@
                         </span>
                     {% endif %}
                 </li>
-            <li class="composition-item-size">
-                            <form method="POST"  >
-                {% for field in form %}
-                    <label for="{{ field.id_for_label }}">
-                    <h3 class="materials">{{ field.label }}</h3>
-                    <ul class="materials-details" role="list">
-                        <li>{{ field }}</li>
-                    </ul>
-                    <button class="button hover filled_green" type="submit">ADD TO BAG</button>
-                    {% csrf_token %}
-                {% endfor %}
-                </label>
-            </form>
-            </li>
+                <li class="composition-item-size">
+                    <form method="POST">
+                        {% for field in form %}
+                            <label for="{{ field.id_for_label }}">
+                            <h3 class="materials">{{ field.label }}</h3>
+                            <ul class="materials-details" role="list">
+                                <li>{{ field }}</li>
+                            </ul>
+                            <button class="button hover filled_green" type="submit">ADD TO BAG</button>
+                            {% csrf_token %}
+                        {% endfor %}
+                        </label>
+                    </form>
+                </li>
             </ul>
         </div>
     </section>

@@ -28,12 +28,37 @@
     border-bottom-style: ridge;
 }
 
-.logo-span-img img {
+.logo-img-container {
+    height: 22vh;
+    width: 22vh;
+    aspect-ratio: 1 / 1;
+}
+
+.logo-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*.logo-span-img img {*/
+/*    display: inline-block;*/
+/*    position: absolute;*/
+/*    width: 4vh;*/
+/*    height: 4vh;*/
+/*    top: 14px;*/
+/*}*/
+
+.logo-span {
     display: inline-block;
+    /*position: relative;*/
+}
+
+.logo-span-img {
     position: absolute;
     width: 4vh;
     height: 4vh;
     top: 14px;
+    /*left: 0px;*/
 }
 
 

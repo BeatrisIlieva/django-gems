@@ -5,11 +5,11 @@
     justify-content: space-evenly;
 }
 
-.jewelry-details-image-first, .jewelry-details-image-second{
+.jewelry-details-image-first, .jewelry-details-image-second {
     width: calc(28vw - 48px);
     aspect-ratio: 1 / 1;
-          overflow: hidden;
-      position: relative;
+    overflow: hidden;
+    position: relative;
 }
 
 .jewelry-details-img {
@@ -36,87 +36,3 @@
 .jewelry-details-image-second:hover .zoom-image {
     transform: scale(2.2);
 }
-
-
-
-
-
-/*.jewelry-details {*/
-/*    color: var(--dark-blue);*/
-/*    padding: 24px 96px 0px 96px;*/
-/*}*/
-
-/*.jewelry-details-image-container {*/
-/*    display: flex;*/
-/*    justify-content: space-evenly;*/
-/*}*/
-
-/*.jewelry-details-img {*/
-/*    width: 43vh;*/
-/*    height: 43vh;*/
-/*    overflow: hidden;*/
-/*    position: relative;*/
-/*}*/
-
-/*.zoom-image {*/
-/*    transition: transform 0.3s ease;*/
-/*}*/
-
-/*.thumbnail:hover .zoom-image {*/
-/*    transform: scale(2.8);*/
-/*}*/
-
-/*.jewelry-details .row .materials {*/
-/*    font-size: 22px;*/
-/*    margin-bottom: 8px;*/
-/*    margin-top: 8px;*/
-/*}*/
-
-/*.jewelry-details .row .materials-details {*/
-/*    font-size: 18px;*/
-/*}*/
-
-
-
-
-/*.jewelry-details {*/
-/*    color: var(--dark-blue);*/
-/*    padding: 24px 96px 0px 96px;*/
-/*}*/
-
-/*.jewelry-details .row {*/
-/*    display: flex;*/
-/*    justify-content: space-evenly;*/
-/*}*/
-
-/*.jewelry-details .row .row-image-first {*/
-/*    width: 43vh;*/
-/*    height: 43vh;*/
-/*    overflow: hidden;*/
-/*    position: relative;*/
-/*}*/
-
-/*.jewelry-details .row .row-image-second {*/
-/*    width: 43vh;*/
-/*    height: 43vh;*/
-/*    overflow: hidden;*/
-/*    position: relative;*/
-/*}*/
-
-/*.zoom-image {*/
-/*    transition: transform 0.3s ease;*/
-/*}*/
-
-/*.thumbnail:hover .zoom-image {*/
-/*    transform: scale(2.8);*/
-/*}*/
-
-/*.jewelry-details .row .materials {*/
-/*    font-size: 22px;*/
-/*    margin-bottom: 8px;*/
-/*    margin-top: 8px;*/
-/*}*/
-
-/*.jewelry-details .row .materials-details {*/
-/*    font-size: 18px;*/
-/*}*/

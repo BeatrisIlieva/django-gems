@@ -1,8 +1,10 @@
 {% extends 'base/base.html' %}
 {% block page_content %}
+    <div class="search-results-container">
     {% include 'wishlist/jewelry-card.html' %}
     {% include 'jewelry/last-seen-jewelries.html' %}
     {% include 'common/pagination.html' %}
+    </div>
 {% endblock %}
 
 

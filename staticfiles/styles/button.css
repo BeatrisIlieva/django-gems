@@ -39,7 +39,7 @@
 
 
 .button.filled_blue {
-    color: black;
+    color: var(--dark-blue);
     background-color: #89cff0;
 }
 
@@ -56,7 +56,7 @@
 
 .button.filled_red:hover {
     color: white;
-    background-color: #993f3a;
+    background-color: #961933;
     transition: background-color 300ms linear, color 300ms;
 }
 

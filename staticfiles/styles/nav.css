@@ -14,11 +14,6 @@
     position: relative;
 }
 
-/*.dropdown:hover {*/
-/*    color: var(--dark-pink);*/
-
-/*}*/
-
 .zoom-text {
     transition: transform 0.3s ease-in-out;
 }
@@ -26,12 +21,6 @@
 .dropdown:hover .zoom-text {
     transform: scale(1.4);
 }
-
-/*.icon-container:hover .zoom-text {*/
-/*    transform: scale(1.4);*/
-/*}*/
-
-
 
 .dropdown-content {
     left: 30px;
@@ -130,10 +119,6 @@
     justify-content: left;
     text-align: left;
 }
-
-/*.icon-dropdown i {*/
-/*    color: var(--dark-blue);*/
-/*}*/
 
 #profile-item-drop-down-name {
     color: var(--dark-blue);

@@ -14,9 +14,16 @@
     z-index: 2;
 }
 
-.last-seen-jewelries-images img {
+.last-seen-jewelries-container {
+    width: 30vh;
+    height: 30vh;
+    aspect-ratio: 1 / 1;
+}
+
+.last-seen-jewelries-img {
     position: relative;
-    width: 180px;
-    height: 180px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
     z-index: 2;
 }

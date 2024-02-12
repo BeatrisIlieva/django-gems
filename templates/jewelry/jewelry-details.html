@@ -2,15 +2,12 @@
 {% load static %}
 {% block page_content %}
     <section class="jewelry-details-wrapper">
-{#        <div class="jewelry-details-img-container">#}
             <div class="jewelry-details-image">
                 <img class="jewelry-details-img zoom-image" src="{{ jewelry.first_image_url }}" alt="image1">
             </div>
             <div class="jewelry-details-image">
                 <img class="jewelry-details-img zoom-image" src="{{ jewelry.second_image_url }}" alt="image1">
             </div>
-{#        </div>#}
-        {#        <div class="jewelry-details-desc-container">#}
         <div class="jewelry-details-composition">
             <h7 class="composition-category">{{ jewelry.category.get_title_display }}</h7>
             <h5 class="composition-title">{{ jewelry.title }}</h5>

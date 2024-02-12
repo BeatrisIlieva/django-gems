@@ -76,10 +76,13 @@
 }
 
 .composition-category {
+    display: inline-block;
+    font-weight: 500;
     font-size: 14px;
     background-color: var(--white-pink);
     border-radius: 4px;
-    padding: 6px;
+    padding: 4px;
+    margin: 0px 0px 4px 0px ;
 }
 
 .composition-title {

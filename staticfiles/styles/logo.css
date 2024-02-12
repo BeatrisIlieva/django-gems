@@ -45,15 +45,12 @@
     width: 4vh;
     height: 4vh;
     aspect-ratio: 1 / 1;
-        position: absolute;
-        top: 16px;
+    position: absolute;
+    top: 16px;
 }
 
 .logo-span-img img {
-
-    /*width: 4vh;*/
-    /*height: 4vh;*/
-        height: 100%;
+    height: 100%;
     width: 100%;
     object-fit: cover;
 }

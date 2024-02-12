@@ -67,7 +67,7 @@
 
 .button.filled_pink:hover {
     color: white;
-    background-color: #ffb7ce;
+    background-color: var(--dark-pink);
     transition: background-color 300ms linear, color 300ms;
 }
 

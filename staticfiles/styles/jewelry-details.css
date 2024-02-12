@@ -6,9 +6,6 @@
 }
 
 .jewelry-details-image-first, .jewelry-details-image-second{
-    /*display: flex;*/
-    /*justify-content: space-between;*/
-    /*height: calc(66vh - 48px);*/
     width: calc(28vw - 48px);
     aspect-ratio: 1 / 1;
           overflow: hidden;

@@ -21,13 +21,9 @@
 }
 
 .jewelry-details-composition {
-    /*height: calc(30% - 96px);*/
     width: calc(28vw - 96px);
     position: relative;
 }
-
-
-
 
 .zoom-image {
     transition: transform 0.3s ease;

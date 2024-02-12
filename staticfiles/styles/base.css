@@ -21,12 +21,6 @@
     padding: 0px;
 }
 
-/*.absolute-container{*/
-/*    position: absolute;*/
-/*    top: 0px;*/
-/*    left: 0px;*/
-/*}*/
-
 .header {
     grid-area: header;
     display: flex;

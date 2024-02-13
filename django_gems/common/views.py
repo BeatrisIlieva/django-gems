@@ -93,26 +93,6 @@ class SearchBarView(
         return context
 
 
-# @login_required
-# def like_jewelry(request, jewelry_pk):
-#     kwargs = {
-#         'jewelry_id': jewelry_pk,
-#         'user_id': request.user.pk,
-#     }
-#
-#     user_liked_jewelry = JewelryLike.objects \
-#         .filter(**kwargs).first()
-#
-#     if user_liked_jewelry:
-#         user_liked_jewelry.delete()
-#
-#     else:
-#         JewelryLike.objects.create(
-#             **kwargs
-#         )
-#
-#     return redirect('display_liked_jewelries', pk=request.user.pk)
-
 
 def show_last_viewed(request, pk):
     last_viewed = request.session.get('last_viewed_jewelries', [])

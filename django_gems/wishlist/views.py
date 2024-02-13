@@ -42,7 +42,6 @@ class LikeJewelryView(View):
         return HttpResponseRedirect(reverse('display_liked_jewelries'))
 
 
-
 class DisplayedLikedJewelries(NavigationBarMixin, ListView):
     model = Jewelry
     template_name = 'wishlist/liked_jewelries.html'

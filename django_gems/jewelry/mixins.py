@@ -8,13 +8,11 @@ from django_gems.jewelry.models import Jewelry, Category, Metal, JewelryStone, S
 from django_gems.common.mixins import NavigationBarMixin
 from collections import OrderedDict
 
-from django_gems.jewelry.funcs import \
-    get_related_choices, \
-    get_query_price, \
+from django_gems.jewelry.funcs import (get_related_choices, get_query_price, \
     get_category_pks, \
     get_metal_pks, \
     get_stone_type_pks, \
-    get_stone_color_pks
+    get_stone_color_pks)
 
 
 class DefineRelatedObjectsMixin:

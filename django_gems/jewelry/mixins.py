@@ -9,7 +9,12 @@ from django_gems.common.mixins import NavigationBarMixin
 from collections import OrderedDict
 
 from django_gems.jewelry.funcs import (
-    get_related_choices, get_query_price, get_category_pks, get_metal_pks, get_stone_type_pks, get_stone_color_pks
+    get_related_choices,
+    get_query_price,
+    get_category_pks,
+    get_metal_pks,
+    get_stone_type_pks,
+    get_stone_color_pks
 )
 
 
@@ -319,6 +324,7 @@ class JewelryIsLikedByUserMixin:
             for jewelry in queryset:
                 jewelry.liked_by_user = jewelry.pk in liked_jewelries
 
+
 class JewelriesStonesMixin:
     @staticmethod
     def get_jewelries_stones(jewelries):
@@ -354,7 +360,6 @@ class JewelriesMetalsMixin:
                     metals_info_dict[jewelry.pk] = {metal: None}
 
         return metals_info_dict
-
 
 
 class DisplayJewelryMixin(
@@ -427,7 +432,7 @@ class JewelryMetalsMixin:
 #
 #         return form_data_encoded, page_number
 
-    # form_data_encoded, page_number = self.get_pagination(self.request)
-    #
-    # context['form_data_encoded'] = form_data_encoded
-    # context['page_number'] = page_number
+# form_data_encoded, page_number = self.get_pagination(self.request)
+#
+# context['form_data_encoded'] = form_data_encoded
+# context['page_number'] = page_number

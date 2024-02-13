@@ -11,5 +11,6 @@ urlpatterns = (
     path('', include('django_gems.user_profile.urls')),
     path('', include('django_gems.inventory.urls')),
     path('', include('django_gems.wishlist.urls')),
-
 )
+
+

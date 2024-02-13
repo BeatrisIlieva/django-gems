@@ -21,7 +21,8 @@ INSTALLED_APPS = [
     'django_celery_beat',
     'django_countries',
 
-    'django_gems.user_account',
+    # 'django_gems.user_account',
+    'django_gems.user_account.apps.UserAccountConfig',
     'django_gems.common',
     'django_gems.inventory',
     'django_gems.jewelry',
@@ -29,6 +30,7 @@ INSTALLED_APPS = [
     'django_gems.user_profile',
     'django_gems.shopping_cart',
     'django_gems.wishlist',
+
 ]
 
 MIDDLEWARE = [
@@ -130,3 +132,17 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = TIME_ZONE
 
 COUNTRIES_COMMON_NAMES = False
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+EMAIL_HOST_USER = 'djangogems@gmail.com'
+EMAIL_HOST_PASSWORD = 'yuyr nnkd kkkr pkzh'
+
+DEFAULT_FROM_EMAIL = 'djangogems@gmail.com'
+SERVER_EMAIL = 'djangogems@gmail.com'
+
+

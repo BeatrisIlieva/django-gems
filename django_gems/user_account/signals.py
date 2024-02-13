@@ -9,7 +9,7 @@ from django.utils.html import strip_tags
 UserModel = get_user_model()
 
 def send_successful_registration_email(user):
-    html_message = render_to_string('common/successful-registration.html', {'profile':user})
+    html_message = render_to_string('user-account/email-greeting.html', {'user':user})
 
     plain_message = strip_tags(html_message)
 

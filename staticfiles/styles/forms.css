@@ -115,13 +115,6 @@ li.form-item:last-of-type {
     margin-bottom: 12px;
 }
 
-/*.left-login-or-register-container {*/
-/*    border-right-style: dotted;*/
-/*    border-right-width: 2px;*/
-/*    border-right-color: var(--dark-pink);*/
-/*    padding-right: 80px;*/
-/*}*/
-
 
 li.form-item::marker {
     display: none;

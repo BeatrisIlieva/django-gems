@@ -10,6 +10,7 @@ from django_gems.jewelry.models import (
 
 UserModel = get_user_model()
 
+
 class IndexView(NavigationBarMixin, TemplateView):
     template_name = 'common/index.html'
 
@@ -93,7 +94,6 @@ class SearchBarView(
         return context
 
 
-
 def show_last_viewed(request, pk):
     last_viewed = request.session.get('last_viewed_jewelries', [])
 
@@ -113,6 +113,7 @@ class ProfileOptionsView(NavigationBarMixin, DetailView):
 
         return context
 
+
 class PasswordChangedSuccessfully(NavigationBarMixin, DetailView):
     template_name = 'common/password-changed.html'
     model = UserModel
@@ -123,6 +124,7 @@ class PasswordChangedSuccessfully(NavigationBarMixin, DetailView):
         context.update(nav_bar_context)
 
         return context
+
 
 class EmailChangedSuccessfully(NavigationBarMixin, DetailView):
     template_name = 'common/email-changed.html'
@@ -135,6 +137,7 @@ class EmailChangedSuccessfully(NavigationBarMixin, DetailView):
 
         return context
 
+
 class DetailsChangedSuccessfully(NavigationBarMixin, DetailView):
     template_name = 'common/details-changed.html'
     model = UserModel
@@ -145,6 +148,7 @@ class DetailsChangedSuccessfully(NavigationBarMixin, DetailView):
         context.update(nav_bar_context)
 
         return context
+
 
 class ProfileDeletedSuccessfully(NavigationBarMixin, TemplateView):
     template_name = 'common/profile-deleted.html'

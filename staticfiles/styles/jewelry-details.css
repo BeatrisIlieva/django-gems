@@ -6,7 +6,7 @@
 }
 
 .jewelry-details-image-first, .jewelry-details-image-second {
-    width: calc(28vw - 48px);
+    width: calc(30vw - 48px);
     aspect-ratio: 1 / 1;
     overflow: hidden;
     position: relative;
@@ -21,7 +21,7 @@
 }
 
 .jewelry-details-composition {
-    width: calc(28vw - 96px);
+    width: calc(30vw - 96px);
     position: relative;
 }
 

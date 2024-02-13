@@ -79,6 +79,10 @@
     display: inline-block;
 }
 
+label.search-icon {
+    cursor: pointer;
+}
+
 .icon-item {
     display: inline-block;
 }
@@ -91,6 +95,11 @@
 
 .header i {
     color: white;
+    margin-left: 18px;
+}
+
+.header .dropdown-content i {
+    color: var(--dark-blue);
     margin-left: 18px;
 }
 
@@ -132,6 +141,7 @@
     padding-left: 8px;
     padding-right: 8px;
     text-align: center;
+    cursor: default;
 }
 
 #profile-item-drop-down-email {
@@ -143,6 +153,7 @@
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     padding: 8px;
     text-align: center;
+    cursor: default;
 }
 
 

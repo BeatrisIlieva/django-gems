@@ -14,6 +14,7 @@
     margin-bottom: 12px;
     margin-top: 12px;
     font-weight: 400;
+    cursor: pointer;
 }
 
 .button a {
@@ -28,7 +29,7 @@
 
 .button.filled_green {
     color: var(--dark-blue);
-    background-color: 	#d5ff87;
+    background-color: #d5ff87;
 }
 
 .button.filled_green:hover {
@@ -75,5 +76,11 @@
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"] {
-    color: var(--dark-blue); 
+    color: var(--dark-blue);
 }
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
+

@@ -141,12 +141,12 @@
 .right-container {
     width: calc(30% - 96px);
     position: sticky;
-    top: calc(24% + 12px);
+    top: calc(30% + 12px);
 }
 
 .right-sticky {
     position: sticky;
-    top: calc(24% + 12px);
+    top: calc(30% + 12px);
 }
 
 .order-summary-items {

@@ -7,6 +7,7 @@ from django_gems.user_profile.models import AccountProfile
 
 UserModel = get_user_model()
 
+
 class UserUpdateView(NavigationBarMixin, UpdateView):
     template_name = 'user-profile/update-profile.html'
     model = AccountProfile
@@ -29,4 +30,3 @@ class UserDeleteView(DeleteView):
     template_name = 'user-profile/delete-profile.html'
     model = UserModel
     success_url = reverse_lazy('profile-deleted')
-

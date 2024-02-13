@@ -1,5 +1,4 @@
 from django.contrib.auth import login, logout
-from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.views import LoginView, PasswordChangeView
 from django.shortcuts import redirect

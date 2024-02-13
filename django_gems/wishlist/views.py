@@ -42,44 +42,6 @@ class LikeJewelryView(View):
         return HttpResponseRedirect(reverse('display_liked_jewelries'))
 
 
-# class LikeJewelryView(RedirectView):
-#     def get_redirect_url(self, *args, **kwargs):
-#         jewelry_pk = self.kwargs.get('jewelry_pk')
-#
-#         if self.request.user.is_authenticated:
-#             user_id = self.request.user.pk
-#
-#             kwargs = {
-#                 'jewelry_id': jewelry_pk,
-#                 'user_id': user_id,
-#             }
-#
-#             user_liked_jewelry = JewelryLike.objects \
-#                 .filter(**kwargs).first()
-#
-#             if user_liked_jewelry:
-#                 user_liked_jewelry.delete()
-#
-#             else:
-#                 JewelryLike.objects.create(
-#                     **kwargs
-#                 )
-#
-#         else:
-#
-#             liked_jewelries = self.request.session.get('liked_jewelries', [])
-#
-#             if jewelry_pk in liked_jewelries:
-#                 liked_jewelries.remove(jewelry_pk)
-#
-#             else:
-#
-#                 liked_jewelries.append(jewelry_pk)
-#
-#             self.request.session['liked_jewelries'] = liked_jewelries
-#
-#             return reverse('display_liked_jewelries')
-
 
 class DisplayedLikedJewelries(NavigationBarMixin, ListView):
     model = Jewelry

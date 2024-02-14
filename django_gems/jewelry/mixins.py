@@ -4,9 +4,16 @@ from django.db.models import Q
 from django.views.generic import ListView
 
 from django_gems.inventory.models import Inventory
-from django_gems.jewelry.models import Jewelry, Category, Metal, JewelryStone, StoneType, StoneColor
 from django_gems.common.mixins import NavigationBarMixin
 from collections import OrderedDict
+from django_gems.jewelry.models import (
+    Jewelry,
+    Category,
+    Metal,
+    JewelryStone,
+    StoneType,
+    StoneColor
+)
 
 from django_gems.jewelry.funcs import (
     get_related_choices,
@@ -422,5 +429,3 @@ class JewelryMetalsMixin:
                 metal_info_dict[metal] = None
 
         return metal_info_dict
-
-

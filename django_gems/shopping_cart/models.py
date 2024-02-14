@@ -1,5 +1,4 @@
 from django.db import models
-from django_gems.user_account.models import AccountUser
 from django_gems.jewelry.models import Jewelry
 
 

@@ -20,7 +20,7 @@ from django_gems.jewelry.funcs import (
 )
 
 
-class DisplayJewelriesByCategoryView(DisplayJewelryMixin, JewelriesStonesMixin, JewelriesMetalsMixin):
+class DisplayJewelriesByCategoryView(DisplayJewelryMixin):
     template_name = 'jewelry/display-jewelries-by-category.html'
 
     def __init__(self, *args, **kwargs):
@@ -208,8 +208,8 @@ class DisplayJewelriesByCategoryView(DisplayJewelryMixin, JewelriesStonesMixin, 
                 stone_color_choices=stone_color_choices,
             )
 
-        self.jewelries_by_metals = self.get_jewelries_metals(jewelries)
-        self.jewelries_by_stones = self.get_jewelries_stones(jewelries)
+        # self.jewelries_by_metals = self.get_jewelries_metals(jewelries)
+        # self.jewelries_by_stones = self.get_jewelries_stones(jewelries)
 
 
 class DisplayJewelriesByMetalView(DisplayJewelryMixin):

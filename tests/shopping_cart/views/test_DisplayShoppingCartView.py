@@ -3,10 +3,10 @@ from django.test import Client
 from django.urls import reverse
 from django.test import TestCase as TestCase
 
-from e_commerce_website.inventory.models import Inventory
-from e_commerce_website.shopping_cart.models import ShoppingCart
-from e_commerce_website.shopping_cart.views import AddToShoppingCartView, DisplayShoppingCartView
-from e_commerce_website.jewelry.models import Category, Jewelry
+from django_gems.inventory.models import Inventory
+from django_gems.shopping_cart.models import ShoppingCart
+from django_gems.shopping_cart.views import AddToShoppingCartView, DisplayShoppingCartView
+from django_gems.jewelry.models import Category, Jewelry
 
 
 class DisplayShoppingCartViewTests(TestCase):

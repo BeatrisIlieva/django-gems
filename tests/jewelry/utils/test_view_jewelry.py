@@ -1,6 +1,6 @@
 from django.test import Client, TestCase
 from django.urls import reverse
-from e_commerce_website.jewelry.models import Jewelry, Category
+from django_gems.jewelry.models import Jewelry, Category
 
 
 class ViewJewelryTest(TestCase):

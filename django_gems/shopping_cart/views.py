@@ -53,7 +53,9 @@ class AddToShoppingCartView(RedirectView):
 
             if quantity_as_int:
                 quantity_as_int += self.QUANTITY_TO_INCREASE_IF_EXISTING_SHOPPING_CART
-                ShoppingCart.objects.filter(jewelry_id=jewelry_pk).update(quantity=quantity_as_int)
+                ShoppingCart.objects.\
+                    filter(jewelry_id=jewelry_pk).\
+                    update(quantity=quantity_as_int)
 
         else:
 
@@ -63,14 +65,8 @@ class AddToShoppingCartView(RedirectView):
                 session_key=self.request.session.session_key,
                 size=size,
             )
-        # return redirect(request.META.get('HTTP_REFERER', 'fallback_url'))
+
         return HttpResponseRedirect(reverse('view_shopping_cart'))
-
-        # return reverse('view_shopping_cart')
-
-        # return reverse('display_jewelry_details', kwargs={
-        #     'pk': pk
-        # })
 
 
 class UpdateShoppingCartView(MaxQuantityMixin, FormView):

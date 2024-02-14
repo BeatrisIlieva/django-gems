@@ -103,8 +103,9 @@ class UpdateShoppingCartView(MaxQuantityMixin, FormView):
                 self.request.session['cart'] = cart
 
                 if new_quantity == self.ZERO_QUANTITY:
-                    ShoppingCart.objects.filter(session_key=self.request.session.session_key,
-                                                jewelry_id=jewelry_pk).delete()
+                    ShoppingCart.objects.filter(
+                        session_key=self.request.session.session_key,
+                        jewelry_id=jewelry_pk).delete()
 
                 return redirect('view_shopping_cart')
 
@@ -112,13 +113,24 @@ class UpdateShoppingCartView(MaxQuantityMixin, FormView):
 
         self.request.session['cart'] = cart
 
-        ShoppingCart.objects.filter(session_key=self.request.session.session_key, jewelry_id=jewelry_pk).update(
-            quantity=new_quantity)
+        ShoppingCart.objects.filter(
+            session_key=self.request.session.session_key,
+            jewelry_id=jewelry_pk
+        ).update(
+            quantity=new_quantity
+        )
 
         return redirect('view_shopping_cart')
 
 
-class DisplayShoppingCartView(LastViewedJewelriesMixin, JewelryStonesMixin, JewelryMetalsMixin, MaxQuantityMixin, NavigationBarMixin, TemplateView):
+class DisplayShoppingCartView(
+    LastViewedJewelriesMixin,
+    JewelryStonesMixin,
+    JewelryMetalsMixin,
+    MaxQuantityMixin,
+    NavigationBarMixin,
+    TemplateView
+):
     template_name = 'shopping-cart/shopping-cart.html'
 
     MIN_QUANTITY = 0

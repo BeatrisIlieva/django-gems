@@ -423,16 +423,4 @@ class JewelryMetalsMixin:
 
         return metal_info_dict
 
-# class PaginatorMixin:
-#     def get_pagination(self, request):
-#         form_data = request.GET.copy() if request.GET else {}
-#         form_data.pop('page', None)
-#         page_number = request.GET.get('page', 1)
-#         form_data_encoded = urlencode(form_data) + '&' if form_data else ''
-#
-#         return form_data_encoded, page_number
 
-# form_data_encoded, page_number = self.get_pagination(self.request)
-#
-# context['form_data_encoded'] = form_data_encoded
-# context['page_number'] = page_number

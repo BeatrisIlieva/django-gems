@@ -22,7 +22,6 @@ class AddToShoppingCartView(RedirectView):
     QUANTITY_TO_INCREASE_UPON_ADDING_TO_NEW_CART = 1
     QUANTITY_TO_INCREASE_IF_EXISTING_SHOPPING_CART = 1
 
-    # def get_redirect_url(self, *args, **kwargs):
     def get(self, request, *args, **kwargs):
         quantity = self.QUANTITY_TO_DECREASE_UPON_ADDING_TO_SHOPPING_CART
         pk = self.kwargs.get('pk')

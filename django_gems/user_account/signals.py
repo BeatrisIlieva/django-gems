@@ -14,7 +14,7 @@ def send_successful_registration_email(user):
     plain_message = strip_tags(html_message)
 
     send_mail(
-        subject='Registration greetings!',
+        subject='Welcome to DjangoGems.com!',
         message=plain_message,
         html_message=html_message,
         from_email=settings.EMAIL_HOST_USER,

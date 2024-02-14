@@ -125,8 +125,6 @@ class UpdateShoppingCartView(MaxQuantityMixin, FormView):
 
 class DisplayShoppingCartView(
     LastViewedJewelriesMixin,
-    JewelryStonesMixin,
-    JewelryMetalsMixin,
     MaxQuantityMixin,
     NavigationBarMixin,
     TemplateView
@@ -168,8 +166,6 @@ class DisplayShoppingCartView(
                 'min_quantity': min_quantity,
                 'max_quantity': max_quantity,
                 'jewelry_total_price': jewelry_total_price,
-                'stone_info_dict': self.get_jewelry_stones(jewelry),
-                'metal_info_dict': self.get_jewelry_metals(jewelry)
             }
 
         additional_context = {

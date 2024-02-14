@@ -1,4 +1,4 @@
-from e_commerce_website.profiles.models import AccountProfile
+from django_gems.user_profile.models import AccountProfile
 from django.test import TestCase, Client
 from django.urls import reverse
 from django.contrib.auth import get_user_model

@@ -1,8 +1,8 @@
 from django.core.exceptions import ValidationError
 from django.test import TestCase
 
-from e_commerce_website.accounts.models import AccountUser
-from e_commerce_website.profiles.models import AccountProfile
+from django_gems.user_account.models import AccountUser
+from django_gems.user_profile.models import AccountProfile
 
 
 class PhoneNumberTests(TestCase):

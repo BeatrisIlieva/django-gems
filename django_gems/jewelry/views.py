@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 from django.views.generic.edit import FormMixin
 from django_gems.jewelry.mixins import (
     DisplayJewelryMixin, LastViewedJewelriesMixin,
-    JewelryStonesMixin, JewelryMetalsMixin, JewelriesStonesMixin, JewelriesMetalsMixin
+    JewelriesStonesMixin, JewelriesMetalsMixin
 )
 from django_gems.jewelry.models import (
     Jewelry, StoneType, StoneColor

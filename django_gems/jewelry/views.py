@@ -736,8 +736,6 @@ class DisplayJewelriesByStoneColorView(DisplayJewelryMixin):
 class JewelryDetailsView(
     LastViewedJewelriesMixin,
     NavigationBarMixin,
-    JewelryStonesMixin,
-    JewelryMetalsMixin,
     TemplateView,
     FormMixin
 ):
@@ -761,10 +759,6 @@ class JewelryDetailsView(
         selection_form.fields['sizes'].choices = size_choices
 
         context['form'] = selection_form
-
-        context['stone_info_dict'] = self.get_jewelry_stones(jewelry)
-
-        context['metal_info_dict'] = self.get_jewelry_metals(jewelry)
 
         context['jewelry'] = jewelry
 

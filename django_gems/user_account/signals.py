@@ -34,8 +34,6 @@ def user_created(instance, created, **kwargs):
 @receiver(post_save, sender=Order)
 def send_order_confirmation_email(sender, instance, created, **kwargs):
     if created:
-        total_price = calculate_total_price(instance)
-
 
         user_full_name = instance.user.accountprofile.full_name
 
@@ -49,7 +47,6 @@ def send_order_confirmation_email(sender, instance, created, **kwargs):
 
         html_message = render_to_string('user-account/email-order-confirmation.html', {
             'order': instance,
-            'total_price': total_price,
             'user_email': user_email,
             'user_full_name': user_full_name,
             'user_country': user_country,
@@ -69,9 +66,3 @@ def send_order_confirmation_email(sender, instance, created, **kwargs):
             from_email=settings.EMAIL_HOST_USER,
             recipient_list=(user_email,),
         )
-
-def calculate_total_price(order):
-    total_price = 0
-    for item in order.orderproducts_set.all():
-        total_price += item.total_price
-    return total_price

@@ -181,7 +181,7 @@ class DisplayJewelriesByCategoryView(DisplayJewelryMixin):
             self.define_jewelries_count_by_stone_type(jewelries, stone_types)
 
         if stone_color_pk is not None:
-            stone_colors = StoneColor.objects.\
+            stone_colors = StoneColor.objects. \
                 filter(id__in=stone_color_pk)
 
         self.jewelries_count_by_stone_color = \
@@ -207,9 +207,6 @@ class DisplayJewelriesByCategoryView(DisplayJewelryMixin):
                 stone_type_choices=stone_type_choices,
                 stone_color_choices=stone_color_choices,
             )
-
-        # self.jewelries_by_metals = self.get_jewelries_metals(jewelries)
-        # self.jewelries_by_stones = self.get_jewelries_stones(jewelries)
 
 
 class DisplayJewelriesByMetalView(DisplayJewelryMixin):
@@ -362,14 +359,14 @@ class DisplayJewelriesByMetalView(DisplayJewelryMixin):
             self.define_jewelries_count_by_category(jewelries, categories)
 
         if stone_type_pk is not None:
-            stone_types = StoneType.objects.\
+            stone_types = StoneType.objects. \
                 filter(id__in=stone_type_pk)
 
         self.jewelries_count_by_stone_type = \
             self.define_jewelries_count_by_stone_type(jewelries, stone_types)
 
         if stone_color_pk is not None:
-            stone_colors = StoneColor.objects.\
+            stone_colors = StoneColor.objects. \
                 filter(id__in=stone_color_pk)
 
         self.jewelries_count_by_stone_color = \
@@ -739,7 +736,6 @@ class JewelryDetailsView(
     TemplateView,
     FormMixin
 ):
-
     template_name = 'jewelry/jewelry-details.html'
     form_class = SizeForm
 

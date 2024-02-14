@@ -1,11 +1,8 @@
 from _decimal import Decimal
-
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
 from django.urls import reverse
-
 from django.views.generic import FormView, TemplateView, RedirectView
-
 from django_gems.common.mixins import NavigationBarMixin
 from django_gems.inventory.models import Inventory
 from django_gems.inventory.utils import remove_quantity_from_inventory, add_quantity_to_inventory
@@ -36,14 +33,19 @@ class AddToShoppingCartView(RedirectView):
         if jewelry_pk in cart:
             cart[jewelry_pk]['quantity'] += quantity
         else:
-            cart[jewelry_pk] = {'quantity': self.QUANTITY_TO_INCREASE_UPON_ADDING_TO_NEW_CART, 'size': size}
+            cart[jewelry_pk] = {
+                'quantity': self.QUANTITY_TO_INCREASE_UPON_ADDING_TO_NEW_CART,
+                'size': size
+            }
 
         request.session['cart'] = cart
 
         remove_quantity_from_inventory(jewelry, quantity)
 
-        customer_shopping_cart = ShoppingCart.objects.filter(session_key=self.request.session.session_key,
-                                                             jewelry_id=jewelry_pk)
+        customer_shopping_cart = ShoppingCart.objects.filter(
+            session_key=self.request.session.session_key,
+            jewelry_id=jewelry_pk
+        )
 
         if customer_shopping_cart:
             cart_item = customer_shopping_cart.get(jewelry_id=jewelry_pk)

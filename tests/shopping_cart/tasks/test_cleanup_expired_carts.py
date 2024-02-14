@@ -1,11 +1,11 @@
 from django.test import TestCase
-from e_commerce_website.shopping_cart.tasks import cleanup_expired_carts
-from e_commerce_website.shopping_cart.models import ShoppingCart
-from e_commerce_website.inventory.models import Inventory
+from django_gems.shopping_cart.tasks import cleanup_expired_carts
+from django_gems.shopping_cart.models import ShoppingCart
+from django_gems.inventory.models import Inventory
 from django.conf import settings
 from django.test import Client
 from django.urls import reverse
-from e_commerce_website.jewelry.models import Category, Jewelry
+from django_gems.jewelry.models import Category, Jewelry
 
 
 class CleanupExpiredCartsTest(TestCase):

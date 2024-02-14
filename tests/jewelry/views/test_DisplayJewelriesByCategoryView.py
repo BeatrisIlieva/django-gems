@@ -2,8 +2,8 @@ from django.test import Client
 from django.urls import reverse
 from django.test import TestCase as TestCase
 
-from e_commerce_website.inventory.models import Inventory
-from e_commerce_website.jewelry.models import Category, Jewelry, Metal, StoneType, StoneColor, JewelryMetal, \
+from django_gems.inventory.models import Inventory
+from django_gems.jewelry.models import Category, Jewelry, Metal, StoneType, StoneColor, JewelryMetal, \
     JewelryStone
 
 

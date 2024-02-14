@@ -6,7 +6,7 @@ from django.views.generic import FormView, TemplateView, RedirectView
 from django_gems.common.mixins import NavigationBarMixin
 from django_gems.inventory.models import Inventory
 from django_gems.inventory.utils import remove_quantity_from_inventory, add_quantity_to_inventory
-from django_gems.jewelry.mixins import LastViewedJewelriesMixin, JewelryStonesMixin, JewelryMetalsMixin
+from django_gems.jewelry.mixins import LastViewedJewelriesMixin
 from django_gems.jewelry.models import Jewelry
 from django_gems.shopping_cart.forms import QuantityUpdateForm
 from django_gems.shopping_cart.mixins import MaxQuantityMixin

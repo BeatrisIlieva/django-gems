@@ -2,7 +2,7 @@ from django.test import Client
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from django.test import TestCase as TestCase
-from e_commerce_website.jewelry.models import (
+from django_gems.jewelry.models import (
     Category, Jewelry,
 )
 

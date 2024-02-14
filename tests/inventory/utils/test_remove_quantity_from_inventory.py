@@ -3,9 +3,9 @@ from django.urls import reverse
 from django.contrib.auth import get_user_model
 from django.test import TestCase as TestCase
 
-from e_commerce_website.inventory.models import Inventory
-from e_commerce_website.inventory.utils import remove_quantity_from_inventory
-from e_commerce_website.jewelry.models import (
+from django_gems.inventory.models import Inventory
+from django_gems.inventory.utils import remove_quantity_from_inventory
+from django_gems.jewelry.models import (
     Category, Metal, StoneType, StoneColor, Jewelry,
     Size, JewelryMetal, JewelryStone, JewelrySize
 )

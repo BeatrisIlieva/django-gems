@@ -2,9 +2,8 @@ from django.db.models import Q
 from django.shortcuts import redirect
 from django.views.generic import TemplateView
 from django.views.generic.edit import FormMixin
-from django_gems.core.cache_mixin import CachedViewMixin
 from django_gems.jewelry.mixins import (
-    DisplayJewelryMixin, LastViewedJewelriesMixin, JewelryIsLikedByUserMixin
+    DisplayJewelryMixin, LastViewedJewelriesMixin
 )
 from django_gems.jewelry.models import (
     Jewelry, StoneType, StoneColor
@@ -20,7 +19,7 @@ from django_gems.jewelry.funcs import (
 )
 
 
-class DisplayJewelriesByCategoryView(CachedViewMixin, DisplayJewelryMixin):
+class DisplayJewelriesByCategoryView(DisplayJewelryMixin):
     template_name = 'jewelry/display-jewelries-by-category.html'
 
     def __init__(self, *args, **kwargs):
@@ -209,7 +208,7 @@ class DisplayJewelriesByCategoryView(CachedViewMixin, DisplayJewelryMixin):
             )
 
 
-class DisplayJewelriesByMetalView(CachedViewMixin, DisplayJewelryMixin):
+class DisplayJewelriesByMetalView(DisplayJewelryMixin):
     template_name = 'jewelry/display-jewelries-by-metal.html'
 
     def __init__(self, *args, **kwargs):
@@ -394,7 +393,7 @@ class DisplayJewelriesByMetalView(CachedViewMixin, DisplayJewelryMixin):
             )
 
 
-class DisplayJewelriesByStoneTypeView(CachedViewMixin, DisplayJewelryMixin):
+class DisplayJewelriesByStoneTypeView(DisplayJewelryMixin):
     template_name = 'jewelry/display-jewelries-by-stone-type.html'
 
     def __init__(self, *args, **kwargs):
@@ -567,7 +566,7 @@ class DisplayJewelriesByStoneTypeView(CachedViewMixin, DisplayJewelryMixin):
             )
 
 
-class DisplayJewelriesByStoneColorView(CachedViewMixin, DisplayJewelryMixin):
+class DisplayJewelriesByStoneColorView(DisplayJewelryMixin):
     template_name = 'jewelry/display-jewelries-by-stone-color.html'
 
     def __init__(self, *args, **kwargs):
@@ -731,7 +730,6 @@ class DisplayJewelriesByStoneColorView(CachedViewMixin, DisplayJewelryMixin):
 
 
 class JewelryDetailsView(
-    CachedViewMixin,
     LastViewedJewelriesMixin,
     NavigationBarMixin,
     TemplateView,

@@ -1,5 +1,7 @@
 {% extends 'base/base.html' %}
+{#{% load cache %}#}
 {% block page_content %}
+{#    {% cache 10 background_image %}#}
     <article class="wish-list-card">
         <img class="img-bg"
              src="https://res.cloudinary.com/deztgvefu/image/upload/v1706346310/template_images/largeherod_l3_candy23_a_red_xczfkn.webp"
@@ -27,6 +29,7 @@
             </div>
         </div>
     </article>
+{#    {% endcache %}#}
     {% if count_liked_jewelries %}
         {% include 'wishlist/jewelry-card.html' %}
         {% include 'common/pagination.html' %}

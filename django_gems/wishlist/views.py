@@ -1,8 +1,10 @@
-from django.views.generic import ListView
+from django.shortcuts import redirect, render
+from django.views.generic import ListView, RedirectView
 from django.http import HttpResponseRedirect
 from django.views import View
 from django.urls import reverse
 from django_gems.common.mixins import NavigationBarMixin
+from django_gems.core.cache_mixin import CachedViewMixin
 from django_gems.jewelry.models import Jewelry
 from django_gems.wishlist.models import JewelryLike
 
@@ -37,7 +39,10 @@ class LikeJewelryView(View):
 
             request.session['liked_jewelries'] = liked_jewelries
 
-        return HttpResponseRedirect(reverse('display_liked_jewelries'))
+
+        return redirect(request.META.get('HTTP_REFERER', '/'))
+
+        # return HttpResponseRedirect(reverse('display_liked_jewelries'))
 
 
 class DisplayedLikedJewelries(NavigationBarMixin, ListView):

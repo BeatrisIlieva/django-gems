@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 from django.views.generic import TemplateView, ListView, DetailView
 from django_gems.common.mixins import NavigationBarMixin
 from django_gems.common.utils import get_object_pks
+from django_gems.core.cache_mixin import CachedViewMixin
 from django_gems.jewelry.mixins import JewelryIsLikedByUserMixin, LastViewedJewelriesMixin
 from django_gems.jewelry.models import (
     Category, Metal, StoneType, StoneColor, Jewelry
@@ -11,7 +12,7 @@ from django_gems.jewelry.models import (
 UserModel = get_user_model()
 
 
-class IndexView(NavigationBarMixin, TemplateView):
+class IndexView(CachedViewMixin, NavigationBarMixin, TemplateView):
     template_name = 'common/index.html'
 
     def get_context_data(self, **kwargs):

@@ -395,7 +395,7 @@ class DisplayJewelriesByMetalView(CachedViewMixin, DisplayJewelryMixin):
             )
 
 
-class DisplayJewelriesByStoneTypeView(DisplayJewelryMixin):
+class DisplayJewelriesByStoneTypeView(CachedViewMixin, DisplayJewelryMixin):
     template_name = 'jewelry/display-jewelries-by-stone-type.html'
 
     def __init__(self, *args, **kwargs):

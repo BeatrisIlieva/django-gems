@@ -210,7 +210,7 @@ class DisplayJewelriesByCategoryView(CachedViewMixin, DisplayJewelryMixin):
             )
 
 
-class DisplayJewelriesByMetalView(DisplayJewelryMixin):
+class DisplayJewelriesByMetalView(CachedViewMixin, DisplayJewelryMixin):
     template_name = 'jewelry/display-jewelries-by-metal.html'
 
     def __init__(self, *args, **kwargs):

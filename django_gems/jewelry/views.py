@@ -732,6 +732,7 @@ class DisplayJewelriesByStoneColorView(CachedViewMixin, DisplayJewelryMixin):
 
 
 class JewelryDetailsView(
+    CachedViewMixin,
     LastViewedJewelriesMixin,
     NavigationBarMixin,
     TemplateView,

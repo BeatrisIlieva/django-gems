@@ -1,13 +1,11 @@
-from django.core.cache import cache
 from django.views import View
-
-
 from django_gems.common.utils import get_objects_by_choices
 from django_gems.jewelry.models import Category, \
     Metal, \
     StoneType, \
     StoneColor
 from django_gems.wishlist.models import JewelryLike
+from django.core.cache import cache
 
 
 class NavigationBarMixin(View):
@@ -40,11 +38,24 @@ class NavigationBarMixin(View):
         context['likes_count'] = likes_count
         context['cart_count'] = cart_count
 
-        # context = self.cache_context(context)
+        # if not cache.get('context'):
+        #     cache.set('context', context, 1 * 3600)
+        #
+        # context = cache.get('context')
 
-        if not cache.get('context'):
-            cache.set('context', context, 30)
+        non_cached_context = {
+            'likes_count': likes_count,
+            'cart_count': cart_count,
+        }
 
-        context = cache.get('context')
+        context = {
+            'categories_by_choices': categories_by_choices,
+            'metals_by_choices': metals_by_choices,
+            'stone_types_by_choices': stone_types_by_choices,
+            'stone_colors_by_choices': stone_colors_by_choices,
+            **non_cached_context,
+        }
+
+        cache.set('nav_bar_context', context, 1 * 3600)
 
         return context

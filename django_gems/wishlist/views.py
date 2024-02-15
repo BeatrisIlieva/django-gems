@@ -1,9 +1,7 @@
 from django.views.generic import ListView
 from django.http import HttpResponseRedirect
 from django.views import View
-
 from django.urls import reverse
-
 from django_gems.common.mixins import NavigationBarMixin
 from django_gems.jewelry.models import Jewelry
 from django_gems.wishlist.models import JewelryLike

@@ -2,9 +2,9 @@ from django.db.models import Q
 from django.shortcuts import redirect
 from django.views.generic import TemplateView
 from django.views.generic.edit import FormMixin
-
+from django_gems.core.cache_mixin import CachedViewMixin
 from django_gems.jewelry.mixins import (
-    DisplayJewelryMixin, LastViewedJewelriesMixin, CachedViewMixin,
+    DisplayJewelryMixin, LastViewedJewelriesMixin, JewelryIsLikedByUserMixin
 )
 from django_gems.jewelry.models import (
     Jewelry, StoneType, StoneColor
@@ -735,7 +735,7 @@ class JewelryDetailsView(
     LastViewedJewelriesMixin,
     NavigationBarMixin,
     TemplateView,
-    FormMixin
+    FormMixin,
 ):
     template_name = 'jewelry/jewelry-details.html'
     form_class = SizeForm
@@ -764,6 +764,15 @@ class JewelryDetailsView(
         last_viewed_jewelries = self.get_last_viewed_jewelries(request_session)
 
         context.update(last_viewed_jewelries)
+
+        if self.request.user.pk:
+
+            jewelry.liked_by_user = jewelry.jewelrylike_set.filter(user=self.request.user).exists()
+
+        else:
+            liked_jewelries = self.request.session.get('liked_jewelries', [])
+
+            jewelry.liked_by_user = jewelry.pk in liked_jewelries
 
         nav_bar_context = self.get_nav_bar_context()
         context.update(nav_bar_context)

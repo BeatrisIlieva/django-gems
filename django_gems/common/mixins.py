@@ -1,9 +1,11 @@
 from django.views import View
 from django_gems.common.utils import get_objects_by_choices
-from django_gems.jewelry.models import Category, \
-    Metal, \
-    StoneType, \
+from django_gems.jewelry.models import (
+    Category,
+    Metal,
+    StoneType,
     StoneColor
+)
 from django_gems.wishlist.models import JewelryLike
 from django.core.cache import cache
 

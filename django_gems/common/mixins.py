@@ -45,11 +45,6 @@ class NavigationBarMixin(CachedViewMixin, View):
         context['stone_types_by_choices'] = stone_types_by_choices
         context['stone_colors_by_choices'] = stone_colors_by_choices
 
-        # context['categories_by_choices'] = 1
-        # context['metals_by_choices'] = 1
-        # context['stone_types_by_choices'] = 1
-        # context['stone_colors_by_choices'] = 1
-
         if self.request.user.pk:
             likes_count = JewelryLike.objects.filter(user_id=self.request.user.pk).count()
         else:

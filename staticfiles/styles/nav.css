@@ -3,6 +3,7 @@
     padding: 4px;
     cursor: pointer;
     color: var(--white);
+    /*border: none;*/
 }
 
 .navigation {
@@ -12,7 +13,13 @@
 
 .dropdown {
     position: relative;
+    margin-right: 12px;
 }
+
+.dropdown:last-child {
+    margin-right: 0px;
+}
+
 
 .zoom-text {
     transition: transform 0.3s ease-in-out;
@@ -80,7 +87,7 @@
 }
 
 label.search-icon {
-        cursor: pointer;
+    cursor: pointer;
 }
 
 .icon-item {
@@ -93,10 +100,23 @@ label.search-icon {
     flex-wrap: wrap;
 }
 
-.header i {
-    color: white;
-    margin-left: 18px;
+/*.header i {*/
+/*    color: white;*/
+/*    margin-left: 6px;*/
+/*}*/
+
+.icon-button {
+    color: var(--white);
+    margin-left: 10px;
 }
+
+.button-no-margin-left {
+    margin-left: 0px;
+}
+
+/*.header:first-child {*/
+/*    margin-left: 0px;*/
+/*}*/
 
 .header .dropdown-content i {
     color: var(--dark-blue);
@@ -154,6 +174,12 @@ label.search-icon {
     padding: 8px;
     text-align: center;
     cursor: default;
+}
+
+.arrow-icon {
+    font-size: 16px;
+    margin: 0px;
+    padding-left: 6px;
 }
 
 

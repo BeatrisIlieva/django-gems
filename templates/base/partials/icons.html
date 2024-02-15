@@ -10,14 +10,14 @@
                     style="text-align: center"
             />
             <label for="search-toggle" class="search-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="button-no-margin-left icon-button fa-solid fa-magnifying-glass"></i>
             </label>
         </form>
     </button>
     {% if likes_count > 0 %}
         <button class="btn">
             <a class="zoom-text" href="{% url 'display_liked_jewelries' %}">
-                <i class="fa-regular fa-heart"
+                <i class="icon-button fa-regular fa-heart"
                 ><span class="likes-count-nav">({{ likes_count }})</span></i
                 >
             </a>
@@ -25,13 +25,13 @@
     {% else %}
         <button class="btn">
             <a class="zoom-text" href="{% url 'display_liked_jewelries' %}">
-                <i class="fa-regular fa-heart"></i>
+                <i class="icon-button fa-regular fa-heart"></i>
             </a>
         </button>
     {% endif %} {% if cart_count > 0 %}
     <button class="btn">
         <a class="zoom-text" href="{% url 'view_shopping_cart' %}">
-            <i class="fa-solid fa-bag-shopping"
+            <i class="icon-button fa-solid fa-bag-shopping"
             ><span class="cart-count-nav">({{ cart_count }})</span></i
             >
         </a>
@@ -39,21 +39,21 @@
 {% else %}
     <button class="btn">
         <a class="zoom-text" href="{% url 'view_shopping_cart' %}">
-            <i class="fa-solid fa-bag-shopping"></i>
+            <i class="icon-button fa-solid fa-bag-shopping"></i>
         </a>
     </button>
 {% endif %}
     {% if not request.user.is_authenticated %}
     <button class="btn">
         <a class="zoom-text" href="{% url 'login_or_register_user' %}">
-            <i class="fa-regular fa-user"></i>
+            <i class="icon-button fa-regular fa-user"></i>
         </a>
     </button>
 {% else %}
     <button class="btn dropdown">
         <ul class="nav-item" role="list" tabindex="0">
             <li>
-                <i class="fa-regular fa-user"></i>
+                <i class="icon-button fa-regular fa-user"></i>
             </li>
             <li class="icon-dropdown dropdown-content">
                 <div id="profile-item-drop-down-name">

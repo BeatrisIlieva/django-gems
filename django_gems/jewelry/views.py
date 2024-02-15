@@ -2,6 +2,8 @@ from django.db.models import Q
 from django.shortcuts import redirect
 from django.views.generic import TemplateView
 from django.views.generic.edit import FormMixin
+
+from django_gems.core.cache_mixin import CachedViewMixin
 from django_gems.jewelry.mixins import (
     DisplayJewelryMixin, LastViewedJewelriesMixin,
 )
@@ -19,7 +21,7 @@ from django_gems.jewelry.funcs import (
 )
 
 
-class DisplayJewelriesByCategoryView(DisplayJewelryMixin):
+class DisplayJewelriesByCategoryView(CachedViewMixin, DisplayJewelryMixin):
     template_name = 'jewelry/display-jewelries-by-category.html'
 
     def __init__(self, *args, **kwargs):

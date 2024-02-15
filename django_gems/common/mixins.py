@@ -1,6 +1,6 @@
 from django.core.cache import cache
 from django.views import View
-from django.views.decorators.cache import cache_page
+
 
 from django_gems.common.utils import get_objects_by_choices
 from django_gems.jewelry.models import Category, \
@@ -10,24 +10,7 @@ from django_gems.jewelry.models import Category, \
 from django_gems.wishlist.models import JewelryLike
 
 
-# class CachedViewMixin:
-#     @classmethod
-#     def as_view(cls, **initkwargs):
-#         view = super().as_view(**initkwargs)
-#         return cache_page(30)(view)
-
-class CachedViewMixin:
-    @staticmethod
-    def cache_context(context):
-        if not cache.get('context'):
-            cache.set('context', context, 30)
-
-        context = cache.get('context')
-
-        return context
-
-
-class NavigationBarMixin(CachedViewMixin, View):
+class NavigationBarMixin(View):
 
     def get_nav_bar_context(self):
         context = {}
@@ -57,11 +40,11 @@ class NavigationBarMixin(CachedViewMixin, View):
         context['likes_count'] = likes_count
         context['cart_count'] = cart_count
 
-        context = self.cache_context(context)
+        # context = self.cache_context(context)
 
-        # if not cache.get('context'):
-        #     cache.set('context', context, 30)
-        #
-        # context = cache.get('context')
+        if not cache.get('context'):
+            cache.set('context', context, 30)
+
+        context = cache.get('context')
 
         return context

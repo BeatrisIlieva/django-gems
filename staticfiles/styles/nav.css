@@ -19,7 +19,7 @@
 }
 
 .dropdown:hover .zoom-text {
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 
 .dropdown-content {

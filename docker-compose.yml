@@ -2,17 +2,16 @@ version: '3'
 
 services:
   web:
-    image: beatris/djangogems:2024_02
-    build: .
-#    command: python manage.py runserver 0.0.0.0:8000
+    image: django_gems
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
     env_file:
       - ./envs/.env
-    volumes:
-      - /tmp/for_deploy/static:/app/static
     platform: linux/amd64
-    command: gunicorn --bind=0.0.0.0:8000 djangogems.wsgi:application
+    command: gunicorn --bind=0.0.0.0:8000 django_gems.wsgi:application
     links:
       - postgres
   postgres:
@@ -33,7 +32,7 @@ services:
       - "81:80"
       - "443:443"
     volumes:
-      - /tmp/for_deploy/static:/home/app/web/staticfiles
+      - /tmp/django_gems/static:/home/app/web/staticfiles
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./nginx/logs:/var/log/nginx
       - ./certbot/www:/var/www/certbot/:ro

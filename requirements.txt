@@ -13,7 +13,9 @@ Django==4.2.10
 django-celery-beat==2.5.0
 django-countries==7.5.1
 django-timezone-field==6.1.0
+gunicorn==21.2.0
 kombu==5.3.4
+packaging==23.2
 prompt-toolkit==3.0.43
 psycopg2-binary==2.9.9
 python-crontab==3.0.0

@@ -12,7 +12,18 @@ from django_gems.jewelry.models import (
 UserModel = get_user_model()
 
 
-class IndexView(CachedViewMixin, NavigationBarMixin, TemplateView):
+# class IndexView(CachedViewMixin, NavigationBarMixin, TemplateView):
+#     template_name = 'common/index.html'
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         nav_bar_context = self.get_nav_bar_context()
+#
+#         context.update(nav_bar_context)
+#
+#         return context
+
+class IndexView(NavigationBarMixin, TemplateView):
     template_name = 'common/index.html'
 
     def get_context_data(self, **kwargs):

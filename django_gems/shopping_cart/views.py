@@ -58,7 +58,6 @@ class AddToShoppingCartView(RedirectView):
                     update(quantity=quantity_as_int)
 
         else:
-
             ShoppingCart.objects.create(
                 jewelry=jewelry,
                 quantity=quantity,
@@ -102,10 +101,9 @@ class UpdateShoppingCartView(MaxQuantityMixin, FormView):
 
                 self.request.session['cart'] = cart
 
-                if new_quantity == self.ZERO_QUANTITY:
-                    ShoppingCart.objects.filter(
-                        session_key=self.request.session.session_key,
-                        jewelry_id=jewelry_pk).delete()
+                ShoppingCart.objects.filter(
+                    session_key=self.request.session.session_key,
+                    jewelry_id=jewelry_pk).delete()
 
                 return redirect('view_shopping_cart')
 
@@ -140,6 +138,7 @@ class DisplayShoppingCartView(
         cart = self.request.session.get('cart', {})
 
         jewelries_by_quantity_and_size = {}
+
         total_price = self.INITIAL_TOTAL_PRICE
 
         for jewelry_pk, quantity_size in cart.items():
@@ -161,7 +160,7 @@ class DisplayShoppingCartView(
             self.MAX_QUANTITIES[jewelry] = max_quantity
 
             jewelries_by_quantity_and_size[jewelry] = {
-                'size':size,
+                'size': size,
                 'quantity': quantity,
                 'min_quantity': min_quantity,
                 'max_quantity': max_quantity,
@@ -177,8 +176,6 @@ class DisplayShoppingCartView(
         request_session = self.request.session
         last_viewed_jewelries = self.get_last_viewed_jewelries(request_session)
         context.update(last_viewed_jewelries)
-        
-        cart = self.request.session.get('cart', {})
 
         cart_count = len(cart)
 

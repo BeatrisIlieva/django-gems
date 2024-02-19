@@ -12,7 +12,7 @@ app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 app.conf.beat_schedule = {
     'cleanup_expired_carts_task': {
         'task': 'django_gems.shopping_cart.tasks.cleanup_expired_carts',
-        # 'schedule': 3600,
-        'schedule': 90,
+        'schedule': 3600,
+        # 'schedule': 90,
     },
 }

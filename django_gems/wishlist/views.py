@@ -1,10 +1,7 @@
-from django.shortcuts import redirect, render
-from django.views.generic import ListView, RedirectView
-from django.http import HttpResponseRedirect
+from django.shortcuts import redirect
+from django.views.generic import ListView
 from django.views import View
-from django.urls import reverse
 from django_gems.common.mixins import NavigationBarMixin
-from django_gems.core.cache_mixin import CachedViewMixin
 from django_gems.jewelry.models import Jewelry
 from django_gems.wishlist.models import JewelryLike
 
@@ -39,10 +36,7 @@ class LikeJewelryView(View):
 
             request.session['liked_jewelries'] = liked_jewelries
 
-
         return redirect(request.META.get('HTTP_REFERER', '/'))
-
-        # return HttpResponseRedirect(reverse('display_liked_jewelries'))
 
 
 class DisplayedLikedJewelries(NavigationBarMixin, ListView):
@@ -56,12 +50,16 @@ class DisplayedLikedJewelries(NavigationBarMixin, ListView):
 
         if self.request.user.is_authenticated:
 
-            likes_pks = JewelryLike.objects.filter(user_id=self.request.user.pk).values_list('jewelry_id', flat=True)
+            likes_pks = JewelryLike.objects. \
+                filter(user_id=self.request.user.pk). \
+                values_list('jewelry_id', flat=True)
 
             queryset = queryset.filter(id__in=likes_pks)
 
             for jewelry in queryset:
-                jewelry.liked_by_user = jewelry.jewelrylike_set.filter(user=self.request.user).exists()
+                jewelry.liked_by_user = jewelry.jewelrylike_set. \
+                    filter(user=self.request.user). \
+                    exists()
         else:
             liked_jewelries = self.request.session.get('liked_jewelries', [])
             likes_pks = liked_jewelries

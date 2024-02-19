@@ -5,9 +5,11 @@ from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import CreateView, UpdateView
-from django_gems.user_account.forms import RegisterUserForm, LoginUserForm, CustomUpdateEmailForm, \
-    CustomUpdatePasswordForm
 from django_gems.common.mixins import NavigationBarMixin
+from django_gems.user_account.forms import (
+    RegisterUserForm, LoginUserForm,
+    CustomUpdateEmailForm, CustomUpdatePasswordForm
+)
 
 
 class RegisterUserView(NavigationBarMixin, CreateView):
@@ -70,7 +72,7 @@ class CustomUpdateEmailView(UpdateView):
         })
 
 
-class CustomUpdatePasswordView(SuccessMessageMixin,PasswordChangeView):
+class CustomUpdatePasswordView(SuccessMessageMixin, PasswordChangeView):
     template_name = 'user-account/update-password.html'
     form_class = CustomUpdatePasswordForm
 

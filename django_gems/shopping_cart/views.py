@@ -25,6 +25,7 @@ class AddToShoppingCartView(RedirectView):
 
         jewelry = Jewelry.objects.get(pk=pk)
         jewelry_pk = str(jewelry.pk)
+
         cart = self.request.session.get('cart', {})
 
         jewelry_by_size = request.session.get('jewelry_by_size', {})

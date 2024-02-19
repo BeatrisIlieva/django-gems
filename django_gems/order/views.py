@@ -102,10 +102,6 @@ class OrderDetailsView(LoginRequiredMixin,NavigationBarMixin, TemplateView):
 
         customer_full_name = AccountProfile.objects.get(pk=user_pk).full_name
 
-        # total_price = ShoppingCart.objects.filter(session_key=self.request.session.session_key).annotate(
-        #     total=ExpressionWrapper(F('jewelry__price') * F('quantity'), output_field=DecimalField())
-        # ).aggregate(total_sum=Sum('total')).get('total_sum') or Decimal('0.00')
-
         country = AccountProfile.objects.get(pk=user_pk).country
         city = AccountProfile.objects.get(pk=user_pk).city
         delivery_address = AccountProfile.objects.get(pk=user_pk).delivery_address

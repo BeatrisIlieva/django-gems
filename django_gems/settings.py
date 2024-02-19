@@ -3,6 +3,9 @@ from datetime import timedelta
 from pathlib import Path
 from django.urls import reverse_lazy
 
+SESSION_ENGINE = 'session_backends.session_backend'
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECRET_KEY = os.getenv('SECRET_KEY', None)

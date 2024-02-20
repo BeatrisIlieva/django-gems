@@ -188,12 +188,6 @@ These models handle the relationships between jewelry and metals, stones, and si
 4. #### Inventory
 The inventory model is designed for keeping track of jewelry quantities and prices. The admin interface provides options to manage inventory efficiently, including features for jewelry, quantity, and pricing.
 
-4. Inventory Model:
-- Customizes the Django admin interface for inventory management.
-- Specifies list display, ordering, list filter, search fields, and sortable fields.
-- Organizes fields into fieldsets based on jewelry, quantity, and price details.
-
-
 <p align="right" dir="auto"><a href="#djangoe-commercewebsite">Back To Top</a></p>
 
 ## Installation

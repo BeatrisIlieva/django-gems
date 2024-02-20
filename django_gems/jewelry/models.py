@@ -25,7 +25,7 @@ class Category(models.Model):
 
 class Metal(models.Model):
     class Meta:
-        verbose_name_plural = 'Jewelries'
+        verbose_name_plural = 'Metals'
     class TitleChoices(ChoicesMaxLengthMixin, models.TextChoices):
         YELLOW_GOLD = "YG", _("Yellow Gold")
         ROSE_GOLD = "RG", _("Rose Gold")

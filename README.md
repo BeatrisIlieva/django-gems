@@ -126,21 +126,26 @@
    
      Registered users can enjoy a shopping experience with the added convenience of an order history feature. Every purchase made by a registered user is meticulously recorded and stored, allowing them to effortlessly track their order history.
 
-14. Pagination:
+13. Pagination:
    
      To enhance accessibility, large sets of content are broken down into manageable sections. Users can effortlessly navigate through pages, ensuring a user-friendly and efficient exploration of our extensive collection. 
 
-15. Enhanced Form Display: Customizing Labels and Utilizing Placeholders:
+14. Enhanced Form Display: Customizing Labels and Utilizing Placeholders:
    
      In this implementation, default Django form labels have been removed, creating a cleaner and more streamlined appearance. Instead, placeholders have been implemented, offering users intuitive cues within the form fields. This enhancement not only improves aesthetics but also ensures a more user-friendly and modern form interaction.
 
-16. User-Friendly Error Messages:
+15. User-Friendly Error Messages:
    
      Enhancing user experience, our system features custom error messages that provide clear and concise feedback. These messages are designed to be user-friendly, allowing customers to easily understand and address any issues that may arise. Notably, these error messages are conveniently dismissible with a simple click, ensuring a seamless and non-intrusive interaction.
 
-17. Logout Functionality:
+16. Logout Functionality:
    
      By clicking on the Logout button conveniently placed in the header, customers can initiate alog-out process. Following the click, users are redirected to the Login or Register page.
+
+17. Email Notifications:
+- Upon successful registration on our platform, users will receive a confirmation email to verify their account. This email contains a link or code to complete the registration process.
+- After a successful purchase, users will receive a purchase confirmation email. This email includes details about their purchase, such as the items bought, transaction ID, and any relevant information.
+    
 
 #### II. Admin Users
 
@@ -162,7 +167,7 @@
 - Defines list display, list filter, search fields, and inlines for associated models (metals, stones, sizes).
 - Implements custom methods to display metals, stone types, and stone colors in the list view.
 
-3. Inventory Model:
+4. Inventory Model:
 - Customizes the Django admin interface for inventory management.
 - Specifies list display, ordering, list filter, search fields, and sortable fields.
 - Organizes fields into fieldsets based on jewelry, quantity, and price details.

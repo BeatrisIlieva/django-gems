@@ -5,14 +5,7 @@ from django.urls import reverse_lazy
 
 SESSION_ENGINE = 'session_backends.session_backend'
 
-
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-# SECRET_KEY = os.getenv('SECRET_KEY', None)
-
-# DEBUG = bool(int(os.getenv('DEBUG', 0)))
-
-# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
 
 SECRET_KEY = "django-insecure-#&s8j5cg)q%3cnr+sw^2h@0s%$d6o3wlpd1=ed9b1_dpos-$*_"
 
@@ -72,17 +65,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_gems.wsgi.application'
-
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": os.getenv('DB_NAME'),
-#         "PASSWORD": os.getenv('DB_PASSWORD'),
-#         "USER": os.getenv('DB_USER'),
-#         "HOST": os.getenv('DB_HOST'),
-#         "PORT": os.getenv('DB_PORT'),
-#     }
-# }
 
 DATABASES = {
     "default": {
@@ -152,16 +134,6 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TIMEZONE = TIME_ZONE
 
 COUNTRIES_COMMON_NAMES = False
-
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = os.getenv('EMAIL_HOST')
-# EMAIL_PORT = os.getenv('EMAIL_PORT')
-# EMAIL_USE_TLS = bool(int(os.getenv('EMAIL_USE_TLS', 0)))
-# EMAIL_USE_SSL = bool(int(os.getenv('EMAIL_USE_SSL', 0)))
-# EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-# DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL ')
-# SERVER_EMAIL = os.getenv('SERVER_EMAIL')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

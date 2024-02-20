@@ -38,7 +38,7 @@
 ---
 1. #### Backend:
 - Followed Django Model View Template (MVT) architecture.
-2. Databases:
+2. #### Databases:
 - PostgreSQL: Optimized CRUD operations, pre-fetched data, and dynamic filtration.
 - Redis: Enhanced performance through caching. Implemented sessions for non-registered users to add products to their shopping carts and temporarily store customer wishlist.
 3. #### Frontend:

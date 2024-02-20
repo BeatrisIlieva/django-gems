@@ -156,6 +156,14 @@ class JewelryMetalAdmin(admin.ModelAdmin):
         'gold_carat',
     )
 
+    list_filter = (
+        'jewelry',
+        'metal',
+        'gold_carat',
+    )
+
+    search_fields = ('jewelry', 'metal', 'gold_carat',)
+
 
 @admin.register(JewelryStone)
 class JewelryStoneAdmin(admin.ModelAdmin):

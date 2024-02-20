@@ -2,7 +2,7 @@
   <img src="https://res.cloudinary.com/deztgvefu/image/upload/v1706426486/template_images/cute-little-pink-cat-watercolor-png_2_kxmwtq.webp" alt="Project Logo" width="200">
 </p>
 
-# <p align="center">*DjangoE-commerceWebsite*</p>
+# <p align="center">*DjangoGems*</p>
 
 <a name="built-with"></a>
 <a name="entity-relationship-diagram"></a>

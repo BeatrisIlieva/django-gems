@@ -19,7 +19,7 @@
 </p>
 
 ## Introduction
-*Welcome to our Online Jewelry Store built with Django! This web application serves as a platform for showcasing and selling a stunning collection of exquisite jewelry. With a user-friendly interface and seamless navigation, customers can explore, select, and purchase their favorite pieces effortlessly..* 
+*Welcome to our Online Jewelry Store! This web application serves as a platform for showcasing and selling a stunning collection of exquisite jewelry. With a user-friendly interface and seamless navigation, customers can explore, select, and purchase their favorite pieces effortlessly..* 
 
 <p align="right" dir="auto"><a href="#djangoe-commercewebsite">Back To Top</a></p>
 

@@ -112,22 +112,25 @@ class SizeAdmin(admin.ModelAdmin):
 @admin.register(JewelryMetal)
 class JewelryMetalAdmin(admin.ModelAdmin):
     list_display = (
-        'measurement',
-        'category'
+        'jewelry',
+        'metal',
+        'gold_carat',
     )
 
 
 @admin.register(JewelryStone)
 class JewelryStoneAdmin(admin.ModelAdmin):
     list_display = (
-        'measurement',
-        'category'
+        'jewelry',
+        'stone_type',
+        'stone_color',
+        'stone_carat'
     )
 
 
 @admin.register(JewelrySize)
 class JewelrySizeAdmin(admin.ModelAdmin):
     list_display = (
-        'measurement',
-        'category'
+        'jewelry',
+        'size'
     )

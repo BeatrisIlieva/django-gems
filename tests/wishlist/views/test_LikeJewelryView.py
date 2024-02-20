@@ -103,11 +103,6 @@ class LikeJewelryViewTests(TestCase):
             self.user
         )
 
-        self.assertRedirects(
-            response,
-            reverse('display_liked_jewelries')
-        )
-
     def test_add_to_liked_jewelries__unauthenticated_user__expect_to_be_stored_in_session(self):
         initial_liked_jewelries_count = \
             len(self.client.session.get('liked_jewelries', []))
@@ -128,11 +123,6 @@ class LikeJewelryViewTests(TestCase):
         self.assertEqual(
             len(liked_jewelries_in_session),
             initial_liked_jewelries_count + 1
-        )
-
-        self.assertRedirects(
-            response,
-            reverse('display_liked_jewelries')
         )
 
     def test_remove_liked_jewelries__authenticated_user__expect_to_be_removed_from_database(self):

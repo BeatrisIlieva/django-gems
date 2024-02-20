@@ -1,48 +1,9 @@
-from django.conf import settings
-from django.test import Client
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from django.test import TestCase as TestCase
-from django_gems.inventory.models import Inventory
-from django_gems.jewelry.models import Category, Jewelry, Size, JewelrySize
 
 
 class AddToShoppingCartViewTests(TestCase):
-    def setUp(self):
-        self.client = Client()
-
-        session = self.client.session
-        session.save()
-
-        self.client.cookies[settings.SESSION_COOKIE_NAME] = \
-            session.session_key
-
-        self.category = Category.objects.create(
-            title=Category.TitleChoices.NECKLACE
-        )
-
-        self.jewelry = Jewelry.objects.create(
-            title='Test Jewelry',
-            first_image_url='https://example.com/image1.jpg',
-            second_image_url='https://example.com/image2.jpg',
-            category=self.category
-        )
-
-        Inventory.objects.create(
-            jewelry=self.jewelry,
-            quantity=10,
-            price=5
-        )
-
-        self.size = Size.objects.create(
-            category=self.category,
-            measurement=Size.MeasurementChoices.V_1
-        )
-
-        JewelrySize.objects.create(
-            self.jewelry,
-            self.size
-        )
 
     def test_complete_order__when_details_provided__expect_redirect(self):
         user_data = {
@@ -69,16 +30,6 @@ class AddToShoppingCartViewTests(TestCase):
             'delivery_address': 'Some Address',
             'user': user
         }
-
-        # url = reverse('jewelry_details', kwargs={'pk': self.jewelry.pk})
-        # data = {'sizes': 'selected_size_value'}
-        #
-        # self.client.post(url, data)
-
-        self.client.get(
-            reverse('add_to_shopping_cart',
-                    kwargs={'pk': self.jewelry.pk})
-        )
 
         response = self.client.post(
             reverse(

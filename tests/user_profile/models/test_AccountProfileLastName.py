@@ -42,6 +42,6 @@ class LastNameTests(TestCase):
         actual_error_message = error_messages.get('last_name')[0]
 
         self.assertEqual(
-            AccountProfile.ONLY_LETTERS_EXCEPTION_MESSAGE,
+            AccountProfile.ONLY_LETTERS_LAST_NAME_EXCEPTION_MESSAGE,
             actual_error_message
         )

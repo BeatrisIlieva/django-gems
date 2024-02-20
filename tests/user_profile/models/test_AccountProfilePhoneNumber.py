@@ -43,6 +43,6 @@ class PhoneNumberTests(TestCase):
         actual_error_message = error_messages.get('phone_number')[0]
 
         self.assertEqual(
-            AccountProfile.ONLY_DIGITS_EXCEPTION_MESSAGE,
+            AccountProfile.ONLY_DIGITS_PHONE_NUMBER_EXCEPTION_MESSAGE,
             actual_error_message
         )

@@ -125,6 +125,13 @@ class StoneColorAdmin(admin.ModelAdmin):
     )
 
 
+    list_filter = (
+        'title',
+    )
+
+    search_fields = ('title',)
+
+
 @admin.register(Size)
 class SizeAdmin(admin.ModelAdmin):
     list_display = (

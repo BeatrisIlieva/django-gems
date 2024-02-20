@@ -85,6 +85,12 @@ class MetalAdmin(admin.ModelAdmin):
         'title',
     )
 
+    list_filter = (
+        'title',
+    )
+
+    search_fields = ('title',)
+
 
 @admin.register(GoldCaratWeight)
 class GoldCaratWeightAdmin(admin.ModelAdmin):

@@ -174,6 +174,15 @@ class JewelryStoneAdmin(admin.ModelAdmin):
         'stone_carat'
     )
 
+    list_filter = (
+        'jewelry',
+        'stone_type',
+        'stone_color',
+        'stone_carat'
+    )
+
+    search_fields = ('jewelry', 'stone_type', 'stone_color', 'stone_carat')
+
 
 @admin.register(JewelrySize)
 class JewelrySizeAdmin(admin.ModelAdmin):

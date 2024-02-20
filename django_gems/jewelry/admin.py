@@ -72,6 +72,12 @@ class CategoryAdmin(admin.ModelAdmin):
         'title',
     )
 
+    list_filter = (
+        'title',
+    )
+
+    search_fields = ('title',)
+
 
 @admin.register(Metal)
 class MetalAdmin(admin.ModelAdmin):

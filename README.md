@@ -61,7 +61,7 @@
 
 ## Features 
 
-#### I. End Users
+### I. End Users
 
 1. Shopping Cart and User Registration
 
@@ -83,7 +83,7 @@ Items added to the shopping cart are stored in the session, ensuring a seamless 
 - **Seamless Experience:**
   This seamless integration between user registration and the shopping cart ensures a smooth transition for users, maintaining the items they've added before registering.
 
-Please note that completing the registration process is necessary for finalizing the purchase and ensuring a secure transaction.
+###### <p align="center">*Please note that completing the registration process is necessary for finalizing the purchase and ensuring a secure transaction.*</p>
 
 #### Shopping Cart
 To enhance efficiency, our system utilizes Celery to automate the cleanup process. Expired shopping carts are systematically cleared within one hour, returning the products back to the inventory. This not only optimizes the shopping experience but also ensures that the inventory remains accurate and up-to-date.
@@ -159,7 +159,7 @@ For added convenience, if a product is added for a first or a second time from t
 - After a successful purchase, users will receive a purchase confirmation email. This email includes a button that, when clicked, directs users to their order history on our website.
     
 
-#### II. Admin Users
+### II. Admin Users
 
 1. User Model:
 - Customizes the Django admin interface for user accounts.

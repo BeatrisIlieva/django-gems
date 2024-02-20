@@ -190,3 +190,10 @@ class JewelrySizeAdmin(admin.ModelAdmin):
         'jewelry',
         'size'
     )
+
+    list_filter = (
+        'jewelry',
+        'size'
+    )
+
+    search_fields = ('jewelry', 'size')

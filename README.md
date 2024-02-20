@@ -215,9 +215,17 @@
     python manage.py migrate
     ```
     
-9. Run [populate_base_tables.py](populate_base_tables.py)
+9. Populate the database with jewelry data by running the following command:
 
-10. Run [populate_jewelries.py](populate_jewelries.py)
+    ```bash
+    python manage.py initialize_jewelries_data
+    ```
+
+10. Initialize the database with specific quantities and prices for each jewelry item using the following command:
+
+    ```bash
+    python manage.py initialize_inventory_data
+    ```
 
 <p align="right" dir="auto"><a href="#djangoe-commercewebsite">Back To Top</a></p>
 

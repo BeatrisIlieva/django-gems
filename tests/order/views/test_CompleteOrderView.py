@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model
 from django.test import TestCase as TestCase
 
 
-class AddToShoppingCartViewTests(TestCase):
+class CompleteOrderViewTests(TestCase):
 
     def test_complete_order__when_details_provided__expect_redirect(self):
         user_data = {

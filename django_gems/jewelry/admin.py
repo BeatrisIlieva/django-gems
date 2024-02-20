@@ -124,7 +124,6 @@ class StoneColorAdmin(admin.ModelAdmin):
         'title',
     )
 
-
     list_filter = (
         'title',
     )
@@ -138,7 +137,6 @@ class SizeAdmin(admin.ModelAdmin):
         'measurement',
         'category'
     )
-
 
     list_filter = (
         'measurement',
@@ -157,7 +155,6 @@ class JewelryMetalAdmin(admin.ModelAdmin):
     )
 
     list_filter = (
-        'jewelry',
         'metal',
         'gold_carat',
     )
@@ -168,14 +165,12 @@ class JewelryMetalAdmin(admin.ModelAdmin):
 @admin.register(JewelryStone)
 class JewelryStoneAdmin(admin.ModelAdmin):
     list_display = (
-        'jewelry',
         'stone_type',
         'stone_color',
         'stone_carat'
     )
 
     list_filter = (
-        'jewelry',
         'stone_type',
         'stone_color',
         'stone_carat'
@@ -192,8 +187,7 @@ class JewelrySizeAdmin(admin.ModelAdmin):
     )
 
     list_filter = (
-        'jewelry',
-        'size'
+        'size',
     )
 
     search_fields = ('jewelry', 'size')

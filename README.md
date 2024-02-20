@@ -36,21 +36,21 @@
 </table>
 
 ---
-1. Backend:
+1. #### Backend:
 - Followed Django Model View Template (MVT) architecture.
 2. Databases:
 - PostgreSQL: Optimized CRUD operations, pre-fetched data, and dynamic filtration.
 - Redis: Enhanced performance through caching. Implemented sessions for non-registered users to add products to their shopping carts and temporarily store customer wishlist.
-3. Frontend:
+3. #### Frontend:
 - Styled the user interface with CSS for an intuitive shopping experience tailored for desktop users.
 ###### <p align="center">*Note: Currently optimized for desktop; future plans include implementing media queries for responsiveness on various devices.*</p>
-4. User Models:
+4. #### User Models:
 - Implemented two distinct user models: one for logging credentials and another for personal details.
-5. Asynchronous Operations:
+5. #### Asynchronous Operations:
 - Utilized Celery for background tasks, specifically for cleaning expired shopping carts and managing inventory updates.
 6. OOP & SOLID:
 - Applied Object-Oriented Programming principles and SOLID for modular and maintainable code.
-7. Test Coverage:
+7. #### Test Coverage:
 - [![Coverage Status](https://img.shields.io/badge/coverage-81%25-brightgreen.svg)](./coverage/index.html)
 
 
@@ -103,7 +103,7 @@ For added convenience, if a product is added for a first or a second time from t
    
      The search button allows users to input keywords or phrases, and in real-time, it dynamically displays related products from our extensive database. This feature ensures a seamless and efficient browsing experience, helping users find exactly what they are looking for with ease.
 
-5. Like:
+5. Wishlist:
    
      For non-registered users, their likes are stored temporarily in the session, allowing them to enjoy a personalized experience during their current visit. Registered users benefit from a seamless experience as their likes are securely stored in the database, ensuring that their preferences are maintained across sessions.
 

@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
-from .models import Jewelry, JewelryMetal, JewelryStone, JewelrySize
+from .models import Jewelry, JewelryMetal, JewelryStone, JewelrySize, Category, Metal, GoldCaratWeight, StoneType, \
+    StoneColor, Size
 
 
 class JewelryMetalInline(admin.TabularInline):
@@ -63,3 +64,46 @@ class JewelryAdmin(admin.ModelAdmin):
         )
 
     display_stone_colors.short_description = _("Stone Colors")
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+    )
+
+
+@admin.register(Metal)
+class MetalAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+    )
+
+
+@admin.register(GoldCaratWeight)
+class GoldCaratWeightAdmin(admin.ModelAdmin):
+    list_display = (
+        'weight',
+    )
+
+
+@admin.register(StoneType)
+class StoneTypeAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+    )
+
+
+@admin.register(StoneColor)
+class StoneColorAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+    )
+
+
+@admin.register(Size)
+class SizeAdmin(admin.ModelAdmin):
+    list_display = (
+        'measurement',
+        'category'
+    )

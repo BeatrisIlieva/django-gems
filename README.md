@@ -143,8 +143,8 @@
      By clicking on the Logout button conveniently placed in the header, customers can initiate alog-out process. Following the click, users are redirected to the Login or Register page.
 
 17. Email Notifications:
-- Upon successful registration on our platform, users will receive a confirmation email to verify their account. This email contains a link or code to complete the registration process.
-- After a successful purchase, users will receive a purchase confirmation email. This email includes details about their purchase, such as the items bought, transaction ID, and any relevant information.
+- Upon successful registration on our platform, users will receive a confirmation email. This email includes a button that, when clicked, will direct users to our website.
+- After a successful purchase, users will receive a purchase confirmation email. This email includes a button that, when clicked, directs users to their order history on our website.
     
 
 #### II. Admin Users

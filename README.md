@@ -48,7 +48,7 @@
 - Implemented two distinct user models: one for logging credentials and another for personal details.
 5. #### Asynchronous Operations:
 - Utilized Celery for background tasks, specifically for cleaning expired shopping carts and managing inventory updates.
-6. OOP & SOLID:
+6. #### OOP & SOLID:
 - Applied Object-Oriented Programming principles and SOLID for modular and maintainable code.
 7. #### Test Coverage:
 - [![Coverage Status](https://img.shields.io/badge/coverage-81%25-brightgreen.svg)](./coverage/index.html)

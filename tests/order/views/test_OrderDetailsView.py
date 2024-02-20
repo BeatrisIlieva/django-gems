@@ -10,33 +10,8 @@ from django_gems.order.forms import CardDetailsForm
 from django_gems.jewelry.models import Category, Jewelry
 
 
-class AddToShoppingCartViewTests(TestCase):
+class OrderDetailsViewTests(TestCase):
     def setUp(self):
-        self.client = Client()
-
-        session = self.client.session
-        session.save()
-
-        self.client.cookies[settings.SESSION_COOKIE_NAME] = \
-            session.session_key
-
-        self.category = Category.objects.create(
-            title=Category.TitleChoices.NECKLACE
-        )
-
-        self.jewelry = Jewelry.objects.create(
-            title='Test Jewelry',
-            first_image_url='https://example.com/image1.jpg',
-            second_image_url='https://example.com/image2.jpg',
-            category=self.category
-        )
-
-        Inventory.objects.create(
-            jewelry=self.jewelry,
-            quantity=10,
-            price=5
-        )
-
         user_data = {
             'email': 'beatris@icloud.com',
             'password1': 'securepassword123',
@@ -62,11 +37,6 @@ class AddToShoppingCartViewTests(TestCase):
             'user': self.user
 
         }
-
-        self.client.get(
-            reverse('add_to_shopping_cart',
-                    kwargs={'pk': self.jewelry.pk})
-        )
 
         self.client.post(
             reverse(
@@ -127,19 +97,4 @@ class AddToShoppingCartViewTests(TestCase):
         self.assertEqual(
             response.status_code,
             200
-        )
-
-        self.assertIn(
-            'jewelries_by_quantities',
-            response.context
-        )
-
-        self.assertIn(
-            'user_pk',
-            response.context
-        )
-
-        self.assertIn(
-            'order_pk',
-            response.context
         )

@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = os.getenv('SECRET_KEY', None)
 
 # DEBUG = bool(int(os.getenv('DEBUG', 0)))
-#
+
 # ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
 
 SECRET_KEY = "django-insecure-#&s8j5cg)q%3cnr+sw^2h@0s%$d6o3wlpd1=ed9b1_dpos-$*_"
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django_gems.middlewares.middlewares.measure_execution_time_middleware',
+    # 'django_gems.middlewares.middlewares.measure_execution_time_middleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

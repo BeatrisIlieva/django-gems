@@ -29,7 +29,8 @@ class NavigationBarMixin(View):
         context['stone_colors_by_choices'] = stone_colors_by_choices
 
         if self.request.user.pk:
-            likes_count = JewelryLike.objects.filter(user_id=self.request.user.pk).count()
+            likes_count = JewelryLike.objects.\
+                filter(user_id=self.request.user.pk).count()
         else:
             likes_count = len(self.request.session.get('liked_jewelries', []))
 

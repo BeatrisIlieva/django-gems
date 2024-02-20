@@ -1,14 +1,9 @@
-from _decimal import Decimal
-
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.db.models import ExpressionWrapper, F, Sum, DecimalField
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views.generic import UpdateView, TemplateView
 from django.views.generic.edit import FormMixin
-
 from django_gems.user_profile.forms import AccountProfileForm
-
 from django_gems.common.mixins import NavigationBarMixin
 from django_gems.inventory.models import Inventory
 from django_gems.jewelry.models import Jewelry
@@ -16,7 +11,6 @@ from django_gems.order.forms import CardDetailsForm
 from django_gems.order.models import Order, OrderProducts
 from django_gems.order.utils import add_order, add_order_details
 from django_gems.user_profile.models import AccountProfile
-
 from django_gems.shopping_cart.models import ShoppingCart
 
 

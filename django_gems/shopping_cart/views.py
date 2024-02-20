@@ -10,7 +10,6 @@ from django_gems.jewelry.mixins import LastViewedJewelriesMixin
 from django_gems.jewelry.models import Jewelry
 from django_gems.shopping_cart.forms import QuantityUpdateForm
 from django_gems.shopping_cart.mixins import MaxQuantityMixin
-
 from django_gems.shopping_cart.models import ShoppingCart
 
 

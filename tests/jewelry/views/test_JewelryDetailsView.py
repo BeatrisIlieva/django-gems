@@ -34,7 +34,7 @@ class JewelryDetailsViewTest(TestCase):
         )
 
         self.assertEqual(
-            response.context['object'],
+            response.context['jewelry'],
             self.jewelry
         )
 

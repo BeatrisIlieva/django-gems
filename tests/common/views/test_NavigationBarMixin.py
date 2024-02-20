@@ -45,3 +45,4 @@ class NavigationBarMixinTestCase(TestCase):
         self.assertEqual(
             1, len(context['stone_colors_by_choices'])
         )
+

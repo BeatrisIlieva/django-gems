@@ -140,6 +140,14 @@ class SizeAdmin(admin.ModelAdmin):
     )
 
 
+    list_filter = (
+        'measurement',
+        'category'
+    )
+
+    search_fields = ('measurement', 'category')
+
+
 @admin.register(JewelryMetal)
 class JewelryMetalAdmin(admin.ModelAdmin):
     list_display = (

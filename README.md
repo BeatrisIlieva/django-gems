@@ -179,10 +179,10 @@ The main jewelry model includes details like title, category, metals, stone type
 ###### Admin Sections
 - The admin pages are structured into sections using fieldsets, allowing for an organized and intuitive experience when managing jewelry items
 
-###### Category, Metal, GoldCaratWeight, StoneType, StoneColor, Size
+##### Category, Metal, GoldCaratWeight, StoneType, StoneColor, Size
 These models represent categories, metals, gold carat weights, stone types, stone colors, and sizes respectively. The admin panels for each model allow easy management of these entities.
 
-###### JewelryMetal, JewelryStone, JewelrySize
+##### JewelryMetal, JewelryStone, JewelrySize
 These models handle the relationships between jewelry and metals, stones, and sizes respectively. The admin panels for these models make it easy to manage these associations.
 
 4. #### Inventory

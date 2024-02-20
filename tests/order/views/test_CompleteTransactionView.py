@@ -1,13 +1,9 @@
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from django.conf import settings
-from django.test import Client
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from django.test import TestCase as TestCase
-from django_gems.inventory.models import Inventory
 from django_gems.order.forms import CardDetailsForm
-from django_gems.jewelry.models import Category, Jewelry
 
 
 class CompleteTransactionViewTests(TestCase):

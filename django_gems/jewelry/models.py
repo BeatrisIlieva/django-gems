@@ -42,8 +42,6 @@ class Metal(models.Model):
 
 
 class GoldCaratWeight(models.Model):
-    class Meta:
-        verbose_name_plural = 'Jewelries'
     class WeightChoices(ChoicesMaxLengthMixin, models.TextChoices):
         V_9 = "9", _("9K")
         V_10 = "10", _("10K")

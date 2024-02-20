@@ -5,6 +5,9 @@ from django_gems.common.utils import ChoicesMaxLengthMixin
 
 
 class Category(models.Model):
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     class TitleChoices(ChoicesMaxLengthMixin, models.TextChoices):
         BRACELET = "B", _("Bracelet")
         EARRING = "E", _("Earring")
@@ -21,6 +24,8 @@ class Category(models.Model):
 
 
 class Metal(models.Model):
+    class Meta:
+        verbose_name_plural = 'Jewelries'
     class TitleChoices(ChoicesMaxLengthMixin, models.TextChoices):
         YELLOW_GOLD = "YG", _("Yellow Gold")
         ROSE_GOLD = "RG", _("Rose Gold")
@@ -37,6 +42,8 @@ class Metal(models.Model):
 
 
 class GoldCaratWeight(models.Model):
+    class Meta:
+        verbose_name_plural = 'Jewelries'
     class WeightChoices(ChoicesMaxLengthMixin, models.TextChoices):
         V_9 = "9", _("9K")
         V_10 = "10", _("10K")

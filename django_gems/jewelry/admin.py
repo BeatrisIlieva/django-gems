@@ -98,12 +98,24 @@ class GoldCaratWeightAdmin(admin.ModelAdmin):
         'weight',
     )
 
+    list_filter = (
+        'weight',
+    )
+
+    search_fields = ('weight',)
+
 
 @admin.register(StoneType)
 class StoneTypeAdmin(admin.ModelAdmin):
     list_display = (
         'title',
     )
+
+    list_filter = (
+        'title',
+    )
+
+    search_fields = ('title',)
 
 
 @admin.register(StoneColor)

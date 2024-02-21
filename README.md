@@ -198,56 +198,55 @@ The inventory model is designed for keeping track of jewelry quantities and pric
 
 ## Installation
 
-1. Clone the repository:
+1. #### Clone the repository:
 
     ```bash
-    git clone https://github.com/BeatrisIlieve/DjangoE-commerceWebsite.git
-    cd DjangoE-commerceWebsite
+    git clone https://github.com/BeatrisIlieve/DjangoGems.git
     ```
 
-2. Install Docker:
+2. #### Install Docker:
 
     Follow the [official Docker installation guide](https://docs.docker.com/get-docker/) to install Docker on your machine.
 
-3. Build and start the Docker container for PostgreSQL:
+3. #### Build and start the Docker container for PostgreSQL:
 
     Follow the [official guide on how to use the Postgres Docker Official Image](https://hub.docker.com/_/postgres) to run the PostgreSQL Docker Container.
 
 
-4. Build and start the Docker container for Redis:
+4. #### Build and start the Docker container for Redis:
 
     Follow the [official guide on how to use the Redis Docker Official Image](https://hub.docker.com/_/redis) to run the Redis Docker Container.
 
-5. Install the project dependencies using [pip](https://pip.pypa.io/en/stable/):
+5. #### Install the project dependencies using [pip](https://pip.pypa.io/en/stable/):
 
     ```bash
     pip install -r requirements.txt
     ```
-6. Run Celery worker:
+6. #### Run Celery worker:
 
     ```bash
     celery -A e_commerce_website worker -l info
     ```
 
-7. Run Celery Beat in a separate terminal:
+7. #### Run Celery Beat in a separate terminal:
 
     ```bash
     celery -A e_commerce_website beat -l info
     ```
 
-8. Apply database migrations:
+8. #### Apply database migrations:
 
     ```bash
     python manage.py migrate
     ```
     
-9. Populate the database with jewelry data by running the following command:
+9. #### Populate the database with jewelry data by running the following command:
 
     ```bash
     python manage.py initialize_jewelries_data
     ```
 
-10. Initialize the database with specific quantities and prices for each jewelry item using the following command:
+10. #### Initialize the database with specific quantities and prices for each jewelry item using the following command:
 
     ```bash
     python manage.py initialize_inventory_data
@@ -256,13 +255,13 @@ The inventory model is designed for keeping track of jewelry quantities and pric
 <p align="right" dir="auto"><a href="#djangoe-commercewebsite">Back To Top</a></p>
 
 ## Usage
-1. Run the development server:
+1. #### Run the development server:
 
     ```bash
     python manage.py runserver
     ```
   
-2. Visit [localhost:8000](http://localhost:8000) in your web browser to access the Django application.
+2. #### Visit [localhost:8000](http://localhost:8000) in your web browser to access the Django application.
 
 <p align="right" dir="auto"><a href="#djangoe-commercewebsite">Back To Top</a></p>
 

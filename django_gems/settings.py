@@ -11,7 +11,7 @@ SECRET_KEY = "django-insecure-#&s8j5cg)q%3cnr+sw^2h@0s%$d6o3wlpd1=ed9b1_dpos-$*_
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -32,7 +32,6 @@ INSTALLED_APPS = [
     'django_gems.user_profile',
     'django_gems.shopping_cart',
     'django_gems.wishlist',
-
 ]
 
 MIDDLEWARE = [
@@ -80,14 +79,14 @@ DATABASES = {
 SESSION_COOKIE_AGE = 3600
 SESSION_SAVE_EVERY_REQUEST = True
 
-CACHES = {
-    'default': {
-        'BACKEND':
-            'django.core.cache.backends.redis.RedisCache',
-        'LOCATION':
-            'redis://127.0.0.1:6379',
-    },
-}
+# CACHES = {
+#     'default': {
+#         'BACKEND':
+#             'django.core.cache.backends.redis.RedisCache',
+#         'LOCATION':
+#             'redis://127.0.0.1:6379',
+#     },
+# }
 
 AUTH_PASSWORD_VALIDATORS = [
     {

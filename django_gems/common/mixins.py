@@ -23,13 +23,8 @@ class NavigationBarMixin(View):
 
         stone_colors_by_choices = get_objects_by_choices(StoneColor)
 
-        context['categories_by_choices'] = categories_by_choices
-        context['metals_by_choices'] = metals_by_choices
-        context['stone_types_by_choices'] = stone_types_by_choices
-        context['stone_colors_by_choices'] = stone_colors_by_choices
-
         if self.request.user.pk:
-            likes_count = JewelryLike.objects.\
+            likes_count = JewelryLike.objects. \
                 filter(user_id=self.request.user.pk).count()
         else:
             likes_count = len(self.request.session.get('liked_jewelries', []))
@@ -38,27 +33,35 @@ class NavigationBarMixin(View):
 
         cart_count = len(cart)
 
-        context['likes_count'] = likes_count
-        context['cart_count'] = cart_count
+        context = {
+            'categories_by_choices': categories_by_choices,
+            'metals_by_choices': metals_by_choices,
+            'stone_types_by_choices': stone_types_by_choices,
+            'stone_colors_by_choices': stone_colors_by_choices,
+            'likes_count': likes_count,
+            'cart_count': cart_count,
+        }
+
+        cache.set('nav_bar_context', context, 1 * 3600)
 
         # if not cache.get('context'):
         #     cache.set('context', context, 1 * 3600)
         #
         # context = cache.get('context')
 
-        non_cached_context = {
-            'likes_count': likes_count,
-            'cart_count': cart_count,
-        }
-
-        context = {
-            'categories_by_choices': categories_by_choices,
-            'metals_by_choices': metals_by_choices,
-            'stone_types_by_choices': stone_types_by_choices,
-            'stone_colors_by_choices': stone_colors_by_choices,
-            **non_cached_context,
-        }
-
-        cache.set('nav_bar_context', context, 1 * 3600)
+        # non_cached_context = {
+        #     'likes_count': likes_count,
+        #     'cart_count': cart_count,
+        # }
+        #
+        # context = {
+        #     'categories_by_choices': categories_by_choices,
+        #     'metals_by_choices': metals_by_choices,
+        #     'stone_types_by_choices': stone_types_by_choices,
+        #     'stone_colors_by_choices': stone_colors_by_choices,
+        #     **non_cached_context,
+        # }
+        #
+        # cache.set('nav_bar_context', context, 1 * 3600)
 
         return context

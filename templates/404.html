@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block page_content %}
+    <div class="not-found-img">
+        <img class="form-img"
+                 src="https://res.cloudinary.com/deztgvefu/image/upload/v1706630328/template_images/8138196_1_f9hgnv.jpg"
+                 alt="image">
+    </div>
+    <div class="not-found">
+        <h1>
+            Uh oh,<br> something broke.
+        </h1>
+        <h3>Error 404 - page not found.</h3>
+        <a href="{% url 'index' %}">
+            <button>Return to Django Gems</button>
+        </a>
+    </div>
+{% endblock %}

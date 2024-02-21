@@ -1,18 +1,24 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load countries %}
+{% get_countries as countries %}
 {% block page_content %}
-    <div class="not-found-img">
-        <img class="form-img"
+    <section class="delete-profile-container">
+        <div class="left-delete-container">
+            <h4 class="delete-profile-title">Uh oh,<br> something broke.</h4>
+            <h4 class="delete-profile-title">Error 404 - page not found.</h4>
+            <div class="delete-profile-items">
+                <div>
+                    <a href="{% url 'index' %}">
+                        <button class="button filled_pink">Return to Django Gems</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="form-img-container">
+            <img class="form-img"
                  src="https://res.cloudinary.com/deztgvefu/image/upload/v1706630328/template_images/8138196_1_f9hgnv.jpg"
                  alt="image">
-    </div>
-    <div class="not-found">
-        <h1>
-            Uh oh,<br> something broke.
-        </h1>
-        <h3>Error 404 - page not found.</h3>
-        <a href="{% url 'index' %}">
-            <button>Return to Django Gems</button>
-        </a>
-    </div>
+        </div>
+    </section>
 {% endblock %}

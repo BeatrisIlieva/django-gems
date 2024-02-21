@@ -13,7 +13,6 @@ from django.core.cache import cache
 class NavigationBarMixin(View):
 
     def get_nav_bar_context(self):
-        context = {}
 
         categories_by_choices = get_objects_by_choices(Category)
 

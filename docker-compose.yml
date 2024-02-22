@@ -22,9 +22,10 @@ services:
     ports:
       - "5432:5432"
     environment:
+      POSTGRES_PASSWORD: S@3ana3a
+      POSTGRES_USER: postgres
+      POSTGRES_DB: django_gems_db
       PGDATA: /var/lib/postgresql/data/pgdata
-    env_file:
-      - envs/.env
     volumes:
       - ./postgresql:/var/lib/postgresql/data
   nginx:

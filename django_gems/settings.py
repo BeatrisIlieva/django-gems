@@ -95,13 +95,13 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 STATICFILES_DIRS = (
-    BASE_DIR / 'staticfiles',
+    BASE_DIR / 'static',
 )
 
-STATIC_ROOT = os.environ.get('STATIC_ROOT', BASE_DIR / 'static')
+STATIC_ROOT = os.getenv('STATIC_ROOT')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -147,7 +147,7 @@ SERVER_EMAIL = os.getenv('SERVER_EMAIL')
 #     'django.contrib.contenttypes',
 #     'django.contrib.sessions',
 #     'django.contrib.messages',
-#     'django.contrib.staticfiles',
+#     'django.contrib.static',
 #
 #     'django_celery_beat',
 #     'django_countries',
@@ -242,7 +242,7 @@ SERVER_EMAIL = os.getenv('SERVER_EMAIL')
 # STATIC_URL = '/static/'
 #
 # STATICFILES_DIRS = (
-#     BASE_DIR / 'staticfiles',
+#     BASE_DIR / 'static',
 # )
 #
 # DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

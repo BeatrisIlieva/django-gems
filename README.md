@@ -62,7 +62,7 @@
 
 1. #### Shopping Cart and User Registration
 
-- Items added to the shopping cart are stored in the session, ensuring a seamless and personalized experience for both logged-in and non-logged-in users.
+    Items added to the shopping cart are stored in the session, ensuring a seamless and personalized experience for both logged-in and non-logged-in users.
 
 #### Guest Checkout
 

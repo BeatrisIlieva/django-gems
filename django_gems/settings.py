@@ -9,6 +9,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', None)
 DEBUG = bool(int(os.getenv('DEBUG')))
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
+CSRF_TRUSTED_ORIGINS = [f'http://{x}:80' for x in os.getenv('ALLOWED_HOSTS', '').split(' ')]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -99,6 +100,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     BASE_DIR / 'staticfiles',
 )
+
+STATIC_ROOT = os.environ.get('STATIC_ROOT', BASE_DIR / 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

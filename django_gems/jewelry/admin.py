@@ -66,84 +66,84 @@ class JewelryAdmin(admin.ModelAdmin):
     display_stone_colors.short_description = _("Stone Colors")
 
 
-# @admin.register(Category)
-# class CategoryAdmin(admin.ModelAdmin):
-#     list_display = (
-#         'title',
-#     )
-#
-#     list_filter = (
-#         'title',
-#     )
-#
-#     search_fields = ('title',)
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+    )
+
+    list_filter = (
+        'title',
+    )
+
+    search_fields = ('title',)
 
 
-# @admin.register(Metal)
-# class MetalAdmin(admin.ModelAdmin):
-#     list_display = (
-#         'title',
-#     )
-#
-#     list_filter = (
-#         'title',
-#     )
-#
-#     search_fields = ('title',)
+@admin.register(Metal)
+class MetalAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+    )
+
+    list_filter = (
+        'title',
+    )
+
+    search_fields = ('title',)
 
 
-# @admin.register(GoldCaratWeight)
-# class GoldCaratWeightAdmin(admin.ModelAdmin):
-#     list_display = (
-#         'weight',
-#     )
-#
-#     list_filter = (
-#         'weight',
-#     )
-#
-#     search_fields = ('weight',)
+@admin.register(GoldCaratWeight)
+class GoldCaratWeightAdmin(admin.ModelAdmin):
+    list_display = (
+        'weight',
+    )
+
+    list_filter = (
+        'weight',
+    )
+
+    search_fields = ('weight',)
 
 
-# @admin.register(StoneType)
-# class StoneTypeAdmin(admin.ModelAdmin):
-#     list_display = (
-#         'title',
-#     )
-#
-#     list_filter = (
-#         'title',
-#     )
-#
-#     search_fields = ('title',)
+@admin.register(StoneType)
+class StoneTypeAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+    )
+
+    list_filter = (
+        'title',
+    )
+
+    search_fields = ('title',)
 
 
-# @admin.register(StoneColor)
-# class StoneColorAdmin(admin.ModelAdmin):
-#     list_display = (
-#         'title',
-#     )
-#
-#     list_filter = (
-#         'title',
-#     )
-#
-#     search_fields = ('title',)
+@admin.register(StoneColor)
+class StoneColorAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+    )
+
+    list_filter = (
+        'title',
+    )
+
+    search_fields = ('title',)
 
 
-# @admin.register(Size)
-# class SizeAdmin(admin.ModelAdmin):
-#     list_display = (
-#         'measurement',
-#         'category'
-#     )
-#
-#     list_filter = (
-#         'measurement',
-#         'category'
-#     )
-#
-#     search_fields = ('measurement', 'category')
+@admin.register(Size)
+class SizeAdmin(admin.ModelAdmin):
+    list_display = (
+        'measurement',
+        'category'
+    )
+
+    list_filter = (
+        'measurement',
+        'category'
+    )
+
+    search_fields = ('measurement', 'category')
 
 
 @admin.register(JewelryMetal)

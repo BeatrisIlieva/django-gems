@@ -3,9 +3,9 @@ version: '3'
 services:
   web:
     image: beatrisilieve/django_gems:2024_03
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
     env_file:

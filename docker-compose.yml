@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    image: beatrisilieve/django_gems:2024_03
+    image: beatrisilieve/django_gems:2024_02
     build:
       context: .
       dockerfile: Dockerfile

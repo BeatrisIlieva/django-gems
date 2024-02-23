@@ -7,6 +7,5 @@ RUN pip install -r requirements.txt
 
 COPY manage.py /app/manage.py
 COPY static /app/static
-COPY static_files /app/static_files
 COPY templates /app/templates
 COPY django_gems /app/django_gems

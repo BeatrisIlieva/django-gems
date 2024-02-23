@@ -4,6 +4,9 @@ from django.urls import reverse_lazy
 
 SESSION_ENGINE = 'session_backends.session_backend'
 
+SESSION_COOKIE_AGE = 3600
+SESSION_SAVE_EVERY_REQUEST = True
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY', None)
@@ -11,7 +14,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', None)
 DEBUG = bool(int(os.getenv('DEBUG')))
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(' ')
-CSRF_TRUSTED_ORIGINS = [f'http://{x}:80' for x in os.getenv('ALLOWED_HOSTS', '').split(' ')]
+CSRF_TRUSTED_ORIGINS = [f'http://{x}' for x in ALLOWED_HOSTS]
+# CSRF_TRUSTED_ORIGINS = [f'http://{x}:80' for x in os.getenv('ALLOWED_HOSTS', '').split(' ')]
 
 INSTALLED_APPS = [
     'django.contrib.admin',

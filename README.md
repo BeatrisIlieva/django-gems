@@ -4,7 +4,7 @@
 
 # <p align="center">*DjangoGems*</p>
 
-## <p align="center" style="margin-bottom: 33px"> *Visit our online store:<br> http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com* </p>
+### <p align="center" style="margin-bottom: 33px"> *Visit our online store:<br> http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com* </p>
 
 <a name="built-with"></a>
 <a name="entity-relationship-diagram"></a>
@@ -51,7 +51,7 @@
 5. #### OOP & SOLID:
 - Applied Object-Oriented Programming principles and SOLID for modular and maintainable code.
 6. #### Deployment:
-- Deployed Django website on AWS for efficient and simplified hosting.
+- Deployed on Amazon Web Services (AWS).
 7. #### Test Coverage:
 - [![Coverage Status](https://img.shields.io/badge/coverage-81%25-brightgreen.svg)](./coverage/index.html)
 
@@ -111,7 +111,6 @@ For added convenience, if a product is added for a first or a second time from t
 6. #### Last Seen Products:
    
      As part of our user-centric approach, the system stores the last three products viewed by users in their session. This recent product history is thoughtfully displayed on pages where it is most relevant, ensuring a personalized and efficient browsing experience. Users can easily revisit and consider these recently viewed products, adding a layer of convenience to their journey throughout the platform.
-
 
 
 7. #### Size Selection:

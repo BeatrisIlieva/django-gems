@@ -20,12 +20,16 @@
 }
 
 
-.zoom-text {
-    transition: transform 0.3s ease-in-out;
-}
+/*.zoom-text {*/
+/*    transition: transform 0.3s ease-in-out;*/
+/*}*/
 
-.dropdown:hover .zoom-text {
-    transform: scale(1.2);
+/*.dropdown:hover .zoom-text {*/
+/*    transform: scale(1.2);*/
+/*}*/
+
+.dropdown:hover {
+    color: var(--dark-pink);
 }
 
 .dropdown-content {

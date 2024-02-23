@@ -217,29 +217,25 @@ The inventory model is designed for keeping track of jewelry quantities and pric
     Follow the [official guide on how to use the Postgres Docker Official Image](https://hub.docker.com/_/postgres) to run the PostgreSQL Docker Container.
 
 
-4. #### Build and start the Docker container for Redis:
-
-    Follow the [official guide on how to use the Redis Docker Official Image](https://hub.docker.com/_/redis) to run the Redis Docker Container.
-
-5. #### Install the project dependencies using [pip](https://pip.pypa.io/en/stable/):
+4. #### Install the project dependencies using [pip](https://pip.pypa.io/en/stable/):
 
     ```bash
     pip install -r requirements.txt
     ```
 
-6. #### Apply database migrations:
+5. #### Apply database migrations:
 
     ```bash
     python manage.py migrate
     ```
     
-7. #### Populate the database with jewelry data by running the following command:
+6. #### Populate the database with jewelry data by running the following command:
 
     ```bash
     python manage.py initialize_jewelries_data
     ```
 
-8. #### Initialize the database with specific quantities and prices for each jewelry item using the following command:
+7. #### Initialize the database with specific quantities and prices for each jewelry item using the following command:
 
     ```bash
     python manage.py initialize_inventory_data

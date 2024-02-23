@@ -4,23 +4,10 @@
 
 # <p align="center">*DjangoGems*</p>
 
-<p style="
-        max-width: 620px;
-        font-size: 16px;
-        padding-left: 3%;
-        padding-right: 3%;
-        padding-bottom: 2%;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
-    <a href="http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com"
-       style="
-           display: inline-block;
-           padding: 10px 20px;
-           background-color: #f38ab7; color: #fff;
-           text-decoration: none;
-           border-radius: 5px;">
-        Explore Django Gems
-    </a>
-</p>
+# <p align="center"> **Visit our online store:** [Link to the site](http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com) </p>
+
+
+
 
 <a name="built-with"></a>
 <a name="entity-relationship-diagram"></a>

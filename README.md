@@ -4,21 +4,21 @@
 
 # <p align="center">*DjangoGems*</p>
 
-### <p align="center" style="margin-bottom: 62px"> *Visit our online store:<br> http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com* </p>
+### <p align="center"> *Visit our online store:<br> http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com* </p>
 
 <a name="built-with"></a>
 <a name="entity-relationship-diagram"></a>
 
 
-<p align="center">
-  <a href="#introduction">Introduction</a> ·
-  <a href="#built-with">Built With</a> ·
-  <a href="#features">Features</a> ·
-  <a href="#installation">Installation</a> ·
-  <a href="#usage">Usage</a> ·
-  <a href="#entity-relationship-diagram">Entity Relationship Diagram</a> ·
-  <a href="#license">License</a>
-</p>
+#### <p align="center">
+####   <a href="#introduction">Introduction</a> ·
+####   <a href="#built-with">Built With</a> ·
+####   <a href="#features">Features</a> ·
+####   <a href="#installation">Installation</a> ·
+####   <a href="#usage">Usage</a> ·
+####   <a href="#entity-relationship-diagram">Entity Relationship Diagram</a> ·
+####   <a href="#license">License</a>
+#### </p>
 
 ## Introduction
 *Welcome to our Online Jewelry Store! This web application serves as a platform for showcasing and selling a stunning collection of exquisite jewelry. With a user-friendly interface and seamless navigation, customers can explore, select, and purchase their favorite pieces effortlessly..* 

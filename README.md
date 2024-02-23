@@ -83,6 +83,7 @@
 ###### <p align="center">*Please note that completing the registration process is necessary for finalizing the purchase and ensuring a secure transaction.*</p>
 
 #### Shopping Cart
+
 To enhance efficiency, our system utilizes Celery to automate the cleanup process. Expired shopping carts are systematically cleared within one hour, returning the products back to the inventory. This not only optimizes the shopping experience but also ensures that the inventory remains accurate and up-to-date.
 
 After successfully adding items to the shopping bag, customers are redirected to their personalized shopping cart. This feature-rich page provides a detailed overview, including information about the quantity of each product, the total price based on the selected quantity, and the overall order total.

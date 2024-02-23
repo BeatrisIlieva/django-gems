@@ -7,7 +7,7 @@
 ### <p align="center"> *Visit our online store:<br> http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com* </p>
 
 ---
-
+<a name="django-gems"></a>
 <a name="built-with"></a>
 <a name="entity-relationship-diagram"></a>
 
@@ -258,10 +258,10 @@ The inventory model is designed for keeping track of jewelry quantities and pric
 ## Entity Relationship Diagram:
 ![diagram](https://github.com/BeatrisIlieve/DjangoE-commerceWebsite/assets/122045435/9be83e6b-b8f3-410c-bed4-495924d5409c)
 
-<p align="right" dir="auto"><a href="#djangoe-commercewebsite">Back To Top</a></p>
+<p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
 
-<p align="right" dir="auto"><a href="#djangoe-commercewebsite">Back To Top</a></p>
+<p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 

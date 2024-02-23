@@ -46,10 +46,10 @@
 ###### <p align="center">*Note: Currently optimized for desktop; future plans include implementing media queries for responsiveness on various devices.*</p>
 4. #### User Models:
 - Implemented two distinct user models: one for logging credentials and another for personal details.
-5. #### Asynchronous Operations:
-- Utilized Celery for background tasks, specifically for cleaning expired shopping carts and managing inventory updates.
-6. #### OOP & SOLID:
+5. #### OOP & SOLID:
 - Applied Object-Oriented Programming principles and SOLID for modular and maintainable code.
+6. #### Deployment:
+- Deployed Django website on AWS for efficient and simplified hosting.
 7. #### Test Coverage:
 - [![Coverage Status](https://img.shields.io/badge/coverage-81%25-brightgreen.svg)](./coverage/index.html)
 

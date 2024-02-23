@@ -1,3 +1,16 @@
+@media only screen and (max-width: 768px) {
+  .btn.dropdown {
+    /* Adjust styles for smaller screens */
+    position: static;
+      color: #00dd00/* Reset positioning for smaller screens */
+  }
+
+  .dropdown-content {
+    display: block; /* Make the dropdown content visible on smaller screens */
+    /* Add any other styles you need for smaller screens */
+  }
+}
+
 .btn {
     all: unset;
     padding: 4px;

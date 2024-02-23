@@ -1,3 +1,5 @@
+<a name="django-gems"></a>
+
 <p align="center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px;">
   <img src="https://res.cloudinary.com/deztgvefu/image/upload/v1706426486/template_images/cute-little-pink-cat-watercolor-png_2_kxmwtq.webp" alt="Project Logo" width="200">
 </p>
@@ -7,7 +9,7 @@
 ### <p align="center"> *Visit our online store:<br> http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com* </p>
 
 ---
-<a name="django-gems"></a>
+
 <a name="built-with"></a>
 <a name="entity-relationship-diagram"></a>
 
@@ -24,7 +26,7 @@
 ## Introduction
 *Welcome to our Online Jewelry Store! This web application serves as a platform for showcasing and selling a stunning collection of exquisite jewelry. With a user-friendly interface and seamless navigation, customers can explore, select, and purchase their favorite pieces effortlessly..* 
 
-<p align="right" dir="auto"><a href="#djangoe-commercewebsite">Back To Top</a></p>
+<p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 
 ## Built With
 <table align="center">
@@ -57,7 +59,7 @@
 - [![Coverage Status](https://img.shields.io/badge/coverage-81%25-brightgreen.svg)](./coverage/index.html)
 
 
-<p align="right" dir="auto"><a href="#djangoe-commercewebsite">Back To Top</a></p>
+<p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 
 ## Features 
 
@@ -195,7 +197,7 @@ These models handle the relationships between jewelry and metals, stones, and si
 4. #### Inventory
 The inventory model is designed for keeping track of jewelry quantities and prices. The admin interface provides options to manage inventory efficiently, including features for jewelry, quantity, and pricing.
 
-<p align="right" dir="auto"><a href="#djangoe-commercewebsite">Back To Top</a></p>
+<p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 
 ## Installation
 
@@ -242,7 +244,7 @@ The inventory model is designed for keeping track of jewelry quantities and pric
     python manage.py initialize_inventory_data
     ```
 
-<p align="right" dir="auto"><a href="#djangoe-commercewebsite">Back To Top</a></p>
+<p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 
 ## Usage
 1. #### Run the development server:
@@ -253,7 +255,7 @@ The inventory model is designed for keeping track of jewelry quantities and pric
   
 2. #### Visit [localhost:8000](http://localhost:8000) in your web browser to access the Django application.
 
-<p align="right" dir="auto"><a href="#djangoe-commercewebsite">Back To Top</a></p>
+<p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 
 ## Entity Relationship Diagram:
 ![diagram](https://github.com/BeatrisIlieve/DjangoE-commerceWebsite/assets/122045435/9be83e6b-b8f3-410c-bed4-495924d5409c)

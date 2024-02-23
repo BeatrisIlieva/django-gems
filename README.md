@@ -150,20 +150,21 @@ For added convenience, if a product is added for a first or a second time from t
    
      Enhancing user experience, our system features custom error messages that provide clear and concise feedback. These messages are designed to be user-friendly, allowing customers to easily understand and address any issues that may arise. Notably, these error messages are conveniently dismissible with a simple click, ensuring a seamless and non-intrusive interaction.
 
-15. #### Change Email Functionality
-
-16. #### Change Password Functionality
-
-17. #### Change Personal Details Functionality
-
-18. #### Detele Profile Functionality
-
-19. #### Logout Functionality
-
-20. #### Email Notifications:
+15. #### Email Notifications:
 - Upon successful registration on our platform, users will receive a confirmation email. This email includes a button that, when clicked, will direct users to our website.
 - After a successful purchase, users will receive a purchase confirmation email. This email includes a button that, when clicked, directs users to their order history on our website.
-    
+
+16. #### Change Email Functionality
+
+17. #### Change Password Functionality
+
+18. #### Change Personal Details Functionality
+
+19. #### Detele Profile Functionality
+
+20. #### Logout Functionality
+
+
 
 ### II. Admin Users
 The admin interface is designed to facilitate the complete addition of jewelry items effortlessly.

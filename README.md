@@ -4,7 +4,7 @@
 
 # <p align="center">*DjangoGems*</p>
 
-## <p align="center" style="margin-bottom: 20px"> *Visit our online store:<br><br> http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com* </p>
+## <p align="center" style="margin-bottom: 33px"> *Visit our online store:<br> http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com* </p>
 
 <a name="built-with"></a>
 <a name="entity-relationship-diagram"></a>

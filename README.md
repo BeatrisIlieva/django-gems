@@ -18,7 +18,7 @@
            background-color: #f38ab7; color: #fff;
            text-decoration: none;
            border-radius: 5px;">
-        http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com
+        Explore Django Gems
     </a>
 </p>
 

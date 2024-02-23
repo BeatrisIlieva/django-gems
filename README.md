@@ -64,7 +64,7 @@
 
 1. #### Shopping Cart and User Registration
 
-    Items added to the shopping cart are stored in the session, ensuring a seamless and personalized experience for both logged-in and non-logged-in users.
+Items added to the shopping cart are stored in the session, ensuring a seamless and personalized experience for both logged-in and non-logged-in users.
 
 #### Guest Checkout
 
@@ -85,8 +85,6 @@
 ###### <p align="center">*Please note that completing the registration process is necessary for finalizing the purchase and ensuring a secure transaction.*</p>
 
 #### Shopping Cart
-
-To enhance efficiency, our system utilizes Celery to automate the cleanup process. Expired shopping carts are systematically cleared within one hour, returning the products back to the inventory. This not only optimizes the shopping experience but also ensures that the inventory remains accurate and up-to-date.
 
 After successfully adding items to the shopping bag, customers are redirected to their personalized shopping cart. This feature-rich page provides a detailed overview, including information about the quantity of each product, the total price based on the selected quantity, and the overall order total.
 
@@ -225,31 +223,20 @@ The inventory model is designed for keeping track of jewelry quantities and pric
     ```bash
     pip install -r requirements.txt
     ```
-6. #### Run Celery worker:
 
-    ```bash
-    celery -A e_commerce_website worker -l info
-    ```
-
-7. #### Run Celery Beat in a separate terminal:
-
-    ```bash
-    celery -A e_commerce_website beat -l info
-    ```
-
-8. #### Apply database migrations:
+6. #### Apply database migrations:
 
     ```bash
     python manage.py migrate
     ```
     
-9. #### Populate the database with jewelry data by running the following command:
+7. #### Populate the database with jewelry data by running the following command:
 
     ```bash
     python manage.py initialize_jewelries_data
     ```
 
-10. #### Initialize the database with specific quantities and prices for each jewelry item using the following command:
+8. #### Initialize the database with specific quantities and prices for each jewelry item using the following command:
 
     ```bash
     python manage.py initialize_inventory_data

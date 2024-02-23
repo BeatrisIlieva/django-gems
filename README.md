@@ -45,7 +45,6 @@
 - Followed Django Model View Template (MVT) architecture.
 2. #### Databases:
 - PostgreSQL: Optimized CRUD operations, pre-fetched data, and dynamic filtration.
-- Redis: Enhanced performance through caching. Implemented sessions for non-registered users to add products to their shopping carts and temporarily store customer wishlist.
 3. #### Frontend:
 - Styled the user interface with CSS for an intuitive shopping experience tailored for desktop users.
 ###### <p align="center">*Note: Currently optimized for desktop; future plans include implementing media queries for responsiveness on various devices.*</p>

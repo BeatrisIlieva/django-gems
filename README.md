@@ -6,10 +6,11 @@
 
 ### <p align="center"> *Visit our online store:<br> http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com* </p>
 
+---
+
 <a name="built-with"></a>
 <a name="entity-relationship-diagram"></a>
 
----
 <p align="center">
   <a href="#introduction">Introduction</a> ·
   <a href="#built-with">Built With</a> ·

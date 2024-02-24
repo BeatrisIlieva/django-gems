@@ -73,8 +73,6 @@
 
 ## Features 
 
-### I. End Users
-
 1. #### User Models:
 - Implemented two distinct user models:
   - logging credentials
@@ -150,40 +148,6 @@
 14. #### Email Notifications:
 - Upon successful registration on our platform, users will receive a confirmation email. This email includes a button that, when clicked, will direct users to our website.
 - After a successful purchase, users will receive a purchase confirmation email.
-
-### II. Admin Users
-  The admin interface is designed to facilitate the complete addition of jewelry items effortlessly.
-
-1. #### User Model:
-   The user model is customized to handle user accounts. In the admin panel, you can manage user details, including email, password, permissions, and important dates.
-
-3. #### Profile Model:
-   The account profile model contains information related to user profiles, including personal details, contact information, and delivery addresses. Users can manage their profiles seamlessly through the admin panel.
-
-3. #### Jewelry Models:
-##### Jewelry:
-- The main jewelry model includes details like title, category, metals, stone types, and stone colors. You can completely add a jewelry item through the user-friendly admin panel. The   admin panel features filtration, ordering, and search options for efficient management.
-
-###### Filtration and Ordering:
-- Filter by category, metals, stone types, and stone colors
-- Order by title or any relevant attribute
-
-###### Search:
-- Search for jewelry items based on their title.
-
-###### Admin Sections:
-- The admin pages are structured into sections using fieldsets, allowing for an organized and intuitive experience when managing jewelry items
-
-##### Category, Metal, GoldCaratWeight, StoneType, StoneColor, Size:
-- These models represent categories, metals, gold carat weights, stone types, stone colors, and sizes respectively. The admin panels for each model allow easy management of these entities.
-
-##### JewelryMetal, JewelryStone, JewelrySize:
-- These models handle the relationships between jewelry and metals, stones, and sizes respectively. The admin panels for these models make it easy to manage these associations.
-
-4. #### Inventory:
-- The inventory model is designed for keeping track of jewelry quantities and prices. The admin interface provides options to manage inventory efficiently, including features for jewelry, quantity, and pricing.
-
-<p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 
 ## Installation
 

@@ -2,7 +2,7 @@ from django.urls import path
 
 from django_gems.common.views import (
     IndexView,
-    SearchBarView, ProfileOptionsView, PasswordChangedSuccessfully, EmailChangedSuccessfully,
+    SearchBarView, PasswordChangedSuccessfully, EmailChangedSuccessfully,
     DetailsChangedSuccessfully, ProfileDeletedSuccessfully
 )
 
@@ -16,11 +16,6 @@ urlpatterns = (
         'search/',
         SearchBarView.as_view(),
         name='search_bar'
-    ),
-    path(
-        'profile-options/<int:pk>/',
-        ProfileOptionsView.as_view(),
-        name='profile_options'
     ),
 
     path(

@@ -1,10 +1,8 @@
 <a name="django-gems"></a>
 
-<p align="center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px;">
-  <img src="https://res.cloudinary.com/deztgvefu/image/upload/v1706426486/template_images/cute-little-pink-cat-watercolor-png_2_kxmwtq.webp" alt="Project Logo" width="200">
+<p align="center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 400px;">
+  <img src="https://res.cloudinary.com/deztgvefu/image/upload/v1707852478/template_images/Screenshot_2024-02-13_at_21.27.06_exrwvw.png" alt="Project Logo" width="400">
 </p>
-
-# <p align="center">*DjangoGems*</p>
 
 ## <p align="center"> *Visit our online store:<br> http://ec2-15-188-235-238.eu-west-3.compute.amazonaws.com* </p>
 
@@ -13,6 +11,7 @@
 
 <h4 align="center">
   <a href="#introduction">Introduction</a> ·
+  <a href="#demo-video">Demo Video</a> ·
   <a href="#built-with">Built With</a> ·
   <a href="#features">Features</a> ·
   <a href="#installation">Installation</a> ·
@@ -23,6 +22,10 @@
 
 ## Introduction
 <p><i>Welcome to our Online Jewelry Store! This web application serves as a platform for showcasing and selling a stunning collection of exquisite jewelry. With a user-friendly       interface and seamless navigation, customers can explore, select, and purchase their favorite pieces effortlessly..</i></p>
+
+## Demo Video
+
+[![Watch the video](https://img.youtube.com/vi/KnK5HedIVjo/hqdefault.jpg)](https://www.youtube.com/embed/KnK5HedIVjo)
 
 <p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 

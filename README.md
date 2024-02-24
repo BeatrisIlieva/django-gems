@@ -19,7 +19,7 @@
   <a href="#usage">Usage</a> ·
   <a href="#entity-relationship-diagram">Entity Relationship Diagram</a> ·
   <a href="#license">License</a>
-</h3>
+</h4>
 
 ## Introduction
 <p><i>Welcome to our Online Jewelry Store! This web application serves as a platform for showcasing and selling a stunning collection of exquisite jewelry. With a user-friendly       interface and seamless navigation, customers can explore, select, and purchase their favorite pieces effortlessly..</i></p>

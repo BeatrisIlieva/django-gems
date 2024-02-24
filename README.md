@@ -71,9 +71,18 @@
 - Detele Profile functionality
 - Logout functionality
 
-2. #### Shopping Cart:
+2. #### Dynamic Navigation Bar:
+- The dropdown menu options are dynamically generated from the database, ensuring that any changes or additions are automatically reflected in the menu.
+
+3. #### Advanced Product Filtering and Real-time Availability Tracking:
+- When a customer selects a choice from the dropdown menu, they are redirected to the chosen page.
+- Here, an advanced product filtering system awaits, allowing users to refine their search further.
+  - The selection menu not only filters the displayed products based on user preferences but also dynamically adjusts other checkboxes based on the available products.
+  - A counter is placed next to each checkbox within the Django multiple checkboxes form. These counters provide real-time feedback, indicating the exact number of products available for each checkbox selection.
+
+4. #### Shopping Cart:
 ##### Adding to Cart:
-- After successfully adding items to the shopping bag, customers are redirected to their personalized shopping cart. This feature-rich page provides a detailed overview, including information about the quantity of each product, the total price based on the selected quantity, and the overall order total.
+- After successfully adding items to the shopping bag, customers are redirected to their personalized shopping cart. This page provides a detailed overview, including information about the quantity of each product, the total price based on the selected quantity, and the overall order total.
   
 - Customers have the flexibility to adjust the quantity directly on the shopping cart page. Increasing or decreasing the quantity dynamically updates both the displayed total price and the inventory quantity in real-time.
 - For added convenience, if a product is added for a first or a second time from the product page, a quantity of one is automatically appended. Conversely, using the 'Update Quantity' button to set the quantity to zero removes the product from the shopping cart. Customers can also add as much quantity as available in the inventory, ensuring a flexible and tailored shopping experience.
@@ -85,92 +94,79 @@
 - Upon clicking on the 'Checkout' button, customers are redirected to a page where they can enter their essential personal details, including names, phone number, and delivery address. This mandatory step, ensures that customers provide the necessary information before proceeding.
 - Proceeding to the next step in the checkout process, customers are required to provide valid card details to complete the payment. This ensures a secure and reliable transaction, adhering to industry standards for payment processing.
 
-3. #### Dynamic Navigation Bar:
-- The project features a dynamic navigation bar at the header. The dropdown menu options are dynamically generated from the database, ensuring that any changes or additions are automatically reflected in the menu.
-
-3. #### Advanced Product Filtering and Real-time Availability Tracking:
-- When a customer selects a choice from the dropdown menu, they are redirected to the chosen page.
-- Here, an advanced product filtering system awaits, allowing users to refine their search further.
-  - The selection menu not only filters the displayed products based on user preferences but also dynamically adjusts other checkboxes based on the available products.
-  - A counter is placed next to each checkbox within the Django multiple checkboxes form. These counters provide real-time feedback, indicating the exact number of products available for each checkbox selection.
-
-4. #### Search:
+5. #### Search:
    
-     The search button allows users to input keywords or phrases, and in real-time, it dynamically displays related products from our extensive database. This feature ensures a efficient browsing experience, helping users find exactly what they are looking for with ease.
+     The search button allows users to input keywords or phrases, and in real-time, it dynamically displays related products from our extensive database.
 
-5. #### Wishlist:
+6. #### Wishlist:
    
      For non-registered users, their likes are stored temporarily in the session, allowing them to enjoy a personalized experience during their current visit. Registered users benefit from having their likes stored in the database, ensuring that their preferences are maintained across sessions.
 
-6. #### Last Seen Products:
+7. #### Last Seen Products:
    
      The system stores the last three products viewed by users in their session. This recent product history is displayed on pages where it is most relevant. Users can easily revisit and consider these recently viewed products, by clicking on them.
 
-7. #### Size Selection:
+8. #### Size Selection:
    
      A radio select button must be chosen before adding items to the shopping bag. This ensures clarity and precision in product selection, allowing customers to specify their preferences before proceeding to the checkout.
 
-10. #### Order Confirmation and Details:
+9. #### Order Confirmation and Details:
    
-     After the successful completion of the payment transaction, customers are redirected to an Order Details page, providing a comprehensive overview of their purchase. This page meticulously lists each product's characteristics, individual total price, and the overall total order price.
+     After the successful completion of the payment transaction, customers are redirected to an Order Details page, providing a comprehensive overview of their purchase. This page lists each product's characteristics, individual total price, and the overall total order price.
 
-    Included in this detailed confirmation is a unique Order ID for reference. Users will also find a summary of their personal information, ensuring transparency and facilitating future reference. The Order Confirmation and Details page serves as a comprehensive receipt, offering customers a complete understanding of their purchase and order specifics.
+    Included in this detailed confirmation is a unique Order ID for reference. Users will also find a summary of their personal information, ensuring transparency and facilitating future reference. 
 
-11. #### Order History:
+10. #### Order History:
    
-     Registered users can enjoy a shopping experience with the added convenience of an order history feature. Every purchase made by a registered user is meticulously recorded and stored, allowing them to effortlessly track their order history.
+     Registered users can enjoy a shopping experience with the added convenience of an order history feature. Every purchase made by a registered user is recorded and stored, allowing them to effortlessly track their order history.
 
-12. #### Pagination:
+11. #### Pagination:
    
-     To enhance accessibility, large sets of content are broken down into manageable sections. Users can effortlessly navigate through pages, ensuring a user-friendly and efficient exploration of our extensive collection. 
+     Users can effortlessly navigate through pages, ensuring a user-friendly and efficient exploration of our extensive collection. 
 
-13. #### Enhanced Form Display: Customizing Labels and Utilizing Placeholders:
+12. #### Enhanced Form Display: Customizing Labels and Utilizing Placeholders:
    
-     In this implementation, default Django form labels have been removed, creating a cleaner and more streamlined appearance. Instead, placeholders have been implemented, offering users intuitive cues within the form fields. This enhancement not only improves aesthetics but also ensures a more user-friendly and modern form interaction.
+     In this implementation, default Django form labels have been removed, creating a cleaner and more aesthetic appearance. Instead, placeholders have been implemented, offering users intuitive cues within the form fields.
 
-14. #### User-Friendly Error Messages:
+13. #### User-Friendly Error Messages:
    
-     Enhancing user experience, our system features custom error messages that provide clear and concise feedback. These messages are designed to be user-friendly, allowing customers to easily understand and address any issues that may arise. Notably, these error messages are conveniently dismissible with a simple click, ensuring a seamless and non-intrusive interaction.
+     Our system features custom error messages that provide clear and concise feedback. Notably, these error messages are conveniently dismissible with a simple click, ensuring a non-intrusive interaction.
 
-15. #### Email Notifications:
+14. #### Email Notifications:
 - Upon successful registration on our platform, users will receive a confirmation email. This email includes a button that, when clicked, will direct users to our website.
-- After a successful purchase, users will receive a purchase confirmation email. This email includes a button that, when clicked, directs users to their order history on our website.
-
-
-
-
+- After a successful purchase, users will receive a purchase confirmation email.
 
 ### II. Admin Users
-The admin interface is designed to facilitate the complete addition of jewelry items effortlessly.
+  The admin interface is designed to facilitate the complete addition of jewelry items effortlessly.
 
 1. #### User Model:
-The user model is customized to handle user accounts. In the admin panel, you can manage user details, including email, password, permissions, and important dates.
+   The user model is customized to handle user accounts. In the admin panel, you can manage user details, including email, password, permissions, and important dates.
 
-2. #### Profile Model:
-The account profile model contains information related to user profiles, including personal details, contact information, and delivery addresses. Users can manage their profiles seamlessly through the admin panel.
+3. #### Profile Model:
+   The account profile model contains information related to user profiles, including personal details, contact information, and delivery addresses. Users can manage their profiles seamlessly through the admin panel.
 
 3. #### Jewelry Models:
-##### Jewelry
-The main jewelry model includes details like title, category, metals, stone types, and stone colors. You can completely add a jewelry item through the user-friendly admin panel. The admin panel features filtration, ordering, and search options for efficient management.
+##### Jewelry:
+- The main jewelry model includes details like title, category, metals, stone types, and stone colors. You can completely add a jewelry item through the user-friendly admin panel. The   admin panel features filtration, ordering, and search options for efficient management.
 
-###### Filtration and Ordering
+###### Filtration and Ordering:
 - Filter by category, metals, stone types, and stone colors
 - Order by title or any relevant attribute
 
-###### Search
+###### Search:
 - Search for jewelry items based on their title.
 
-###### Admin Sections
+###### Admin Sections:
 - The admin pages are structured into sections using fieldsets, allowing for an organized and intuitive experience when managing jewelry items
 
-##### Category, Metal, GoldCaratWeight, StoneType, StoneColor, Size
-These models represent categories, metals, gold carat weights, stone types, stone colors, and sizes respectively. The admin panels for each model allow easy management of these entities.
+##### Category, Metal, GoldCaratWeight, StoneType, StoneColor, Size:
+- These models represent categories, metals, gold carat weights, stone types, stone colors, and sizes respectively. The admin panels for each model allow easy management of these entities.
 
-##### JewelryMetal, JewelryStone, JewelrySize
-These models handle the relationships between jewelry and metals, stones, and sizes respectively. The admin panels for these models make it easy to manage these associations.
+##### JewelryMetal, JewelryStone, JewelrySize:
+- These models handle the relationships between jewelry and metals, stones, and sizes respectively. The admin panels for these models make it easy to manage these associations.
 
-4. #### Inventory
-The inventory model is designed for keeping track of jewelry quantities and prices. The admin interface provides options to manage inventory efficiently, including features for jewelry, quantity, and pricing.
+4. #### Inventory:
+- The inventory model is designed for keeping track of jewelry quantities and prices. The admin interface provides options to manage inventory efficiently, including features for jewelry, quantity, and pricing.
 
 <p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 

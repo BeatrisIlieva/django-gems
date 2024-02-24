@@ -69,7 +69,7 @@ class Command(BaseCommand):
         for index in range(len(jewelries)):
             jewelries_by_quantities.append(
                 Inventory(
-                    quantity=10,
+                    quantity=20,
                     jewelry=jewelries[index],
                     price=jewelries_by_prices[index]
                 ),

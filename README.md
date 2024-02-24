@@ -32,7 +32,7 @@
 ## Introduction
 <p><i>Welcome to our Online Jewelry Store! This web application serves as a platform for showcasing and selling a stunning collection of exquisite jewelry. With a user-friendly       interface and seamless navigation, customers can explore, select, and purchase their favorite pieces effortlessly..</i></p>
 
-<p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
+<br>
 
 ## Demo Video
 
@@ -52,7 +52,8 @@
   </tr>
 </table>
 
----
+<br>
+
 1. #### Backend:
 - Followed Django Model View Template (MVT) architecture.
 2. #### Databases:

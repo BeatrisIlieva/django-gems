@@ -6,14 +6,12 @@
 
 # <p align="center">*DjangoGems*</p>
 
-### <p align="center"> *Visit our online store:<br> http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com* </p>
-
----
+## <p align="center"> *Visit our online store:<br> http://ec2-15-236-82-16.eu-west-3.compute.amazonaws.com* </p>
 
 <a name="built-with"></a>
 <a name="entity-relationship-diagram"></a>
 
-<p align="center">
+<h4 align="center">
   <a href="#introduction">Introduction</a> ·
   <a href="#built-with">Built With</a> ·
   <a href="#features">Features</a> ·
@@ -21,10 +19,10 @@
   <a href="#usage">Usage</a> ·
   <a href="#entity-relationship-diagram">Entity Relationship Diagram</a> ·
   <a href="#license">License</a>
-</p>
+</h3>
 
 ## Introduction
-*Welcome to our Online Jewelry Store! This web application serves as a platform for showcasing and selling a stunning collection of exquisite jewelry. With a user-friendly interface and seamless navigation, customers can explore, select, and purchase their favorite pieces effortlessly..* 
+<p><i>Welcome to our Online Jewelry Store! This web application serves as a platform for showcasing and selling a stunning collection of exquisite jewelry. With a user-friendly       interface and seamless navigation, customers can explore, select, and purchase their favorite pieces effortlessly..</i></p>
 
 <p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 
@@ -47,16 +45,14 @@
 - PostgreSQL: Optimized CRUD operations, pre-fetched data, and dynamic filtration.
 3. #### Frontend:
 - Styled the user interface with CSS for an intuitive shopping experience tailored for desktop users.
-###### <p align="center">*Note: Currently optimized for desktop; future plans include implementing media queries for responsiveness on various devices.*</p>
-4. #### User Models:
-- Implemented two distinct user models: one for logging credentials and another for personal details.
-5. #### OOP & SOLID:
+> [!NOTE]
+> Currently optimized for desktop; future plans include implementing media queries for responsiveness on various devices.
+4. #### OOP & SOLID:
 - Applied Object-Oriented Programming principles and SOLID for modular and maintainable code.
-6. #### Deployment:
+5. #### Deployment:
 - Deployed on Amazon Web Services (AWS).
-7. #### Test Coverage:
+6. #### Test Coverage:
 - [![Coverage Status](https://img.shields.io/badge/coverage-81%25-brightgreen.svg)](./coverage/index.html)
-
 
 <p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 
@@ -64,17 +60,31 @@
 
 ### I. End Users
 
-1. #### Shopping Cart and User Registration
+1. #### User Models:
+- Implemented two distinct user models:
+  - logging credentials
+  - personal details
+    
+- Change Email functionality
+- Change Password functionality
+- Change Personal Details functionality
+- Detele Profile functionality
+- Logout functionality
 
-Items added to the shopping cart are stored in the session, ensuring a seamless and personalized experience for both logged-in and non-logged-in users.
-
-#### Guest Checkout
-
-- **Adding to Cart:**
-  Non-registered users can add items to their shopping cart without creating an account. The selected items will be stored in the session.
-
-- **Purchase Process:**
-  To complete a purchase, users need to register, providing personal details and valid card information during the checkout process.
+2. #### Shopping Cart:
+##### Adding to Cart:
+- After successfully adding items to the shopping bag, customers are redirected to their personalized shopping cart. This feature-rich page provides a detailed overview, including information about the quantity of each product, the total price based on the selected quantity, and the overall order total.
+  
+- Customers have the flexibility to adjust the quantity directly on the shopping cart page. Increasing or decreasing the quantity dynamically updates both the displayed total price and the inventory quantity in real-time.
+- For added convenience, if a product is added for a first or a second time from the product page, a quantity of one is automatically appended. Conversely, using the 'Update Quantity' button to set the quantity to zero removes the product from the shopping cart. Customers can also add as much quantity as available in the inventory, ensuring a flexible and tailored shopping experience.
+- Non-registered users can add items to their shopping cart without creating an account. 
+  - When users add items to their shopping cart, a cart is created in our database and linked to their current session key. This session key serves as a temporary identifier.
+  - Our system is designed with dedicated settings and functions to ensure that the session key remains associated with the user's cart and account even after completing the registration process.
+  - After a customer completes the registration, they will be redirected back to their shopping cart. All the items they had selected before registering will still be there, ready for them to proceed with their purchase.
+##### Purchase Process:
+- To complete a purchase, users need to register, providing personal details and valid card information during the checkout process.
+> [!NOTE]
+> Please note that completing the registration process is necessary for finalizing the purchase and ensuring a secure transaction
 
 #### User Registration
 
@@ -83,16 +93,6 @@ Items added to the shopping cart are stored in the session, ensuring a seamless 
 
 - **Seamless Experience:**
   This seamless integration between user registration and the shopping cart ensures a smooth transition for users, maintaining the items they've added before registering.
-
-###### <p align="center">*Please note that completing the registration process is necessary for finalizing the purchase and ensuring a secure transaction.*</p>
-
-#### Shopping Cart
-
-After successfully adding items to the shopping bag, customers are redirected to their personalized shopping cart. This feature-rich page provides a detailed overview, including information about the quantity of each product, the total price based on the selected quantity, and the overall order total.
-
-Customers have the flexibility to adjust the quantity directly on the shopping cart page. Increasing or decreasing the quantity dynamically updates both the displayed total price and the inventory quantity in real-time.
-
-For added convenience, if a product is added for a first or a second time from the product page, a quantity of one is automatically appended. Conversely, using the 'Update Quantity' button to set the quantity to zero removes the product from the shopping cart. Customers can also add as much quantity as available in the inventory, ensuring a flexible and tailored shopping experience.
 
 2. #### Dynamic Navigation Bar:
 
@@ -153,15 +153,7 @@ For added convenience, if a product is added for a first or a second time from t
 - Upon successful registration on our platform, users will receive a confirmation email. This email includes a button that, when clicked, will direct users to our website.
 - After a successful purchase, users will receive a purchase confirmation email. This email includes a button that, when clicked, directs users to their order history on our website.
 
-16. #### Change Email Functionality
 
-17. #### Change Password Functionality
-
-18. #### Change Personal Details Functionality
-
-19. #### Detele Profile Functionality
-
-20. #### Logout Functionality
 
 
 

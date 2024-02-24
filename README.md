@@ -82,50 +82,33 @@
   - Our system is designed with dedicated settings and functions to ensure that the session key remains associated with the user's cart and account even after completing the registration process.
   - After a customer completes the registration, they will be redirected back to their shopping cart. All the items they had selected before registering will still be there, ready for them to proceed with their purchase.
 ##### Purchase Process:
-- To complete a purchase, users need to register, providing personal details and valid card information during the checkout process.
-> [!NOTE]
-> Please note that completing the registration process is necessary for finalizing the purchase and ensuring a secure transaction
+- Upon clicking on the 'Checkout' button, customers are redirected to a page where they can enter their essential personal details, including names, phone number, and delivery address. This mandatory step, ensures that customers provide the necessary information before proceeding.
+- Proceeding to the next step in the checkout process, customers are required to provide valid card details to complete the payment. This ensures a secure and reliable transaction, adhering to industry standards for payment processing.
 
-#### User Registration
-
-- **Registration Redirect:**
-  After successful registration, users are automatically redirected back to their shopping cart. This allows them to view and proceed with the purchase of the jewelries already added to their cart.
-
-- **Seamless Experience:**
-  This seamless integration between user registration and the shopping cart ensures a smooth transition for users, maintaining the items they've added before registering.
-
-2. #### Dynamic Navigation Bar:
-
-    The project features a dynamic navigation bar at the header, providing an intuitive and seamless user experience. The dropdown menu options are dynamically generated from the database, ensuring that any changes or additions are automatically reflected in the menu.
+3. #### Dynamic Navigation Bar:
+- The project features a dynamic navigation bar at the header. The dropdown menu options are dynamically generated from the database, ensuring that any changes or additions are automatically reflected in the menu.
 
 3. #### Advanced Product Filtering and Real-time Availability Tracking:
-   
-     When a customer selects a category from the dropdown menu, they are redirected to the chosen category page. Here, an advanced product filtering system awaits, allowing users to refine their search further. The selection menu not only filters the displayed products based on user preferences but also dynamically adjusts other checkboxes based on the available products. A counter is placed next to each checkbox within the Django multiple checkboxes form. These counters provide real-time feedback, indicating the exact number of products available for each checkbox selection.
+- When a customer selects a choice from the dropdown menu, they are redirected to the chosen page.
+- Here, an advanced product filtering system awaits, allowing users to refine their search further.
+  - The selection menu not only filters the displayed products based on user preferences but also dynamically adjusts other checkboxes based on the available products.
+  - A counter is placed next to each checkbox within the Django multiple checkboxes form. These counters provide real-time feedback, indicating the exact number of products available for each checkbox selection.
 
 4. #### Search:
    
-     The search button allows users to input keywords or phrases, and in real-time, it dynamically displays related products from our extensive database. This feature ensures a seamless and efficient browsing experience, helping users find exactly what they are looking for with ease.
+     The search button allows users to input keywords or phrases, and in real-time, it dynamically displays related products from our extensive database. This feature ensures a efficient browsing experience, helping users find exactly what they are looking for with ease.
 
 5. #### Wishlist:
    
-     For non-registered users, their likes are stored temporarily in the session, allowing them to enjoy a personalized experience during their current visit. Registered users benefit from a seamless experience as their likes are securely stored in the database, ensuring that their preferences are maintained across sessions.
+     For non-registered users, their likes are stored temporarily in the session, allowing them to enjoy a personalized experience during their current visit. Registered users benefit from having their likes stored in the database, ensuring that their preferences are maintained across sessions.
 
 6. #### Last Seen Products:
    
-     As part of our user-centric approach, the system stores the last three products viewed by users in their session. This recent product history is thoughtfully displayed on pages where it is most relevant, ensuring a personalized and efficient browsing experience. Users can easily revisit and consider these recently viewed products, adding a layer of convenience to their journey throughout the platform.
-
+     The system stores the last three products viewed by users in their session. This recent product history is displayed on pages where it is most relevant. Users can easily revisit and consider these recently viewed products, by clicking on them.
 
 7. #### Size Selection:
    
-     To enhance the shopping experience, a radio select button must be chosen before adding items to the shopping bag. This ensures clarity and precision in product selection, allowing customers to effortlessly specify their preferences before proceeding to the checkout.
-
-8. #### Secure Checkout Process: Providing Essential Personal Details:
-   
-     Upon clicking on the 'Checkout' button, customers are redirected to a page where they can enter their essential personal details, including names, phone number, and delivery address. This mandatory step, ensures that customers provide the necessary information before proceeding.
-
-9. #### Payment Confirmation with Valid Card Details:
-   
-     Proceeding to the next step in the checkout process, customers are required to provide valid card details to complete the payment. This ensures a secure and reliable transaction, adhering to industry standards for payment processing.
+     A radio select button must be chosen before adding items to the shopping bag. This ensures clarity and precision in product selection, allowing customers to specify their preferences before proceeding to the checkout.
 
 10. #### Order Confirmation and Details:
    

@@ -1,10 +1,17 @@
 <a name="django-gems"></a>
 
-<p align="center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 400px;">
-  <img src="https://res.cloudinary.com/deztgvefu/image/upload/v1707852478/template_images/Screenshot_2024-02-13_at_21.27.06_exrwvw.png" alt="Project Logo" width="400">
+<p align="center" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px;">
+  <img src="https://res.cloudinary.com/deztgvefu/image/upload/v1707852478/template_images/Screenshot_2024-02-13_at_21.27.06_exrwvw.png" alt="Project Logo" width="340">
 </p>
 
-## <p align="center"> *Visit our online store:<br> http://ec2-15-188-235-238.eu-west-3.compute.amazonaws.com* </p>
+---
+<br>
+
+### <p align="center"> *Visit our online store:<br> http://ec2-15-188-235-238.eu-west-3.compute.amazonaws.com* </p>
+
+<br>
+
+---
 
 <a name="built-with"></a>
 <a name="entity-relationship-diagram"></a>
@@ -20,8 +27,12 @@
   <a href="#license">License</a>
 </h4>
 
+---
+
 ## Introduction
 <p><i>Welcome to our Online Jewelry Store! This web application serves as a platform for showcasing and selling a stunning collection of exquisite jewelry. With a user-friendly       interface and seamless navigation, customers can explore, select, and purchase their favorite pieces effortlessly..</i></p>
+
+<p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 
 ## Demo Video
 

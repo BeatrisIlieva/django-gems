@@ -5,13 +5,6 @@
 </p>
 
 ---
-<br>
-
-### <p align="center"> *Visit our online store:<br> http://35.181.248.13:3000/* </p>
-
-<br>
-
----
 
 <a name="built-with"></a>
 <a name="entity-relationship-diagram"></a>

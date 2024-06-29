@@ -7,7 +7,7 @@
 ---
 <br>
 
-### <p align="center"> *Visit our online store:<br> http://ec2-13-36-51-60.eu-west-3.compute.amazonaws.com/* </p>
+### <p align="center"> *Visit our online store:<br> http://35.181.248.13:3000/* </p>
 
 <br>
 

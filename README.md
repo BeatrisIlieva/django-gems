@@ -41,7 +41,6 @@
     <td align="center"><img alt="PostgreSQL" width="80px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg"/></td>
     <td align="center"><img alt="HTML5" width="80px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"/></td>
     <td align="center"><img alt="CSS" width="80px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"/></td>
-    <td align="center"><img alt="AWS" width="80px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"/></td>
   </tr>
 </table>
 
@@ -57,9 +56,7 @@
 > Currently optimized for desktop; future plans include implementing media queries for responsiveness on various devices.
 4. #### OOP & SOLID:
 - Applied Object-Oriented Programming principles and SOLID for modular and maintainable code.
-5. #### Deployment:
-- Hosted on Amazon Web Services (AWS).
-6. #### Test Coverage:
+5. #### Test Coverage:
 - [![Coverage Status](https://img.shields.io/badge/coverage-81%25-brightgreen.svg)](./coverage/index.html)
 
 <p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>

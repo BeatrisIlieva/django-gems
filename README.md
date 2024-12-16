@@ -57,7 +57,7 @@
 4. #### OOP & SOLID:
 - Applied Object-Oriented Programming principles and SOLID for modular and maintainable code.
 5. #### Test Coverage:
-- [![Coverage Status](https://img.shields.io/badge/coverage-81%25-brightgreen.svg)](./coverage/index.html)
+- ![Coverage Status](https://img.shields.io/badge/coverage-81%25-brightgreen.svg)
 
 <p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 

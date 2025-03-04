@@ -29,7 +29,7 @@
 
 ## Demo Video
 
-[![Watch the video](https://img.youtube.com/vi/RCQqE-m7bb0/maxresdefault.jpg)](https://www.youtube.com/embed/KnK5HedIVjo)
+[![Watch the video](https://img.youtube.com/vi/RCQqE-m7bb0/maxresdefault.jpg)](https://www.youtube.com/embed/RCQqE-m7bb0)
 
 <p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 

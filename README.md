@@ -203,5 +203,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 <p align="right" dir="auto"><a href="#django-gems">Back To Top</a></p>
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=beatrisilieva&theme=omni&show_icons=true)
-
